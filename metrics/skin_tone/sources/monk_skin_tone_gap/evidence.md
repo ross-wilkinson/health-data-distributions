@@ -28,7 +28,7 @@ Searched 2026-10-06. All quotes are verbatim. A search-result summary is a lead 
 
 ### O'Hagan, Sharma, Ungar 2025: read in full, no category shares in text or tables
 
-O'Hagan R, Sharma D, Ungar B. Large Multiethnic Comparison Benchmark of the Fitzpatrick and Monk Skin Tone Scales. *J Drugs Dermatol* 2025;24(7):431-432. doi:10.36849/JDD.8618e. Read on 2026-10-06 from a PDF supplied by Ross Wilkinson (`C:/Users/wilki/Downloads/O'Hagan et al. 2025 - J. Drugs Dermatol_.pdf`, not copied into the repo). The copy carries the publisher's notice that no portion may be reproduced without written consent, so only short quotations are given here.
+O'Hagan R, Sharma D, Ungar B. Large Multiethnic Comparison Benchmark of the Fitzpatrick and Monk Skin Tone Scales. *J Drugs Dermatol* 2025;24(7):431-432. doi:10.36849/JDD.8618e. Read on 2026-10-06 from a PDF supplied by Ross Wilkinson (`raw/papers/O'Hagan et al. 2025 - J. Drugs Dermatol_.pdf`, kept untracked in the repo). The copy carries the publisher's notice that no portion may be reproduced without written consent, so only short quotations are given here.
 
 What it is: an analysis of the Skin Condition Image Network (SCIN) dataset.
 

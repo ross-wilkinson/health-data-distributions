@@ -6,7 +6,7 @@ All quotes are verbatim. Retrieved 2026-10-06.
 
 Source: Ballone E, Passamonti M, Lappa G, Di Blasio G, Fazii P. *Pigmentary traits, nevi and skin phototypes in a youth population of Central Italy.* Eur J Epidemiol 1999;15(2):189-195. doi:10.1023/A:1007539807705. PMID 10204650. First page: "© 1999 Kluwer Academic Publishers."
 
-Where the text was read: the full article, on 2026-10-06, from a PDF supplied by Ross Wilkinson (`C:/Users/wilki/Downloads/Ballone et al. 1999 - Eur. J. Epidemiol_.pdf`, not copied into the repo). Before that, only the abstract had been read (PubMed and Europe PMC records), and the entry held two numbers from it. Those are now replaced by Table 1.
+Where the text was read: the full article, on 2026-10-06, from a PDF supplied by Ross Wilkinson (`raw/papers/Ballone et al. 1999 - Eur. J. Epidemiol_.pdf`, kept untracked in the repo). Before that, only the abstract had been read (PubMed and Europe PMC records), and the entry held two numbers from it. Those are now replaced by Table 1.
 
 ### Locator: Table 1
 

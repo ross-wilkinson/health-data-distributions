@@ -33,8 +33,10 @@ and guidance, no numbers) before publication.
 Not in question: Quer et al. 2020 (Creative Commons Attribution License, stated
 in the article) and Heldreth et al. 2024 (CC BY 4.0, stated on its first page).
 
-No PDF supplied by Ross has been copied into the repository. The figure
-images used for measurement are in `raw/figures/`, which is git-ignored.
+Copies of the source papers are kept in `raw/papers/` and the figure images
+used for measurement in `raw/figures/`. Both are git-ignored and stay
+untracked until the questions above are closed (Ross, 2026-10-06). `PAPERS.md`
+lists what should be there.
 
 ## Resolved
 

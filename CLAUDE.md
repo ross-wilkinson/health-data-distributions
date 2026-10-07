@@ -40,7 +40,11 @@ it should and should not be used for.
     a source that is not clearly openly licensed, quote the source's own
     licence statement in `citation.license` and add a row to
     `COPYRIGHT_QUESTIONS.md`. Ross closes those rows before anything is
-    published. No supplied PDF is ever copied into the repo.
+    published.
+12. **Source papers are kept, untracked.** Every paper a source is built from
+    has a copy in `raw/papers/`, which git ignores, and a row in `PAPERS.md`
+    (Ross, 2026-10-06). They stay untracked until the copyright questions
+    are closed. Never `git add -f` anything under `raw/`.
 
 ## Layout
 
@@ -50,7 +54,8 @@ metrics/<metric_id>/sources/<source_id>/        source.json, data.csv, evidence.
 pipelines/                                      survey.py, one script per recomputed source, validate.py, render.py
 pipelines/digitise/                             one measuring script per digitised figure; images live in raw/figures/
 entries/, CATALOG.md                            generated
-raw/                                            downloaded public data, git-ignored
+raw/                                            downloaded public data, figure images, and papers/; git-ignored
+PAPERS.md                                       index of the papers expected in raw/papers/
 .github/directives/                             pending directives; _completed/ after audit
 ACCESS_REQUESTS.md                              sources agents could not read, for Ross to obtain
 COPYRIGHT_QUESTIONS.md                          publication questions for Ross to close

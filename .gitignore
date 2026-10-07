@@ -1,3 +1,5 @@
+# Downloaded data, figure images, and copies of source papers: never tracked.
+# See PAPERS.md and COPYRIGHT_QUESTIONS.md.
 raw/
 .venv/
 __pycache__/

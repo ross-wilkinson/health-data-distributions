@@ -1,6 +1,6 @@
 # Evidence: self-reported light, medium, and dark skin tone, US online survey (Heldreth et al. 2024)
 
-All quotes are verbatim. Read in full on 2026-10-06 from a PDF of the published article supplied by Ross Wilkinson (`C:/Users/wilki/Downloads/Heldreth et al. 2023 - ACM J. Responsib. Comput_.pdf`, not copied into the repo). The ACM page had returned HTTP 403 to the fetch tool earlier the same day.
+All quotes are verbatim. Read in full on 2026-10-06 from a PDF of the published article supplied by Ross Wilkinson (`raw/papers/Heldreth et al. 2023 - ACM J. Responsib. Comput_.pdf`, kept untracked in the repo). The ACM page had returned HTTP 403 to the fetch tool earlier the same day.
 
 Source: Heldreth CM, Monk EP, Clark AT, Ricco S, Schumann C, Eyee X. Which Skin Tone Measures Are the Most Inclusive? An Investigation of Skin Tone Measures for Artificial Intelligence. *ACM J. Responsib. Comput.* 1, 1, Article 7 (March 2024), 21 pages. https://doi.org/10.1145/3632120
 

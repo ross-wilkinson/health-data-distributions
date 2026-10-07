@@ -1,6 +1,6 @@
 # Evidence: ITA categories measured from Wilkes et al. 2015, Figure panel B
 
-Wilkes M, Wright CY, du Plessis JL, Reeder A. *JAMA Dermatol* 2015;151(8):902-903. doi:10.1001/jamadermatol.2015.0351. Read in full on 2026-10-06 from a PDF supplied by Ross Wilkinson, not copied into the repo. Verbatim quotes from the text are in the `ita_colorimetry_gap` source's evidence.md.
+Wilkes M, Wright CY, du Plessis JL, Reeder A. *JAMA Dermatol* 2015;151(8):902-903. doi:10.1001/jamadermatol.2015.0351. Read in full on 2026-10-06 from a PDF supplied by Ross Wilkinson, kept untracked in `raw/papers/`. Verbatim quotes from the text are in the `ita_colorimetry_gap` source's evidence.md.
 
 ## What was measured
 

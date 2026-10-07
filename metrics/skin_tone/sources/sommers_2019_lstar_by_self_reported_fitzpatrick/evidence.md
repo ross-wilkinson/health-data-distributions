@@ -1,6 +1,6 @@
 # Evidence: skin lightness by self-reported Fitzpatrick type (Sommers et al. 2019)
 
-All quotes are verbatim. Read in full on 2026-10-06 from a PDF supplied by Ross Wilkinson (`C:/Users/wilki/Downloads/Sommers et al. 2019 - Ethn. Dis_.pdf`, not copied into the repo).
+All quotes are verbatim. Read in full on 2026-10-06 from a PDF supplied by Ross Wilkinson (`raw/papers/Sommers et al. 2019 - Ethn. Dis_.pdf`, kept untracked in the repo).
 
 Source: Sommers MS, Fargo JD, Regueira Y, Brown KM, Beacham BL, Perfetti AR, Everett JS, Margolis DJ. Are the Fitzpatrick Skin Phototypes valid for cancer risk assessment in a racially and ethnically diverse sample of women? *Ethn Dis.* 2019;29(3):505-512. doi:10.18865/ed.29.3.505
 

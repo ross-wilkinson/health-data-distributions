@@ -22,7 +22,8 @@ before implementing.
 4. When you transcribe, quote, or measure from a source that is not clearly
    openly licensed, record its own licence statement verbatim in
    `citation.license` and add a row to `COPYRIGHT_QUESTIONS.md`. Do not decide
-   the question.
+   the question. If you obtain the paper itself, save it in `raw/papers/`
+   (git-ignored) and add a row to `PAPERS.md`.
 5. A source entered from an abstract alone is provisional and must say so.
 6. Run the acceptance checks in the directive.
 7. Append `## Implementation report` to the directive: what changed, check

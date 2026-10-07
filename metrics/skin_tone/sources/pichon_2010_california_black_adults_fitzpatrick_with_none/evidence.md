@@ -1,6 +1,6 @@
 # Evidence: Fitzpatrick type with a "none of the above" option, California Black adults (Pichon et al. 2010)
 
-All quotes are verbatim. Read in full on 2026-10-06 from a PDF supplied by Ross Wilkinson (`C:/Users/wilki/Downloads/Pichon et al. 2010 - Ethn. Dis_.pdf`, not copied into the repo).
+All quotes are verbatim. Read in full on 2026-10-06 from a PDF supplied by Ross Wilkinson (`raw/papers/Pichon et al. 2010 - Ethn. Dis_.pdf`, kept untracked in the repo).
 
 Source: Pichon LC, Landrine H, Corral I, Hao Y, Mayer JA, Hoerster KD. Measuring skin cancer risk in African Americans: is the Fitzpatrick Skin Type Classification Scale culturally sensitive? *Ethn Dis.* 2010;20:174-179.
 

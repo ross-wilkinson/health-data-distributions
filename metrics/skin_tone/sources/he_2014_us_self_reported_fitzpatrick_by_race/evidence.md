@@ -1,6 +1,6 @@
 # Evidence: self-reported Fitzpatrick phototype by race, US convenience survey (He et al. 2014)
 
-All quotes are verbatim. Read in full on 2026-10-06 from a PDF of the published article supplied by Ross Wilkinson (`C:/Users/wilki/Downloads/He et al. 2014 - J. Am. Acad. Dermatol_.pdf`, not copied into the repo). The journal page had blocked the fetch tool earlier the same day.
+All quotes are verbatim. Read in full on 2026-10-06 from a PDF of the published article supplied by Ross Wilkinson (`raw/papers/He et al. 2014 - J. Am. Acad. Dermatol_.pdf`, kept untracked in the repo). The journal page had blocked the fetch tool earlier the same day.
 
 Source: He SY, McCulloch CE, Boscardin WJ, Chren M-M, Linos E, Arron ST. Self-reported pigmentary phenotypes and race are significant but incomplete predictors of Fitzpatrick skin phototype in an ethnically diverse population. *J Am Acad Dermatol* 2014;71:731-7. http://dx.doi.org/10.1016/j.jaad.2014.05.023
 

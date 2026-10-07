@@ -25,7 +25,7 @@ Searched 2026-10-06. All quotes are verbatim. A search-result summary is a lead 
 
 ### Wilkes et al. 2015: read in full, ITA categories shown only in a figure
 
-Wilkes M, Wright CY, du Plessis JL, Reeder A. Fitzpatrick Skin Type, Individual Typology Angle, and Melanin Index in an African Population: Steps Toward Universally Applicable Skin Photosensitivity Assessments. *JAMA Dermatol* 2015;151(8):902-903. doi:10.1001/jamadermatol.2015.0351. "Copyright 2015 American Medical Association. All rights reserved." Read on 2026-10-06 from a PDF supplied by Ross Wilkinson (`C:/Users/wilki/Downloads/wilkes2015.pdf`, not copied into the repo). The article notes: "This article was corrected on August 12, 2015, to fix statistics in the Figure."
+Wilkes M, Wright CY, du Plessis JL, Reeder A. Fitzpatrick Skin Type, Individual Typology Angle, and Melanin Index in an African Population: Steps Toward Universally Applicable Skin Photosensitivity Assessments. *JAMA Dermatol* 2015;151(8):902-903. doi:10.1001/jamadermatol.2015.0351. "Copyright 2015 American Medical Association. All rights reserved." Read on 2026-10-06 from a PDF supplied by Ross Wilkinson (`raw/papers/Wilkes et al. 2015 - JAMA Dermatol.pdf`, kept untracked in the repo). The article notes: "This article was corrected on August 12, 2015, to fix statistics in the Figure."
 
 Who was measured and how:
 
