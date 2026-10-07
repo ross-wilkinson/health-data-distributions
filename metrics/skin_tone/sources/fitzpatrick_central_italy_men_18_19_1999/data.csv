@@ -1,0 +1,5 @@
+category,n,statistic,estimate,ci_low,ci_high,locator
+Phototype I,5318,proportion,0.027,,,Table 1
+Phototype II,5318,proportion,0.086,,,Table 1
+Phototype III,5318,proportion,0.398,,,Table 1
+Phototype IV,5318,proportion,0.489,,,Table 1

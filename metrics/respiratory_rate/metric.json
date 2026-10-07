@@ -1,0 +1,12 @@
+{
+  "id": "respiratory_rate",
+  "name": "Respiratory rate",
+  "category": "Respiratory",
+  "units": "breaths/min",
+  "priority": 8,
+  "status": "planned",
+  "candidate_sources": [
+    "To be identified"
+  ],
+  "note": "Awake clinic counts and overnight wearable estimates are different quantities."
+}

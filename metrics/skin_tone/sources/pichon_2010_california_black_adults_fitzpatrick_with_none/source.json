@@ -1,0 +1,52 @@
+{
+  "id": "pichon_2010_california_black_adults_fitzpatrick_with_none",
+  "title": "Self-reported Fitzpatrick type I to IV with a \"none of the above\" option, random household sample of Black adults, California (Pichon et al. 2010)",
+  "origin": "transcribed",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "2,085 Black adult residents of California, aged 18 to 95 (mean 43.8), 57.9% women, reached by a three-stage random household sample: the seven counties where most California Black residents live, then randomly selected high- and low-segregation census tracts, then all households in randomly selected block groups. One self-identified Black adult per household.",
+    "country": "United States (California)",
+    "years": "Not stated (published 2010)",
+    "age_range": "18 to 95",
+    "n": 2085,
+    "sampling": "probability sample",
+    "exclusions": "None stated. The paper reports that 99% of those who answered the door completed the survey; it does not report how many households did not answer."
+  },
+  "measurement": {
+    "method": "Self-report on a written survey. The question was \"Which of the following best describes your skin's usual reaction to your first exposure to summer sun, without sunscreen, for one-half hour at midday?\" with four Fitzpatrick options (always burn, unable to tan; usually burn, then can tan if I work at it; sometimes mild burn, then tan easily; rarely burn, tan easily) and a fifth added for this study: \"none of the above describes me\".",
+    "device": "None. Written questionnaire.",
+    "protocol": "Surveys were handed out door to door on weekends by Black surveyors from a community organisation; participants received $10."
+  },
+  "analysis": [
+    "The five shares are the paper's \"% of sample\" with the \"none apply\" option, from Table 1, converted to fractions (59.0% becomes 0.590). Nothing else was computed.",
+    "The same table gives the shares among only the 41% who chose a type, the way the scale is normally scored: 6.0%, 6.4%, 22.1%, and 65.5% for types I to IV. Those are not the entered values.",
+    "The paper reports no sampling weights and no confidence intervals for these shares."
+  ],
+  "use_for": [
+    "The best available evidence on how Black adults answer the Fitzpatrick sun-reaction question when allowed to say it does not fit: a random household sample, not volunteers.",
+    "Estimating how much of a study population may be unclassifiable by the Fitzpatrick questionnaire."
+  ],
+  "do_not_use_for": [
+    "A distribution of skin colour: this is a sun-reaction question, and most respondents rejected it.",
+    "Fitzpatrick types V and VI: the question offered types I to IV only.",
+    "Black adults outside California, or any other group."
+  ],
+  "caveats": [
+    "**59% said none of the options described them.** Under the usual scoring they would be dropped as non-responders, which raises the apparent share of Type IV from 26.8% to 65.5%.",
+    "**Only four types were offered.** The questionnaire used the original four sun-reactive types.",
+    "**The non-responders differ.** The paper reports that those who chose \"none\" had lower incomes than types III and IV, included more men, and were least likely to use sunscreen.",
+    "**Unweighted.** Counties were sampled in proportion to their share of the state's Black population, but no weights are reported.",
+    "**A small inconsistency in the table.** The four type counts sum to 854; the table heads that column N=853."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Pichon LC, Landrine H, Corral I, Hao Y, Mayer JA, Hoerster KD. Measuring skin cancer risk in African Americans: is the Fitzpatrick Skin Type Classification Scale culturally sensitive? Ethnicity & Disease. 2010;20(2):174-179.",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20503899/",
+    "license": "Not stated on the article pages read. Confirm the journal's terms before publishing the five transcribed values."
+  },
+  "provenance": {
+    "url": "https://pubmed.ncbi.nlm.nih.gov/20503899/",
+    "accessed": "2026-10-06"
+  },
+  "verification": "The full article was read by Sentinel on 2026-10-06 from a PDF supplied by Ross Wilkinson. The five counts in Table 1 (51, 55, 189, 559, 1231) sum to 2,085 and reproduce the printed percentages. Two later papers quote the 59% figure (Sommers et al. 2019; Heldreth et al. 2024)."
+}

@@ -1,0 +1,13 @@
+self_reported_type,n,statistic,estimate,ci_low,ci_high,locator
+Type I,21,mean,68.0,,,Table 1
+Type I,21,sd,2.5,,,Table 1
+Type II,54,mean,65.1,,,Table 1
+Type II,54,sd,6.0,,,Table 1
+Type III,143,mean,60.3,,,Table 1
+Type III,143,sd,8.5,,,Table 1
+Type IV,54,mean,57.3,,,Table 1
+Type IV,54,sd,10.1,,,Table 1
+Type V,36,mean,51.1,,,Table 1
+Type V,36,sd,8.6,,,Table 1
+Type VI,138,mean,42.8,,,Table 1
+Type VI,138,sd,5.8,,,Table 1

@@ -1,0 +1,12 @@
+{
+  "id": "body_size",
+  "name": "Height, body mass, and BMI",
+  "category": "Anthropometry",
+  "units": "cm, kg, kg/m2",
+  "priority": 3,
+  "status": "planned",
+  "candidate_sources": [
+    "NHANES body measures"
+  ],
+  "note": "CDC already publishes reference tables as PDFs; the value here is machine-readable subgroups."
+}

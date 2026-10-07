@@ -1,0 +1,45 @@
+{
+  "id": "monk_skin_tone_gap",
+  "title": "Monk Skin Tone scale: no population distribution found in this search",
+  "origin": "gap",
+  "statistic_form": "none",
+  "population": {
+    "description": "What was looked for: the share of people in a defined population (a national survey, a large cohort, or a published study) who fall in each Monk Skin Tone category, as self-rated or rated by an observer.",
+    "country": "Any",
+    "years": "Any",
+    "age_range": "Any",
+    "n": null,
+    "sampling": "other",
+    "exclusions": "Not applicable: this entry records a search, not a population."
+  },
+  "measurement": {
+    "method": "Monk Skin Tone (MST) scale, a 10-shade scale of colour swatches. What was looked for: a distribution of MST categories, self-rated or observer-rated.",
+    "device": "Not applicable (printed or on-screen swatches; no instrument).",
+    "protocol": "Not applicable: nothing was found to describe."
+  },
+  "use_for": [
+    "Knowing what was searched and which near misses were seen, so the search need not be repeated from scratch."
+  ],
+  "do_not_use_for": [
+    "Concluding that no Monk Skin Tone distribution exists: this records one search on one date.",
+    "Substituting self-reported race and ethnicity, the Fitzpatrick scale, or any enrolled study sample for a population distribution of Monk Skin Tone."
+  ],
+  "caveats": [
+    "**Not found in this search.** No distribution of Monk Skin Tone categories in a defined population was found in the searches logged in evidence.md (2026-10-06). That is a statement about this search only.",
+    "**Closest proxies seen, and why each is a poor substitute.**",
+    "Self-reported race and ethnicity (for example NIH or census categories): groups overlap widely in measured skin tone. In one San Francisco cohort that measured both, self-identified Black or African American and self-identified White participants had wide, overlapping ranges of Monk values (medRxiv preprint doi:10.1101/2025.02.21.25322707; convenience sample).",
+    "Enrolled clinical or laboratory samples that recorded Monk Skin Tone (a 128-patient ICU cohort at Duke, a 789-participant lab and ICU cohort at UCSF and San Francisco General, a 90-patient cohort at one Veterans Affairs hospital): each was recruited for another purpose, the UCSF authors state their sites were chosen for convenience, and none was sampled to represent a population. Their category shares reflect recruitment. In the 90-patient cohort the Monk distribution is shown only in a histogram, and in the UCSF cohort the Monk categories appear in a table of ITA ranges that gives no n per category.",
+    "A survey of 2,214 people in the United States that compared how well three scales (Fitzpatrick, Fenty Beauty, Monk) were perceived to represent the person (Heldreth et al. 2024). The full text was read on 2026-10-06: it does not report the share of respondents at each Monk point. It reports only three pooled groups (light, medium, dark) across all three scales, which are recorded as the separate source heldreth_2024_us_online_survey_light_medium_dark. Its own Table 1 marks national data on skin tone as \"no data available\".",
+    "Interviewer-rated skin colour in the Add Health study (item 'What is the respondent's skin color?', five categories from black to white): a different scale with five categories, so it cannot be mapped onto MST; I did not read its frequencies from an opened source.",
+    "The SCIN dermatology image dataset (5,033 US volunteer contributions, 2023), with Monk scores from two pools of trained lay annotators: now entered as the separate source scin_2023_monk_lay_annotators, recomputed from the open data. It is the only Monk distribution in this entry and is a volunteer group, not a population; the two annotator pools agree on the exact point for 40% of contributions."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Not applicable: documented gap. No source was found; see evidence.md for the search log and the near misses.",
+    "url": "Not applicable (documented gap; see evidence.md)",
+    "license": "Not applicable"
+  },
+  "provenance": {
+    "accessed": "2026-10-06"
+  }
+}

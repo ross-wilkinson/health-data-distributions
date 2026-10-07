@@ -1,0 +1,56 @@
+{
+  "id": "quer_2020_fitbit_92457_adults",
+  "title": "Quer et al. 2020, Fitbit wearable cohort (92,457 US adults), daily resting heart rate",
+  "origin": "transcribed",
+  "statistic_form": "moments",
+  "population": {
+    "description": "Fitbit users in the United States (all 50 states) who consistently wore a wrist heart-rate tracker. Starting from a convenience sample of 200,000 users, the authors kept 92,457 adults with a reported sex, age, and BMI who met the wear-time rules below. About 63% were women; average age was 45.8 years and average BMI 28.4 kg/m2 (as the paper reports them).",
+    "country": "United States",
+    "years": "March 2016 to February 2018",
+    "age_range": "18 to 100 (self-reported); average 45.8",
+    "n": 92457,
+    "sampling": "convenience sample",
+    "exclusions": "Users who did not report sex, whose self-reported age was under 18 or over 100, or whose BMI (from self-reported height and weight) was outside 15 to 50 kg/m2; days with the device worn under 20 hours; users without at least 2 qualifying days per week for at least 35 weeks. No exclusion for medication or medical conditions is stated."
+  },
+  "measurement": {
+    "method": "A single resting heart rate value per person per day, calculated by a proprietary Fitbit formula from interbeat intervals derived from the optical (PPG) sensor. The paper says this value is expected to represent the true resting heart rate that would be obtained supine immediately after waking, before getting out of bed, and that it was primarily calculated during periods of sleep.",
+    "device": "Fitbit wrist-worn trackers: Charge HR versions 1 to 3 (65% of individuals), Blaze (21%), Alta HR (8%), Ionic (3%), Surge (2%), Versa (1%).",
+    "protocol": "Continuous wear, with measurements obtained daily in normal living conditions. Only days with at least 20 hours of wear count. The mean in data.csv is the paper's mean RHR \"for all individuals over all available monitored days\" (median 320 days per person, maximum possible 730)."
+  },
+  "analysis": [
+    "The paper reports the mean as a single sentence in the Results text, with no table and no confidence interval. No sampling weights or adjustment to the US population are described in the text read.",
+    "The paper gives the mean as 65.5 ± 7.7 bpm and does not define the 7.7. It is recorded in data.csv as the SD, between people, of each person's average daily resting heart rate. That reading is Ross Wilkinson's (2026-10-06), on two grounds stated under verification. The Abstract rounds the mean to 65."
+  ],
+  "use_for": [
+    "Seeing the typical level of daily resting heart rate as a Fitbit wrist tracker reports it, in a large group of adult US users of that device.",
+    "Sizing a study of wearable-derived resting heart rate, with the caveat that this is a self-selected cohort of device owners."
+  ],
+  "do_not_use_for": [
+    "A reference for a clinic pulse or any manually counted heart rate: the quantity and the setting differ.",
+    "A distribution for the US general population: the cohort is device owners, selected by wear-time rules, and the figures are not weighted.",
+    "Percentiles or a normal range: the paper's text gives a mean only, and this entry holds no percentiles.",
+    "A reference for devices other than the Fitbit models listed, or for other algorithms."
+  ],
+  "caveats": [
+    "**This is a wearable-derived daily value from a proprietary algorithm.** The paper states the formula is Fitbit's own and that the value is expected to represent a supine resting rate on waking; it is not a clinic measurement.",
+    "**Only one overall mean is recorded.** The text gives no separate mean for women and men or for age groups (those appear only in figures), and no percentiles. The paper states that \"95% of men had an RHR between 50 and 80 bpm, while the corresponding range for women was between 53 and 82 bpm\" but does not say these are central percentile bounds, so they are not entered as data.",
+    "**The mean is of people, over their days.** The paper says the mean is \"for all individuals over all available monitored days\"; it does not say whether this is the mean of per-person averages or of all daily values pooled.",
+    "**The SD of 7.7 is an interpretation.** The paper writes \"65.5 ± 7.7 bpm\" without saying what the 7.7 denotes. It is entered as the between-person SD because nothing else fits; see verification.",
+    "**Self-selected cohort.** The authors state the cohort \"is not likely to be representative of the total socioeconomic and demographic diversity of the U.S.\" About 63% were women and the average age was 45.8; age was self-reported, BMI was calculated from self-reported height and weight, and sex was reported by the user.",
+    "**Strict wear-time rules.** People needed at least 2 days per week with 20 or more hours of wear for at least 35 weeks, which selects consistent users.",
+    "**Resting heart rate varies with age, sex, BMI, sleep, and time of year.** The authors report a change of 2 bpm in the population average over the year, peaking in the first week of January with a minimum at the end of July; a single overall mean mixes all of this.",
+    "**The underlying data are not public.** Fitbit owns them and the authors state they cannot share them, so this value cannot be recomputed."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Quer G, Gouda P, Galarnyk M, Topol EJ, Steinhubl SR. Inter- and intraindividual variability in daily resting heart rate and its associations with age, sex, sleep, BMI, and time of year: Retrospective, longitudinal cohort study of 92,457 adults. PLOS ONE. 2020;15(2):e0227709.",
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0227709",
+    "doi": "10.1371/journal.pone.0227709",
+    "license": "© 2020 Quer et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited."
+  },
+  "provenance": {
+    "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0227709",
+    "accessed": "2026-10-06"
+  },
+  "verification": "The Abstract gives the mean daily RHR as 65 bpm; the Results give 65.5 bpm (both quoted in evidence.md), which agree to rounding. The wording of every quoted passage was checked in two independent renderings of the full text (PLOS and Europe PMC). Reading 7.7 as an SD was checked two ways. First, the same passage gives age as \"45.8 ± 14.4 years\", which for adults aged 18 to 100 can only be an SD. Second, the paper's Fig 2 (distribution of average daily resting heart rate for men and women) shows curves about 17 beats/min wide at half their peak height, which for a roughly normal shape is an SD of about 7; a standard error or confidence interval for 92,457 people would be near 0.03. The figure was used only to check the meaning of 7.7. No value was read from it into data.csv."
+}

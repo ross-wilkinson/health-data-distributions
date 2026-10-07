@@ -1,0 +1,67 @@
+{
+  "id": "nhanes_2003_2004_fitzpatrick_image_readers",
+  "title": "NHANES 2003-2004, Fitzpatrick skin type assigned by two dermatologist image readers, adults aged 20-59",
+  "origin": "recomputed",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "US adults aged 20 to 59 examined in the NHANES 2003-2004 mobile examination centre, which took digital skin photographs of a full sample of adults in that age range. Each reader's type is reported separately, so the people counted differ slightly by reader.",
+    "country": "United States",
+    "years": "2003-2004",
+    "age_range": "20-59",
+    "n": 2693,
+    "n_eligible": 2992,
+    "sampling": "probability sample",
+    "exclusions": "The documentation says: \"Sample persons aged 20-59 years who do not meet any of the exclusion criteria.\" and \"A person using a wheelchair did not receive the photos of the back or back of the legs. He/she would be eligible for the other photos. There are no safety exclusions for this component.\" Here, examined adults with no type from a reader (code 9, or no entry) are left out of that reader's table; n is the number of people with a type from at least one reader."
+  },
+  "measurement": {
+    "method": "Fitzpatrick skin type I to VI assigned by dermatologist readers from digital photographs (NHANES variables DEX1FITZ for Reader 1 and DEX2FITZ for Reader 2). The documentation says: \"The dermatology digital images were read by two separate dermatologists.\" Who the two readers were, how they were trained, whether the same two read every image, and what they were told to judge the type from: Not stated. It defines the type as \"a method of classifying individuals based on their response to sun exposure in terms of tanning and burning (photosensitivity)\" and lists \"I - Always burns, never tans (pale white skin)\" through \"VI - Never burns, (deeply pigmented dark brown to black skin)\". The page does not say how a reaction to sun was inferred from a photograph. Code 9 means, in the codebook's words, \"Not determined, picture missing\" (3 people for Reader 1, 5 for Reader 2). Consensus rule, quoted: \"When the finding of the two readers disagreed, the image reading software program required a third consensus reading.\" and \"Any outcome that resulted in \"reject\" went to consensus.\" In the documentation's matrix for Fitzpatrick type, a pair of types both in I to III, or both in IV to VI, is \"Accept\"; any pair with one reader in I to III and the other in IV to VI is \"Reject\". Missing critical values and any condition requiring follow-up also sent an image to consensus. The consensus value (DEX6FITZ, \"Reader 6\") exists for 260 people (codebook count) and is not used in this source. Keiser et al. 2012 (see verification) add detail the NHANES page does not give: \"Two board-certified dermatologists independently reviewed each digital image to assign a skin type (DIST) score on a scale of 1 to 6 (1 = lightest and 6 = darkest)\", from images \"of their back, arms, hands, and lower extremities\" with \"no images ... taken of the participant's face, eyes, or hair\", and \"Dermatologists received validation training on skin type scoring.\"",
+    "device": "Photographs taken by a health technician using \"a Kodak DCS760 digital camera with a 50mm lens\". The skin type itself was assigned by the readers, not by an instrument.",
+    "protocol": "\"The exam consists of four digital images\": \"BACK with ELBOWS\", \"INNER ARM\" (left arm extended, palm up), \"FRONT OF LEGS with HANDS\" and \"BACK OF LEGS with PALMS\". The readers also assessed image quality. Which of the four images, and so which body sites, each reader used to assign the Fitzpatrick type: Not stated."
+  },
+  "analysis": [
+    "Reader 1 and Reader 2 are reported separately. No single combined or consensus type is made, because the two readers disagree often (see the reader agreement below).",
+    "Proportions are weighted with the examination weight (WTMEC2YR); this is one 2-year cycle, so the weight is not halved. Each reader's shares are the weighted number of people given that type divided by the weighted number of people given any type (1 to 6) by that reader.",
+    "95% intervals are the 2.5th and 97.5th percentiles of the share across 500 bootstrap resamples of primary sampling units within strata (Rao-Wu), built once on everyone examined in the 2003-2004 file (9,643 people of all ages) and reused for each subgroup, so they reflect the survey's clustered design.",
+    "n is the number of people in the subgroup with a type from that reader; it is the same on all six rows of a subgroup. Subgroups with fewer than 50 people are not reported. Race and ethnicity is NHANES variable RIDRETH1; there is no age split.",
+    "Code 9 (\"Not determined, picture missing\") and a blank entry are both treated as no type from that reader. Of the 2,992 examined adults aged 20 to 59, Reader 1 gave a type to 2,693 and Reader 2 to 2,691; 296 have a blank entry for both readers.",
+    "Reader agreement, unweighted, among the 2,691 people given a type from 1 to 6 by both readers: the two readers gave the same type to 1,657 (61.6%) and a type within one step of each other for 2,551 (94.8%). Of those 2,691 people, 212 had one reader in types I to III and the other in IV to VI, the combinations the documentation's matrix sends to consensus. Counting all 2,696 people with a value (1 to 6 or 9) from both readers, 1,660 had the same value, including 3 people given code 9 by both.",
+    "No adjustment was made for examined adults who were not read, and no reweighting for the difference between the two readers.",
+    "A third series, \"Both readers averaged, half-points rounded down\", gives one score per person for the 2,691 adults with a type from both readers. It follows Keiser et al. 2012, whose published counts it reproduces exactly. Rounding a half-point down moves people toward lighter types; rounding up would put 68.4% of all adults at Type III instead of 47.8%."
+  ],
+  "use_for": [
+    "Seeing how Fitzpatrick type, as assigned by dermatologists from photographs, was distributed in US adults aged 20 to 59 in 2003-2004, with the range between two readers as a measure of how uncertain that assignment is.",
+    "Planning the skin-type mix of a study of US adults aged 20 to 59, with both readers' distributions in view rather than one."
+  ],
+  "do_not_use_for": [
+    "A single correct distribution of Fitzpatrick type: report both readers, or state which reader you used and why.",
+    "A distribution of skin type defined by a person's own report of burning and tanning, or measured by an instrument: this is a reader's judgement from photographs.",
+    "Adults under 20 or over 59, or the US population today: the data are from 2003-2004 and cover ages 20 to 59 only.",
+    "Any statement about a subgroup that is not in the table, or about the rarer types (I and V) in small subgroups: the counts are small and the intervals are wide."
+  ],
+  "caveats": [
+    "**The two readers often disagree.** Among the 2,691 people given a type from 1 to 6 by both readers, they gave the same type for 1,657 (61.6%) and a type within one step for 2,551 (94.8%). Their distributions differ: for all adults, Type III is 71.4% by Reader 1 and 46.1% by Reader 2. Neither reader is known to be right.",
+    "**Type was assigned from photographs by readers, not from a person's reported reaction to sun and not by instrument.** The documentation defines the Fitzpatrick type by response to sun exposure, but the readers saw digital images. The documentation does not say what the readers were told to judge from, who they were, or which images they used for type (Not stated).",
+    "**The consensus value is not used.** An image went to a third consensus reading only if the pair of types was a \"reject\" in the documentation's matrix (one reader in I to III, the other in IV to VI), a critical value was missing, or a condition needed follow-up; the codebook counts 260 consensus readings. Most disagreements between the two readers (for example Type II against Type III) were accepted as they stood and have no consensus value. This source does not report the consensus value.",
+    "**Ages 20 to 59 only.** The skin photograph exam was for adults in that age range.",
+    "**The data are from 2003-2004.** Population composition and sun behaviour may have changed since.",
+    "**People examined but not read are left out, with no adjustment.** Of 2,992 examined adults aged 20 to 59, 296 have no type from either reader, and 3 (Reader 1) and 5 (Reader 2) were coded 9, \"Not determined, picture missing\". The weights were not adjusted for them.",
+    "**The survey's own documentation says the US distribution was unknown.** It states: \"Currently, the distribution of skin type across the U.S. population is unknown.\" These figures are an analysis of that survey by this project; no published distribution was available to check against.",
+    "**Race and ethnicity groups are NHANES's own 2003-2004 categories** (RIDRETH1), self-reported. The fifth group is \"Other Race - Including Multi-Racial\"; Asian people are not a separate group. Some groups are small (Other Hispanic: 97 people for each reader).",
+    "**The published single-score distribution depends on an unstated rounding rule.** Keiser et al. 2012 averaged the two readers and report 47.8% at score 3 and 33.1% at score 2. That matches the raw data only if half-point averages are rounded down, which moves people toward lighter types. This entry reports each reader separately and, as a third series, the averaged score with that rounding rule.",
+    "**The published analysis calls this a \"digital image skin type\" score, lightest to darkest**, not a Fitzpatrick sun-reactivity type, although the NHANES variable is labelled Fitzpatrick skin type. Treat it as a reader's rating of skin colour from photographs of the trunk and limbs."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Centers for Disease Control and Prevention, National Center for Health Statistics. National Health and Nutrition Examination Survey Data, 2003-2004, Dermatology (DEX_C) and Demographics (DEMO_C). Hyattsville, MD: U.S. Department of Health and Human Services.",
+    "url": "https://wwwn.cdc.gov/Nchs/Data/Nhanes/Public/2003/DataFiles/DEX_C.htm",
+    "license": "NCHS public-use data file. No licence name is stated; the NCHS terms (https://www.cdc.gov/nchs/data_access/restrictions.htm) say users must \"Use the data in this dataset for statistical reporting and analysis only.\""
+  },
+  "provenance": {
+    "pipeline": "pipelines/fitzpatrick_nhanes.py",
+    "raw_files": [
+      "raw/nhanes/DEMO_C.xpt",
+      "raw/nhanes/DEX_C.xpt"
+    ]
+  },
+  "verification": "Checked against the published analysis of the same file: Keiser E, Linos E, Kanzler M, Lee W, Sainani KL, Tang JY. Reliability and prevalence of digital image skin types in the United States: results from National Health and Nutrition Examination Survey 2003-2004. J Am Acad Dermatol 2012;66(1):163-165 (doi:10.1016/j.jaad.2011.02.044), read in full on 2026-10-06 from a copy supplied by Ross Wilkinson. Their Table I reports, for 2,691 adults, a single score per person (the two readers' scores averaged) with counts and survey-weighted shares of 42 (1.6%), 716 (33.1%), 1116 (47.8%), 195 (4.9%), 163 (3.6%) and 459 (9.0%) for scores 1 to 6. From the raw file we reproduce all six counts and all six shares exactly, but only when a half-point average is rounded down (a 2 and a 3 become 2). The letter does not state that rounding rule; rounding up instead gives 68.4% for score 3. We also reproduce their sample size (2,691), their race and sex counts, their unweighted kappa (0.45; ours 0.451), quadratic weighted kappa (0.85; ours 0.855), and \"within 1 unit of each other 95% of the time\" (ours 94.8%). The per-reader shares in data.csv are not in the letter and have no published counterpart."
+}

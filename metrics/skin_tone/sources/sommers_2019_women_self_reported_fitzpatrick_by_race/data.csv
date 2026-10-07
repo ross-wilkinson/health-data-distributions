@@ -1,0 +1,19 @@
+race_ethnicity,category,n,statistic,estimate,ci_low,ci_high,locator
+Black or Black Hispanic,Type I,178,proportion,0.0000,,,Table 1
+Black or Black Hispanic,Type II,178,proportion,0.0220,,,Table 1
+Black or Black Hispanic,Type III,178,proportion,0.1220,,,Table 1
+Black or Black Hispanic,Type IV,178,proportion,0.0500,,,Table 1
+Black or Black Hispanic,Type V,178,proportion,0.0833,,,Table 1
+Black or Black Hispanic,Type VI,178,proportion,0.7110,,,Table 1
+Other Identity,Type I,68,proportion,0.0000,,,Table 1
+Other Identity,Type II,68,proportion,0.0290,,,Table 1
+Other Identity,Type III,68,proportion,0.3380,,,Table 1
+Other Identity,Type IV,68,proportion,0.2210,,,Table 1
+Other Identity,Type V,68,proportion,0.2790,,,Table 1
+Other Identity,Type VI,68,proportion,0.1320,,,Table 1
+White or White Hispanic,Type I,200,proportion,0.1040,,,Table 1
+White or White Hispanic,Type II,200,proportion,0.2390,,,Table 1
+White or White Hispanic,Type III,200,proportion,0.4880,,,Table 1
+White or White Hispanic,Type IV,200,proportion,0.1490,,,Table 1
+White or White Hispanic,Type V,200,proportion,0.0090,,,Table 1
+White or White Hispanic,Type VI,200,proportion,0.0050,,,Table 1

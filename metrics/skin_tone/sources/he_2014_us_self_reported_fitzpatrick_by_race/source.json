@@ -1,0 +1,54 @@
+{
+  "id": "he_2014_us_self_reported_fitzpatrick_by_race",
+  "title": "Self-reported Fitzpatrick phototype I to VI by self-reported race, US adults in a convenience survey enriched for minority groups (He et al. 2014)",
+  "origin": "transcribed",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "3,386 adults who answered an internet or paper survey over six months. The link was spread through social media, including pages for minority groups, and by participants among their acquaintances; paper versions in English and Spanish were handed out at community events and at seminars at the University of California, San Francisco. 69% were women and the mean age was 37.0 years.",
+    "country": "United States",
+    "years": "Not stated (accepted for publication May 2014)",
+    "age_range": "18 and over",
+    "n": 3386,
+    "sampling": "convenience sample",
+    "exclusions": "Individuals younger than 18 years. No other exclusion is stated."
+  },
+  "measurement": {
+    "method": "Self-report. Phototype was taken from the participant's answer to \"How does your skin react if you go outside without sunscreen for half an hour?\", with six options from \"Always burns easily\" and \"Never tan\" (I) to \"Never burns\" and \"Tans profusely\" (VI). The paper states \"There was no physician assessment of skin phototype for study participants.\"",
+    "device": "None. Internet or paper questionnaire.",
+    "protocol": "Not stated beyond the questionnaire item. The authors note the survey \"was not validated for reliability\"."
+  },
+  "analysis": [
+    "Race-group shares are the row percentages printed in the paper's Table II, converted to fractions (48.4% becomes 0.484). The overall shares are from the Results text. Nothing else was computed.",
+    "The paper reports no weights and no confidence intervals for these shares.",
+    "Table II also breaks phototype down by sex, age, and self-reported skin, hair, and eye colour. Those rows are not entered here."
+  ],
+  "use_for": [
+    "How self-reported Fitzpatrick phototype spreads within each self-reported race group, to show that every group spans all six types.",
+    "Contrast with reader-assigned type: evidence that self-reported sun reaction and rated skin colour are different quantities."
+  ],
+  "do_not_use_for": [
+    "The share of the US population at each Fitzpatrick type: the sample was deliberately enriched for minority groups, so the `All` row describes this sample only.",
+    "A probability-sample estimate within any race group: respondents were reached through social media, referral by acquaintances, and community events.",
+    "A stand-in for skin colour: within this sample, people of every reported skin colour gave every phototype."
+  ],
+  "caveats": [
+    "**The overall distribution reflects who was recruited.** The authors write: \"Our study enriched for responses from ethnic minorities and does not fully represent the demographics of the US population.\" The sample is 30.2% White, 17.0% Asian, and 16.4% Black as printed in Table II.",
+    "**Convenience sample within each group too.** Social media, chain referral, and community events around one medical centre; 69% women.",
+    "**This is sun reaction, not skin colour.** The paper reports that \"the entire range of FSPT (I-VI) was observed in each racial group\", that \"61 blacks (11%) also reported burning moderately or very easily\", and that \"401 whites (39%) reported tanning moderately or profusely\".",
+    "**One question, not validated.** Phototype comes from a single self-report item, and the authors state the survey was not validated for reliability.",
+    "**Race categories are the survey's own**, with Latino offered as a race option and a separate multiracial group.",
+    "**Small inconsistencies in the printed table.** The Latino row's counts sum to 340 against a printed N of 342, and the race Ns sum to 3,379 of 3,386."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "He SY, McCulloch CE, Boscardin WJ, Chren M-M, Linos E, Arron ST. Self-reported pigmentary phenotypes and race are significant but incomplete predictors of Fitzpatrick skin phototype in an ethnically diverse population. Journal of the American Academy of Dermatology. 2014;71(4):731-737.",
+    "url": "https://doi.org/10.1016/j.jaad.2014.05.023",
+    "doi": "10.1016/j.jaad.2014.05.023",
+    "license": "\"© 2014 by the American Academy of Dermatology, Inc.\" Subscription article with no open licence. This entry reproduces 42 percentages from one table; confirm that is acceptable under the publisher's terms before the entry is published."
+  },
+  "provenance": {
+    "url": "https://doi.org/10.1016/j.jaad.2014.05.023",
+    "accessed": "2026-10-06"
+  },
+  "verification": "The full article was read by Sentinel on 2026-10-06 from a PDF supplied by Ross Wilkinson. The counts in the eight race rows of Table II, summed by type and divided by 3,386, reproduce the six overall percentages stated in the Results text. No independent published value was compared."
+}

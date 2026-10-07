@@ -1,0 +1,57 @@
+{
+  "id": "scin_2023_monk_lay_annotators",
+  "title": "Monk Skin Tone assigned from photographs by trained lay annotators, SCIN dermatology image dataset, United States, 2023",
+  "origin": "recomputed",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "Volunteer contributions to the SCIN dermatology image dataset: internet users in the United States who were shown a search advertisement against a dermatology-related query on a mobile device and chose to submit photographs of a skin concern. 5,033 contributions.",
+    "country": "United States",
+    "years": "2023 (the dataset authors give March to November 2023)",
+    "age_range": "Adults (age group is unknown for more than half of contributions)",
+    "sampling": "convenience sample",
+    "n": 5019,
+    "n_eligible": 5033,
+    "exclusions": "Contributions with no Monk label from the rater in question (28 for the US pool, 14 for the India pool), which includes those marked not gradable."
+  },
+  "measurement": {
+    "method": "Monk Skin Tone point 1 to 10 estimated from the contribution's images. The dataset documentation describes each label as from \"a trained lay person from a pool of graders\", one pool in the United States and one in India. Each pool is reported separately.",
+    "device": "None. Visual rating of contributors' photographs.",
+    "protocol": "Not stated in the dataset documentation beyond the description of the graders."
+  },
+  "analysis": [
+    "Shares are the unweighted fraction of rated contributions at each Monk point, for each annotator pool, overall and for self-reported race and ethnicity groups with at least 50 rated contributions.",
+    "Race and ethnicity groups are contributors who gave a single listed group, plus the dataset's own \"two or more\" group. 2,381 contributions have no race or ethnicity.",
+    "Agreement between the two pools, among 5,004 contributions rated by both: the same Monk point for 40.1%, and within one point for 83.6%."
+  ],
+  "use_for": [
+    "A first look at how Monk Skin Tone ratings spread in a large US volunteer group, when no population data exist.",
+    "Seeing how much a Monk distribution depends on who does the rating: the two annotator pools differ substantially on the same photographs."
+  ],
+  "do_not_use_for": [
+    "The share of the US population at each Monk point.",
+    "Self-assessed Monk Skin Tone: nobody here rated their own skin on this scale.",
+    "Fine distinctions between adjacent Monk points: the two pools agree exactly on only 40% of contributions."
+  ],
+  "caveats": [
+    "**People with a skin concern who answered an advertisement.** Not a sample of any population. Among those who gave demographics the dataset authors report more women and more people under 40 than the US population, and race or ethnicity is missing for nearly half of contributions.",
+    "**Shares are unweighted and have no intervals.** An interval would describe only the size of this volunteer group, not how well it represents anyone else.",
+    "**Rated from contributors' own phone photographs of a skin condition**, taken in uncontrolled light and often of affected skin.",
+    "**The two annotator pools give different distributions.** The US pool places 11.5% at point 1 and 33.2% at point 2; the India pool places 3.7% and 48.4%. Among Black or African American contributors the US pool's most common rating is point 6 and the India pool's is point 4.",
+    "**The darkest points are almost empty.** Points 8 to 10 together hold under 2% of contributions for either pool, so nothing can be said about them."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Ward A, Li J, Wang J, et al. Creating an Empirical Dermatology Dataset Through Crowdsourcing With Web Search Advertisements. JAMA Network Open. 2024;7(11):e2446615. Dataset: SCIN (Skin Condition Image Network), https://github.com/google-research-datasets/scin",
+    "url": "https://github.com/google-research-datasets/scin",
+    "doi": "10.1001/jamanetworkopen.2024.46615",
+    "license": "The repository states: \"The SCIN Dataset is released under SCIN Data Use License\" (https://github.com/google-research-datasets/scin/blob/main/LICENSE). It grants the right to reproduce and share the material and adapted material with attribution and a link to the licence, and prohibits any attempt to re-identify the data subjects. The shares here are adapted from the SCIN dataset."
+  },
+  "provenance": {
+    "pipeline": "pipelines/scin_skin_tone.py",
+    "raw_files": [
+      "raw/scin/scin_cases.csv",
+      "raw/scin/scin_labels.csv"
+    ]
+  },
+  "verification": "O'Hagan, Sharma, Ungar (J Drugs Dermatol 2025;24(7):431-432) analysed \"the 4292 patient images with all FST and MST scores available\" from this dataset. Restricting to contributions with a dermatologist Fitzpatrick label and both Monk labels gives exactly 4,292 here. The US-pool Monk shares on that subset match the bar heights measured from that letter's Figure 1 panel A to within 0.06 percentage points (pipelines/digitise/ohagan_2025_figure1_check.py)."
+}

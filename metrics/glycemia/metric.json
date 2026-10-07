@@ -1,0 +1,12 @@
+{
+  "id": "glycemia",
+  "name": "Fasting glucose and HbA1c",
+  "category": "Metabolic",
+  "units": "mg/dL, %",
+  "priority": 15,
+  "status": "planned",
+  "candidate_sources": [
+    "NHANES laboratory data"
+  ],
+  "note": "Fasting glucose uses the fasting subsample weights, not the examination weights."
+}

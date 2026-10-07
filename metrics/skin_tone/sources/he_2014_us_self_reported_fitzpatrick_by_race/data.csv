@@ -1,0 +1,43 @@
+race_ethnicity,category,n,statistic,estimate,ci_low,ci_high,locator
+All,Type I,3386,proportion,0.046,,,Results
+All,Type II,3386,proportion,0.111,,,Results
+All,Type III,3386,proportion,0.181,,,Results
+All,Type IV,3386,proportion,0.222,,,Results
+All,Type V,3386,proportion,0.250,,,Results
+All,Type VI,3386,proportion,0.188,,,Results
+White,Type I,1021,proportion,0.095,,,Table II
+White,Type II,1021,proportion,0.217,,,Table II
+White,Type III,1021,proportion,0.295,,,Table II
+White,Type IV,1021,proportion,0.214,,,Table II
+White,Type V,1021,proportion,0.123,,,Table II
+White,Type VI,1021,proportion,0.055,,,Table II
+Asian,Type I,576,proportion,0.013,,,Table II
+Asian,Type II,576,proportion,0.059,,,Table II
+Asian,Type III,576,proportion,0.130,,,Table II
+Asian,Type IV,576,proportion,0.262,,,Table II
+Asian,Type V,576,proportion,0.335,,,Table II
+Asian,Type VI,576,proportion,0.199,,,Table II
+Black,Type I,556,proportion,0.014,,,Table II
+Black,Type II,556,proportion,0.030,,,Table II
+Black,Type III,556,proportion,0.065,,,Table II
+Black,Type IV,556,proportion,0.115,,,Table II
+Black,Type V,556,proportion,0.291,,,Table II
+Black,Type VI,556,proportion,0.484,,,Table II
+Native American,Type I,245,proportion,0.012,,,Table II
+Native American,Type II,245,proportion,0.078,,,Table II
+Native American,Type III,245,proportion,0.082,,,Table II
+Native American,Type IV,245,proportion,0.273,,,Table II
+Native American,Type V,245,proportion,0.359,,,Table II
+Native American,Type VI,245,proportion,0.196,,,Table II
+Latino,Type I,342,proportion,0.079,,,Table II
+Latino,Type II,342,proportion,0.108,,,Table II
+Latino,Type III,342,proportion,0.187,,,Table II
+Latino,Type IV,342,proportion,0.278,,,Table II
+Latino,Type V,342,proportion,0.225,,,Table II
+Latino,Type VI,342,proportion,0.117,,,Table II
+Multiracial,Type I,564,proportion,0.019,,,Table II
+Multiracial,Type II,564,proportion,0.074,,,Table II
+Multiracial,Type III,564,proportion,0.184,,,Table II
+Multiracial,Type IV,564,proportion,0.229,,,Table II
+Multiracial,Type V,564,proportion,0.326,,,Table II
+Multiracial,Type VI,564,proportion,0.167,,,Table II

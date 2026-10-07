@@ -1,0 +1,4 @@
+category,n,statistic,estimate,ci_low,ci_high,locator
+Light,2214,proportion,0.618,,,Table 1
+Medium,2214,proportion,0.232,,,Table 1
+Dark,2214,proportion,0.150,,,Table 1

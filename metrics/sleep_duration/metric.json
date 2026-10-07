@@ -1,0 +1,13 @@
+{
+  "id": "sleep_duration",
+  "name": "Sleep duration",
+  "category": "Sleep",
+  "units": "hours/night",
+  "priority": 12,
+  "status": "planned",
+  "candidate_sources": [
+    "NHANES sleep questionnaire",
+    "NHANES 2011-2014 accelerometry"
+  ],
+  "note": "Self-reported and device-measured durations differ systematically and need separate entries."
+}

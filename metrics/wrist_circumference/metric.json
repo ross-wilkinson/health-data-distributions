@@ -1,0 +1,12 @@
+{
+  "id": "wrist_circumference",
+  "name": "Wrist and arm circumference",
+  "category": "Anthropometry",
+  "units": "cm",
+  "priority": 5,
+  "status": "planned",
+  "candidate_sources": [
+    "To be identified; NHANES has arm circumference"
+  ],
+  "note": "Wrist size drives wearable fit and sensor contact. Source for wrist specifically not yet found."
+}

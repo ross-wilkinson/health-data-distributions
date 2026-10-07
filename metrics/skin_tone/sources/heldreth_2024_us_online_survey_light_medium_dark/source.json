@@ -1,0 +1,57 @@
+{
+  "id": "heldreth_2024_us_online_survey_light_medium_dark",
+  "title": "Self-reported light, medium, or dark skin tone, US adults in a weighted online survey, 2021 (Heldreth et al. 2024)",
+  "origin": "transcribed",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "2,214 adults in the United States who completed an online survey through the Qualtrics platform in April to May 2021. Respondents were screened to quotas based on Census population proportions, with respondents reporting medium and dark skin tones oversampled, then weighted by raking to the 2019 American Community Survey on race and gender.",
+    "country": "United States",
+    "years": "April to May 2021",
+    "age_range": "18 and over",
+    "n": 2214,
+    "sampling": "convenience sample",
+    "exclusions": "Under 18; not agreeing to answer questions collecting potentially sensitive information. No other exclusion is stated."
+  },
+  "measurement": {
+    "method": "Self-report. Each respondent was randomly assigned one of three on-screen scales (a 6-swatch Fitzpatrick graphic, the 10-point Monk scale, or a 40-shade Fenty Beauty palette) and asked \"Which of the following is closest to your skin tone?\" The authors then grouped answers into light (Fitzpatrick I and II, Monk 1 to 3, Fenty 100 to 190), medium (Fitzpatrick III and IV, Monk 4 to 6, Fenty 200 to 390), and dark (Fitzpatrick V and VI, Monk 7 to 10, Fenty 400 to 490).",
+    "device": "The respondent's own desktop or mobile screen; no colour calibration.",
+    "protocol": "Respondents were asked to hold the back of their hand up to the screen until they found the colour that most closely matched."
+  },
+  "analysis": [
+    "The three shares are the paper's \"Weighted % of Sample\" from Table 1, converted from percent to a fraction (61.8% becomes 0.618). Nothing else was computed.",
+    "The weights adjust for race and gender only. Skin tone, age, and education are listed in the table under \"Not used for weighting\".",
+    "The paper gives no confidence interval for these shares.",
+    "The unweighted counts are 994 light, 582 medium, and 638 dark."
+  ],
+  "use_for": [
+    "A rough first estimate of how US adults split across three broad self-described skin tone groups, when nothing better is available.",
+    "Showing that a published survey weighted to Census race and gender put about 15% of US adults in its darkest group."
+  ],
+  "do_not_use_for": [
+    "The share of people at any individual Monk point, Fitzpatrick type, or Fenty shade: the paper reports only the three pooled groups.",
+    "A Monk Skin Tone distribution: respondents were randomly assigned to one of three scales, so only some saw the Monk scale, and the paper does not report their answers separately.",
+    "A probability-sample estimate: respondents came from an online panel and were weighted on race and gender only.",
+    "Comparison with instrument-measured skin colour or with reader-assigned type: this is self-matching to swatches on an uncalibrated screen."
+  ],
+  "caveats": [
+    "**Three different scales are pooled.** A respondent counted as \"medium\" chose Fitzpatrick III or IV, or Monk 4 to 6, or Fenty 200 to 390, depending on which scale they were shown. The paper does not show that these cut-points are equivalent.",
+    "**The grouping is the authors' own.** The paper does not test other cut-points on any of the three scales.",
+    "**Online panel, not a probability sample.** The paper says \"The random sample was not nationally representative on entry, but data was weighted to be nationally representative on ethnoracial group and gender.\"",
+    "**The weighted sample is young.** 30.9% of the weighted sample is aged 18 to 29; age was not used for weighting.",
+    "**Self-matched on an uncalibrated screen.** The authors report that desktop versus mobile made no significant difference to their main outcome, which is not the same as showing the colour match is accurate.",
+    "**Two printed percentages do not match their counts.** In Table 1 the unweighted shares for medium and dark are printed as 27.1% and 28.0%, but 582 and 638 of 2,214 are 26.3% and 28.8%. The weighted shares used here cannot be checked from the paper.",
+    "**The paper's own table marks national data on skin tone as \"no data available\".**"
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Heldreth CM, Monk EP, Clark AT, Ricco S, Schumann C, Eyee X. Which Skin Tone Measures Are the Most Inclusive? An Investigation of Skin Tone Measures for Artificial Intelligence. ACM Journal on Responsible Computing. 2024;1(1):Article 7.",
+    "url": "https://doi.org/10.1145/3632120",
+    "doi": "10.1145/3632120",
+    "license": "\"This work is licensed under a Creative Commons Attribution International 4.0 License.\""
+  },
+  "provenance": {
+    "url": "https://doi.org/10.1145/3632120",
+    "accessed": "2026-10-06"
+  },
+  "verification": "The published PDF was read in full by Sentinel on 2026-10-06 from a copy supplied by Ross Wilkinson, after the publisher's page blocked the fetch tool. The three weighted shares sum to 100.0%. No independent published value was compared."
+}

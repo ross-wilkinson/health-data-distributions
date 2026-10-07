@@ -1,0 +1,12 @@
+{
+  "id": "sleep_architecture",
+  "name": "Sleep stage proportions",
+  "category": "Sleep",
+  "units": "% of total sleep time",
+  "priority": 13,
+  "status": "planned",
+  "candidate_sources": [
+    "Polysomnography cohorts at the National Sleep Research Resource"
+  ],
+  "note": "Cohort data need an access agreement; check terms before publishing aggregates."
+}

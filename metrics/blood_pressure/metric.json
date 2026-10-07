@@ -1,0 +1,12 @@
+{
+  "id": "blood_pressure",
+  "name": "Blood pressure (systolic and diastolic)",
+  "category": "Cardiovascular",
+  "units": "mmHg",
+  "priority": 2,
+  "status": "planned",
+  "candidate_sources": [
+    "NHANES examination data"
+  ],
+  "note": "Same files as resting pulse, so the cheapest second entry. Auscultatory and oscillometric cycles need separate entries."
+}

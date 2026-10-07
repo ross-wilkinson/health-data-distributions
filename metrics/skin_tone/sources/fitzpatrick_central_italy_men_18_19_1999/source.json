@@ -1,0 +1,55 @@
+{
+  "id": "fitzpatrick_central_italy_men_18_19_1999",
+  "title": "Self-reported Fitzpatrick phototype I to IV, men aged about 18 at the military medical visit, Abruzzo and Ascoli Piceno (Italy), 1990",
+  "origin": "transcribed",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "Men born in 1972 (a small percentage in 1971) called for the preliminary military medical visit at Chieti during 1990. The 11,862 men called are described as approximately 88% of the 18-year-old residents of the region of Abruzzo and the province of Ascoli Piceno (Marche). The 5,837 scheduled for an early-morning visit had the dermatological examination; 5,318 of them gave a usable phototype answer.",
+    "country": "Italy",
+    "years": "January to December 1990",
+    "age_range": "About 18 (the abstract says 18-19)",
+    "n": 5318,
+    "n_eligible": 5837,
+    "sampling": "other",
+    "exclusions": "519 of the 5,837 (8.9%) were excluded from the phototype analysis because they did not know their sensitivity to the sun or gave more than one answer. No one declined to participate. Participants are described as healthy."
+  },
+  "measurement": {
+    "method": "Self-report. Each man completed a questionnaire before the physical examination, reporting his skin's response to an initial 45 to 60 minutes of midday summer sun: burning after 24 hours and tanning after 7 days. Answers were classified by Fitzpatrick's sun-reactive criteria. Phototypes V and VI were not recorded, the paper says, \"Since all subjects were Caucasians\".",
+    "device": "None. Self-completed questionnaire.",
+    "protocol": "At least one examiner was present to explain the questionnaire, only when asked, while it was being answered."
+  },
+  "analysis": [
+    "The four shares are the paper's \"Valid %\" column in Table 1: the share of the 5,318 men with a usable answer, converted from percent to a fraction (48.9% becomes 0.489). Nothing else was computed.",
+    "The same table also gives each type as a share of all 5,837 men, including the 519 without a usable answer: 2.5%, 7.8%, 36.3% and 44.5%. Those are the figures quoted in the paper's abstract.",
+    "The paper reports no weights and no confidence intervals."
+  ],
+  "use_for": [
+    "The distribution of self-reported Fitzpatrick phototype I to IV in young men of one Central Italian area in 1990, from a near-complete conscription cohort.",
+    "An example of how many people cannot place themselves on the Fitzpatrick questionnaire: 8.9% here."
+  ],
+  "do_not_use_for": [
+    "A distribution of Fitzpatrick type for women, other ages, other countries, or a mixed-ancestry population.",
+    "Planning recruitment across the full Fitzpatrick range: phototypes V and VI were not recorded.",
+    "Comparison with reader-assigned or instrument-measured skin tone: this is self-reported sun reaction."
+  ],
+  "caveats": [
+    "**Phototypes V and VI were not recorded.** The paper says \"Since all subjects were Caucasians, phototype V and VI were not recorded.\" The four shares sum to 100% of a scale cut off at IV.",
+    "**The abstract's percentages use a different denominator.** The abstract's \"44.5%\" for phototype IV and \"10.3%\" for I or II are shares of all 5,837 men, including 519 with no usable answer. Among the 5,318 who answered, the shares are 48.9% and 11.3% (2.7% plus 8.6%). This entry uses the valid-answer shares.",
+    "**8.9% could not be classified.** 519 men did not know their sensitivity to the sun or gave more than one answer.",
+    "**Men only, one birth cohort, one area.** The paper says the group \"was not intended to represent all of Italy but only the regions indicated.\"",
+    "**Not a designed probability sample, but close to a census.** The men called were about 88% of 18-year-old residents, and those examined were the ones scheduled for early-morning visits, which the paper describes as random. Sampling is recorded as 'other'.",
+    "**Self-report has a subjective component.** The authors write that \"the reliability is always questionable due to an inherent margin of error.\""
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Ballone E, Passamonti M, Lappa G, Di Blasio G, Fazii P. Pigmentary traits, nevi and skin phototypes in a youth population of Central Italy. European Journal of Epidemiology. 1999;15(2):189-195.",
+    "url": "https://doi.org/10.1023/A:1007539807705",
+    "doi": "10.1023/A:1007539807705",
+    "license": "\"© 1999 Kluwer Academic Publishers.\" Subscription article with no open licence. Only the four shares and short quotations are reproduced here; check the publisher's terms before reusing more."
+  },
+  "provenance": {
+    "url": "https://doi.org/10.1023/A:1007539807705",
+    "accessed": "2026-10-06"
+  },
+  "verification": "The full article was read by Sentinel on 2026-10-06 from a PDF supplied by Ross Wilkinson; until then only the abstract had been read. The four counts in Table 1 (144, 457, 2119, 2598) sum to 5,318 and reproduce the printed Valid % to one decimal. The same counts appear as the row totals of the paper's Tables 3 and 4. No independent published value was compared."
+}

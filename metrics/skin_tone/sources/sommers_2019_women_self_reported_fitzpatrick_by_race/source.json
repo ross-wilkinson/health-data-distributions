@@ -1,0 +1,50 @@
+{
+  "id": "sommers_2019_women_self_reported_fitzpatrick_by_race",
+  "title": "Self-reported Fitzpatrick type I to VI by race group, using descriptions that name skin colour, women in Philadelphia and San Juan (Sommers et al. 2019)",
+  "origin": "transcribed",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "446 English- or Spanish-speaking women aged 21 and over in Philadelphia and San Juan, Puerto Rico, recruited by flyers at health sciences centres for a study of skin injury, and enrolled to match the age and race and ethnicity mix of an existing sexual assault registry. Mean age 32.8.",
+    "country": "United States (Philadelphia) and Puerto Rico (San Juan)",
+    "years": "November 2008 to January 2014",
+    "age_range": "21 and over",
+    "n": 446,
+    "sampling": "convenience sample",
+    "exclusions": "Women with injury to the genitalia. Of 575 screened, 109 declined."
+  },
+  "measurement": {
+    "method": "Self-reported type, chosen in an interview from six descriptions that name a skin colour as well as a sun reaction: \"Type I, very fair, always burns, never tans; Type II, fair, burns easily; Type III, fair, sometimes burns; Type IV, beige-olive, burns minimally; Type V, moderate brown, rarely burns; Type VI, dark brown or black, never burns\".",
+    "device": "None. Interview.",
+    "protocol": "Read to the participant by a trained research assistant in English or Spanish at a skin research laboratory."
+  },
+  "analysis": [
+    "Shares are the row percentages printed in the paper's Table 1 for each race group, converted to fractions. The paper's three groups are White/White Hispanic, Black/Black Hispanic, and Other Identities.",
+    "n for each group is the sum of the six counts printed in that row (178, 68, 200); the paper states the groups only as 40%, 15%, and 45% of the sample.",
+    "The whole-sample row of Table 1 is not entered: its printed percentages sum to 100.4, and 36 of 446 is 8.1%, not the 8.5% printed for Type V."
+  ],
+  "use_for": [
+    "Showing how the wording of the Fitzpatrick question changes the answer: these descriptions name a skin colour, and 71% of Black or Black Hispanic women chose Type VI."
+  ],
+  "do_not_use_for": [
+    "A distribution for any population: a quota-matched convenience sample of women in two cities.",
+    "Comparison with sources that asked about sun reaction alone, as if they measured the same thing."
+  ],
+  "caveats": [
+    "**Women only, recruited by flyer, in two cities.** Enrolment was matched to the age and race mix of a sexual assault registry, not to any population.",
+    "**The paper gives two sample sizes.** The abstract says N=466; the Methods, Results, and tables say 446. 466 is also given as the number enrolled.",
+    "**The descriptions mix colour and sun reaction.** \"Type VI, dark brown or black, never burns\" lets a respondent answer on colour. Sources that ask only about burning and tanning get very different answers from Black respondents.",
+    "**Small groups.** The Other Identity group is 68 women."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Sommers MS, Fargo JD, Regueira Y, Brown KM, Beacham BL, Perfetti AR, Everett JS, Margolis DJ. Are the Fitzpatrick Skin Phototypes valid for cancer risk assessment in a racially and ethnically diverse sample of women? Ethnicity & Disease. 2019;29(3):505-512.",
+    "url": "https://doi.org/10.18865/ed.29.3.505",
+    "doi": "10.18865/ed.29.3.505",
+    "license": "Not stated on the article pages read. Confirm the journal's terms before publishing the transcribed values."
+  },
+  "provenance": {
+    "url": "https://doi.org/10.18865/ed.29.3.505",
+    "accessed": "2026-10-06"
+  },
+  "verification": "The full article was read by Sentinel on 2026-10-06 from a PDF supplied by Ross Wilkinson. The counts in the three race rows of Table 1 sum to 446 and, by type, to the counts in the table's whole-sample row (21, 54, 143, 54, 36, 138)."
+}

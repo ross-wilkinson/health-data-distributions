@@ -1,0 +1,23 @@
+sex,age_band,n,statistic,estimate,ci_low,ci_high,locator
+Male,All,34621,mean,63.4,,,Fig 2
+Male,All,34621,sd,7.5,,,Fig 2
+Male,All,34621,p2.5,49.8,,,Fig 2
+Male,All,34621,p5,51.8,,,Fig 2
+Male,All,34621,p10,54.1,,,Fig 2
+Male,All,34621,p25,58.1,,,Fig 2
+Male,All,34621,p50,62.9,,,Fig 2
+Male,All,34621,p75,68.2,,,Fig 2
+Male,All,34621,p90,73.4,,,Fig 2
+Male,All,34621,p95,76.6,,,Fig 2
+Male,All,34621,p97.5,79.6,,,Fig 2
+Female,All,57836,mean,66.6,,,Fig 2
+Female,All,57836,sd,7.4,,,Fig 2
+Female,All,57836,p2.5,53.0,,,Fig 2
+Female,All,57836,p5,55.0,,,Fig 2
+Female,All,57836,p10,57.3,,,Fig 2
+Female,All,57836,p25,61.5,,,Fig 2
+Female,All,57836,p50,66.4,,,Fig 2
+Female,All,57836,p75,71.5,,,Fig 2
+Female,All,57836,p90,76.3,,,Fig 2
+Female,All,57836,p95,79.3,,,Fig 2
+Female,All,57836,p97.5,81.9,,,Fig 2

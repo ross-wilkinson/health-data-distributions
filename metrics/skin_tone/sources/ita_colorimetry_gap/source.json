@@ -1,0 +1,47 @@
+{
+  "id": "ita_colorimetry_gap",
+  "title": "Individual typology angle and other colorimeter measures: no population distribution found in this search",
+  "origin": "gap",
+  "statistic_form": "none",
+  "population": {
+    "description": "What was looked for: the distribution (percentiles, or mean and SD, or category shares) of an instrument-measured skin colour, such as individual typology angle (ITA) or CIELAB L*, in a defined population (a national survey, a large cohort, or a published study).",
+    "country": "Any",
+    "years": "Any",
+    "age_range": "Any",
+    "n": null,
+    "sampling": "other",
+    "exclusions": "Not applicable: this entry records a search, not a population."
+  },
+  "measurement": {
+    "method": "Reflectance colorimeter or spectrophotometer readings, reported as CIELAB L*, a*, b* or as individual typology angle (ITA) in degrees.",
+    "device": "Any colorimeter or spectrophotometer (for example Konica Minolta CM-700d, Delfin SkinColorCatch).",
+    "protocol": "Not applicable: nothing was found to describe. Where such studies were seen, the body site and lighting varied between studies."
+  },
+  "use_for": [
+    "Knowing what was searched and which near misses were seen, so the search need not be repeated from scratch."
+  ],
+  "do_not_use_for": [
+    "Concluding that no instrument-measured skin colour distribution exists: this records one search on one date.",
+    "Substituting self-reported race and ethnicity, a visual scale, or an enrolled study sample for a population distribution of ITA."
+  ],
+  "caveats": [
+    "**Not found in this search.** No distribution of ITA or other colorimeter or spectrophotometer measures in a defined population was found in the searches logged in evidence.md (2026-10-06). That is a statement about this search only.",
+    "**Closest proxies seen, and why each is a poor substitute.**",
+    "A cohort of 789 participants measured with a Konica Minolta CM-700d at UCSF and San Francisco General Hospital (medRxiv preprint doi:10.1101/2025.02.21.25322707): it reports median ITA with quartiles by self-identified race and by Fitzpatrick and Monk category (its Table 4), but the authors say the sites were chosen for convenience and the table gives no n for each row, so it neither describes a population nor fits the n column this format requires.",
+    "A cohort of 368 Indian adults measured at one prosthodontics department with a SkinColorCatch colorimeter (J Indian Prosthodont Soc 2024, doi:10.4103/jips.jips_194_24): the article states 'The convenience method of sampling was adopted', participants were volunteers aged 20 to 45, and the reported groups come from a cluster analysis of the measurements, not from a defined population.",
+    "A 128-patient ICU cohort at Duke that measured ITA with a Delfin SkinColorCatch (medRxiv preprint doi:10.1101/2024.02.24.24303291): a pilot sample recruited for a pulse oximetry question.",
+    "Self-reported race and ethnicity: groups overlap widely in measured ITA; the UCSF preprint states 'Each self-assigned NIH race category included a wide range of ITA and subjective scale categories.'",
+    "Fitzpatrick phototype (self-reported or assigned): a different quantity (sun reaction) that corresponds to ITA only roughly; the UCSF preprint reports that only 51% of participants rated Fitzpatrick V or VI had an ITA below -30 degrees.",
+    "A study of 556 people at one research campus in Pretoria, South Africa, in 2014 (Wilkes et al. 2015): its ITA category counts appear only in a bar chart and are now entered as the separate digitised source wilkes_2015_pretoria_ita_categories_digitised. One workplace, not a population.",
+    "A study of 446 women in Philadelphia and San Juan (Sommers et al. 2019) that reports the mean and SD of CIELAB L* on the inner upper arm within each self-reported Fitzpatrick type: entered as the separate source sommers_2019_lstar_by_self_reported_fitzpatrick. It gives lightness, not ITA, and only conditional on the person's own type choice."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Not applicable: documented gap. No source was found; see evidence.md for the search log and the near misses.",
+    "url": "Not applicable (documented gap; see evidence.md)",
+    "license": "Not applicable"
+  },
+  "provenance": {
+    "accessed": "2026-10-06"
+  }
+}

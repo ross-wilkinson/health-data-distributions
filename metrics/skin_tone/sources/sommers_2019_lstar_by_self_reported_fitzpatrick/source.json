@@ -1,0 +1,52 @@
+{
+  "id": "sommers_2019_lstar_by_self_reported_fitzpatrick",
+  "title": "Skin lightness (CIELAB L*) on the inner upper arm, by self-reported Fitzpatrick type, women in Philadelphia and San Juan (Sommers et al. 2019)",
+  "origin": "transcribed",
+  "statistic_form": "moments",
+  "population": {
+    "description": "446 English- or Spanish-speaking women aged 21 and over in Philadelphia and San Juan, Puerto Rico, recruited by flyers at health sciences centres for a study of skin injury, and enrolled to match the age and race and ethnicity mix of an existing sexual assault registry. Mean age 32.8.",
+    "country": "United States (Philadelphia) and Puerto Rico (San Juan)",
+    "years": "November 2008 to January 2014",
+    "age_range": "21 and over",
+    "n": 446,
+    "sampling": "convenience sample",
+    "exclusions": "Women with injury to the genitalia. Of 575 screened, 109 declined."
+  },
+  "measurement": {
+    "method": "CIELAB L* (lightness; the paper gives a general skin range of about 20, dark, to 85, light) measured with a reflectance spectrophotometer, reported as mean and SD within each self-reported Fitzpatrick type. Self-reported type, chosen in an interview from six descriptions that name a skin colour as well as a sun reaction: \"Type I, very fair, always burns, never tans; Type II, fair, burns easily; Type III, fair, sometimes burns; Type IV, beige-olive, burns minimally; Type V, moderate brown, rarely burns; Type VI, dark brown or black, never burns\".",
+    "device": "ColorTec PSM reflectance spectrophotometer.",
+    "protocol": "Inner upper arm, two inches distal from the axilla, chosen as a sun-protected site. The paper states that quality control kept L* error within 5%."
+  },
+  "analysis": [
+    "Means and SDs are transcribed from the L* row of the paper's Table 1; n for each type is from the table's whole-sample row. Units are L* units, not degrees of ITA.",
+    "These are distributions of an instrument reading conditional on the person's own type choice. The paper does not give the L* distribution of the whole sample or of each race group."
+  ],
+  "use_for": [
+    "Seeing how widely measured skin lightness spreads within a single self-reported Fitzpatrick type: types III to V have SDs of 8 to 10 L* units, so neighbouring types overlap heavily.",
+    "The only instrument-measured skin colour values with a mean and SD in this entry."
+  ],
+  "do_not_use_for": [
+    "The distribution of L* in any population.",
+    "ITA: L* is one of the two quantities ITA is computed from, and the paper does not report ITA.",
+    "A conversion from self-reported type to skin lightness for an individual."
+  ],
+  "caveats": [
+    "**Women only, recruited by flyer, in two cities.** Enrolment was matched to the age and race mix of a sexual assault registry, not to any population.",
+    "**The paper gives two sample sizes.** The abstract says N=466; the Methods, Results, and tables say 446. 466 is also given as the number enrolled.",
+    "**Conditional on self-report.** Each row describes the women who chose that type, and the type descriptions named a skin colour, which ties the answer to lightness more than a sun-reaction question would.",
+    "**Self-report tracks lightness across the whole sample but not within groups.** The paper reports a correlation of -0.77 between type and L* overall, but -0.23 among Black or Black Hispanic women.",
+    "**L* values in the text are on a different scale.** The Results quote L* means such as 6361.9, a hundred times the table's scale; the table values are used."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Sommers MS, Fargo JD, Regueira Y, Brown KM, Beacham BL, Perfetti AR, Everett JS, Margolis DJ. Are the Fitzpatrick Skin Phototypes valid for cancer risk assessment in a racially and ethnically diverse sample of women? Ethnicity & Disease. 2019;29(3):505-512.",
+    "url": "https://doi.org/10.18865/ed.29.3.505",
+    "doi": "10.18865/ed.29.3.505",
+    "license": "Not stated on the article pages read. Confirm the journal's terms before publishing the transcribed values."
+  },
+  "provenance": {
+    "url": "https://doi.org/10.18865/ed.29.3.505",
+    "accessed": "2026-10-06"
+  },
+  "verification": "The full article was read by Sentinel on 2026-10-06 from a PDF supplied by Ross Wilkinson. The six type counts sum to 446. No independent published value was compared."
+}

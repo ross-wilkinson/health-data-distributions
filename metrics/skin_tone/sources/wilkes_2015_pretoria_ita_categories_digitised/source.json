@@ -1,0 +1,55 @@
+{
+  "id": "wilkes_2015_pretoria_ita_categories_digitised",
+  "title": "ITA skin colour category measured by colorimeter, staff of one research campus, Pretoria, South Africa, 2014 (Wilkes et al. 2015, digitised)",
+  "origin": "digitised",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "556 people \"drawn from the Council for Scientific and Industrial Research campus in Pretoria, South Africa\". They self-identified as black (390), Indian/Asian (51), white (99), or colored (16).",
+    "country": "South Africa",
+    "years": "6 to 22 October 2014",
+    "age_range": "Not stated",
+    "n": 556,
+    "sampling": "convenience sample",
+    "exclusions": "Not stated. Participants gave written consent and spoke English."
+  },
+  "measurement": {
+    "method": "Individual typology angle (ITA) measured with a colorimeter and grouped into six categories (very light, light, intermediate, tanned, brown, dark) following Del Bino and Bernerd 2013, which the paper cites for the cut-points without restating them.",
+    "device": "Skin Colorimeter CL 400 (Courage+Khazaka Electronics).",
+    "protocol": "Device held against the inner part of the upper non-dominant arm, after the participant cleaned the arm with a sanitary wipe."
+  },
+  "analysis": [
+    "The paper gives the number of participants in each ITA category only as a bar chart. The six bar heights were measured in pixels against the chart's gridlines and rounded to whole participants: 58, 46, 13, 53, 348, 38.",
+    "Shares are those counts divided by their total. The paper reports no ITA mean, SD, or percentile."
+  ],
+  "use_for": [
+    "One example of instrument-measured ITA categories in a group where most people have brown skin.",
+    "Showing that an inner-arm ITA category of \"dark\" is uncommon (6.8%) even in a group that is 70% black by self-identification."
+  ],
+  "do_not_use_for": [
+    "The ITA distribution of South Africa, of any ethnic group, or of any population: this is the staff of one workplace.",
+    "ITA at any other body site: the inner upper arm is a sun-protected site.",
+    "ITA values in degrees: only the six categories are available."
+  ],
+  "caveats": [
+    "**Measured from a chart, not read from a table.** Each count is good to about one participant. Two bars measured almost exactly half-way between whole numbers (45.6 and 52.6), so those two counts could each be one lower.",
+    "**One workplace, two weeks.** The paper does not say how participants were recruited on the campus.",
+    "**Category cut-points are not stated in this paper.** It refers to an earlier publication for them.",
+    "**The figure was corrected after publication.** The article notes a correction \"to fix statistics in the Figure\"; the corrected version is the one measured."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Wilkes M, Wright CY, du Plessis JL, Reeder A. Fitzpatrick Skin Type, Individual Typology Angle, and Melanin Index in an African Population: Steps Toward Universally Applicable Skin Photosensitivity Assessments. JAMA Dermatology. 2015;151(8):902-903.",
+    "url": "https://doi.org/10.1001/jamadermatol.2015.0351",
+    "doi": "10.1001/jamadermatol.2015.0351",
+    "license": "\"Copyright 2015 American Medical Association. All rights reserved.\" Subscription article. Six measured values are given here, not the figure; confirm this is acceptable before publishing."
+  },
+  "provenance": {
+    "url": "https://doi.org/10.1001/jamadermatol.2015.0351",
+    "accessed": "2026-10-06",
+    "figure": "Figure, panel B (ITA series, the darker bars)",
+    "method": "Page 902 of the article PDF rendered at 600 dpi; bar tops, including their outlines, located in pixels and scaled against the gridlines, which are 25 participants apart",
+    "precision": "about one participant per bar (0.2 percentage points)",
+    "script": "pipelines/digitise/wilkes_2015_figure_b.py"
+  },
+  "verification": "The six measured ITA counts sum to 555.9 before rounding and to exactly 556 after, the number of participants stated in the paper. The same method, applied to a published bar chart whose true values are known from open data, was accurate to 0.06 percentage points (pipelines/digitise/ohagan_2025_figure1_check.py)."
+}

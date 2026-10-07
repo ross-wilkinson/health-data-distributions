@@ -1,0 +1,6 @@
+category,n,statistic,estimate,ci_low,ci_high,locator
+Type I,2085,proportion,0.024,,,Table 1
+Type II,2085,proportion,0.026,,,Table 1
+Type III,2085,proportion,0.091,,,Table 1
+Type IV,2085,proportion,0.268,,,Table 1
+None of the above,2085,proportion,0.590,,,Table 1

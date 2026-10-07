@@ -1,0 +1,12 @@
+{
+  "id": "heart_rate_variability",
+  "name": "Heart rate variability",
+  "category": "Cardiovascular",
+  "units": "ms",
+  "priority": 10,
+  "status": "planned",
+  "candidate_sources": [
+    "Published ECG cohort reference values"
+  ],
+  "note": "Strongly dependent on metric, recording length, time of day, and device. Likely pointer entries with citations rather than recomputed tables."
+}

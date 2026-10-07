@@ -1,0 +1,12 @@
+{
+  "id": "gait_speed",
+  "name": "Walking speed",
+  "category": "Mobility",
+  "units": "m/s",
+  "priority": 14,
+  "status": "planned",
+  "candidate_sources": [
+    "To be identified"
+  ],
+  "note": "Timed-walk tests and free-living wearable estimates are different quantities."
+}

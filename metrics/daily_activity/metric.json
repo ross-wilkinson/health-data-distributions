@@ -1,0 +1,12 @@
+{
+  "id": "daily_activity",
+  "name": "Daily physical activity volume and step count",
+  "category": "Activity",
+  "units": "steps/day, activity units/day",
+  "priority": 11,
+  "status": "planned",
+  "candidate_sources": [
+    "NHANES 2011-2014 wrist accelerometry"
+  ],
+  "note": "The parked population-reference-curves project becomes this entry."
+}

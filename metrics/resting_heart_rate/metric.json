@@ -1,0 +1,10 @@
+{
+  "id": "resting_heart_rate",
+  "name": "Resting heart rate and pulse",
+  "category": "Cardiovascular",
+  "units": "beats/min",
+  "priority": 1,
+  "status": "available",
+  "definition": "Heart or pulse rate, in beats per minute, while the person is at rest. The value depends on how and when it is taken, so each source below states its method.",
+  "comparison_note": "The two sources measure different quantities in different people and must not be merged. NHANES is a pulse counted for 30 seconds by an examiner after 5 minutes of seated rest in a clinic, in a probability sample of US adults aged 18 and over (2015-2018, weighted, no exclusions for medication or conditions). The Fitbit cohort (Quer et al. 2020) is a daily value from a proprietary algorithm that is meant to represent a supine rate on waking, taken in normal living conditions and averaged over many days per person, in a convenience sample of device owners (2016-2018, about 63% women, average age 45.8, unweighted). In the two data files the NHANES mean is 72.41 beats/min (median 72.0) and the Fitbit cohort mean is 65.5 beats/min, so the wearable mean is the lower of the two. Method, timing and population all differ, and the two files do not separate their effects, so the gap cannot be attributed to the device or the method alone. The Fitbit source records only a mean, so no other central or spread values can be compared. A third source gives the Fitbit cohort's distribution by sex, measured from the paper's Fig 2 and labelled as digitised: medians of 62.9 beats/min for men and 66.4 for women, against NHANES clinic-pulse medians of 70 and 72. The same cautions apply, and the digitised percentiles describe differences between people's long-run averages, not day-to-day values."
+}

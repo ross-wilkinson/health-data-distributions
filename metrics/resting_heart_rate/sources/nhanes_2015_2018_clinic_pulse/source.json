@@ -1,0 +1,58 @@
+{
+  "id": "nhanes_2015_2018_clinic_pulse",
+  "title": "NHANES 2015-2018, clinic pulse",
+  "origin": "recomputed",
+  "statistic_form": "percentiles",
+  "population": {
+    "description": "Civilian, non-institutionalised US residents aged 18 and over who were examined, two survey cycles combined (2015-2016 and 2017-2018).",
+    "country": "United States",
+    "years": "2015-2018",
+    "age_range": "18 and over",
+    "n": 10848,
+    "n_eligible": 11268,
+    "sampling": "probability sample",
+    "exclusions": "None for medication (for example beta blockers), medical conditions, pregnancy, or an irregular pulse. Adults examined without a pulse reading are left out."
+  },
+  "measurement": {
+    "method": "Pulse counted for 30 seconds by an examiner and doubled (NHANES variable BPXPLS).",
+    "device": "Counted by an examiner; no device is recorded in this entry.",
+    "protocol": "The participant rested quietly, seated, for 5 minutes, during the NHANES mobile examination centre visit."
+  },
+  "analysis": [
+    "Estimates use the examination sampling weights, halved for the two combined cycles. Percentiles are from the weighted empirical distribution.",
+    "95% intervals are from 500 bootstrap resamples of primary sampling units within strata (Rao-Wu), so they reflect the survey's clustered design.",
+    "No adjustment was made for examined adults without a pulse reading.",
+    "Subgroups with fewer than 50 people are not reported."
+  ],
+  "use_for": [
+    "Sizing a study of clinic-measured pulse in US adults, by age, sex, and race and ethnicity.",
+    "Seeing the spread of a clinic pulse count in the general US adult population."
+  ],
+  "do_not_use_for": [
+    "A reference for wearable resting heart rate: that is a different quantity. See the comparison of sources for this metric.",
+    "A healthy reference range: nobody was excluded for medication, medical conditions, pregnancy, or an irregular pulse."
+  ],
+  "caveats": [
+    "**This is a clinic pulse, not a wearable resting heart rate.** Overnight or daily resting heart rate from a wearable is a different quantity, taken by a different method at a different time. Do not use these values as a reference for one.",
+    "**Values are even numbers.** A 30-second count doubled cannot be odd, so percentiles move in steps of 2 beats/min.",
+    "**This is the general population, not a healthy reference sample.** Nobody was excluded for medication (for example beta blockers), medical conditions, pregnancy, or an irregular pulse.",
+    "**Age 80 and over is one group** because NHANES records all such ages as 80.",
+    "**Race and ethnicity groups are NHANES's own categories**, self-reported."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Centers for Disease Control and Prevention, National Center for Health Statistics. National Health and Nutrition Examination Survey Data, 2015-2018. Hyattsville, MD: U.S. Department of Health and Human Services.",
+    "url": "https://www.cdc.gov/nchs/nhanes/",
+    "license": "NCHS public-use data file. No licence name is stated; the NCHS terms (https://www.cdc.gov/nchs/data_access/restrictions.htm) say users must \"Use the data in this dataset for statistical reporting and analysis only.\""
+  },
+  "provenance": {
+    "pipeline": "pipelines/resting_pulse.py",
+    "raw_files": [
+      "raw/nhanes/DEMO_I.xpt",
+      "raw/nhanes/BPX_I.xpt",
+      "raw/nhanes/DEMO_J.xpt",
+      "raw/nhanes/BPX_J.xpt"
+    ]
+  },
+  "verification": "CDC's own reference report for 1999-2008 (Ostchega et al., National Health Statistics Reports no. 41) gives means of 71 beats/min for men and 74 for women aged 20 and over, in a sample that excluded conditions and medications affecting pulse. The values here, for a later period and with no exclusions, are 71.2 and 73.6. The report itself was read on 2026-10-06 (https://www.cdc.gov/nchs/data/nhsr/nhsr041.pdf). Its abstract states: \"females aged 20 and over have an RPR of 74 beats/min, SE 0.2, and males aged 20 and over have an RPR of 71 beats/min, SE 0.3\", and \"The mean RPR in adulthood plateaus at 72 beats/min\"."
+}

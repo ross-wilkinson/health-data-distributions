@@ -1,0 +1,12 @@
+{
+  "id": "waist_circumference",
+  "name": "Waist circumference",
+  "category": "Anthropometry",
+  "units": "cm",
+  "priority": 4,
+  "status": "planned",
+  "candidate_sources": [
+    "NHANES body measures"
+  ],
+  "note": ""
+}

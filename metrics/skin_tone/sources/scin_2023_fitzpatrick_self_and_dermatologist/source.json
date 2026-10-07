@@ -1,0 +1,57 @@
+{
+  "id": "scin_2023_fitzpatrick_self_and_dermatologist",
+  "title": "Fitzpatrick type, self-reported and dermatologist-estimated for the same contributors, SCIN dermatology image dataset, United States, 2023",
+  "origin": "recomputed",
+  "statistic_form": "proportions",
+  "population": {
+    "description": "Volunteer contributions to the SCIN dermatology image dataset: internet users in the United States who were shown a search advertisement against a dermatology-related query on a mobile device and chose to submit photographs of a skin concern. 5,033 contributions.",
+    "country": "United States",
+    "years": "2023 (the dataset authors give March to November 2023)",
+    "age_range": "Adults (age group is unknown for more than half of contributions)",
+    "sampling": "convenience sample",
+    "n": 4302,
+    "n_eligible": 5033,
+    "exclusions": "Self-reported: 2,530 contributions left the question blank and 328 answered that none of the options fit, leaving 2,175. Dermatologist: 731 contributions have no label, leaving 4,302."
+  },
+  "measurement": {
+    "method": "Two ratings, reported separately. Self-reported: the dataset documentation says \"users were asked questions about how their skin responds to sun exposure and those responses were mapped to these FST values\". Dermatologist: \"Label from a dermatologist estimating the Fitzpatrick skin type\" from the contribution's images; where a contribution has more than one such label, the first is used.",
+    "device": "None. Questionnaire for the self-report; visual rating of photographs for the dermatologist estimate.",
+    "protocol": "Not stated in the dataset documentation beyond the descriptions quoted under method."
+  },
+  "analysis": [
+    "Shares are the unweighted fraction at each type among contributions with that rating, overall and for self-reported race and ethnicity groups with at least 50 such contributions.",
+    "328 of the 2,503 contributors who answered the self-report question (13.1%) said none of the options fit. They are not in the shares.",
+    "Agreement, among 1,878 contributions with both ratings: the same type for 31.1%, and within one type for 73.1%."
+  ],
+  "use_for": [
+    "The clearest available illustration that self-reported and dermatologist-estimated Fitzpatrick type are different measures: the same people, rated both ways.",
+    "A rough idea of how each kind of rating spreads within race and ethnicity groups in a US volunteer group."
+  ],
+  "do_not_use_for": [
+    "The share of the US population at each Fitzpatrick type.",
+    "Converting between self-reported and observer-rated type: agreement is too low for a mapping."
+  ],
+  "caveats": [
+    "**People with a skin concern who answered an advertisement.** Not a sample of any population. Among those who gave demographics the dataset authors report more women and more people under 40 than the US population, and race or ethnicity is missing for nearly half of contributions.",
+    "**Shares are unweighted and have no intervals.** An interval would describe only the size of this volunteer group, not how well it represents anyone else.",
+    "**Rated from contributors' own phone photographs of a skin condition**, taken in uncontrolled light and often of affected skin.",
+    "**The two ratings disagree for most people.** They match for 31% of contributors rated both ways. Among Black or African American contributors, 34.8% report Type VI themselves while dermatologists assign Type VI to 10.3%; among White contributors, 9.7% report Type V or VI and dermatologists assign those types to 1.3%.",
+    "**One in eight could not place themselves.** 13.1% of those who answered said none of the sun-reaction options fit.",
+    "**The two ratings cover different subsets.** Fewer than half of contributions have a self-report; most have a dermatologist estimate."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Ward A, Li J, Wang J, et al. Creating an Empirical Dermatology Dataset Through Crowdsourcing With Web Search Advertisements. JAMA Network Open. 2024;7(11):e2446615. Dataset: SCIN (Skin Condition Image Network), https://github.com/google-research-datasets/scin",
+    "url": "https://github.com/google-research-datasets/scin",
+    "doi": "10.1001/jamanetworkopen.2024.46615",
+    "license": "The repository states: \"The SCIN Dataset is released under SCIN Data Use License\" (https://github.com/google-research-datasets/scin/blob/main/LICENSE). It grants the right to reproduce and share the material and adapted material with attribution and a link to the licence, and prohibits any attempt to re-identify the data subjects. The shares here are adapted from the SCIN dataset."
+  },
+  "provenance": {
+    "pipeline": "pipelines/scin_skin_tone.py",
+    "raw_files": [
+      "raw/scin/scin_cases.csv",
+      "raw/scin/scin_labels.csv"
+    ]
+  },
+  "verification": "The dermatologist shares on the 4,292 contributions analysed by O'Hagan, Sharma, Ungar (J Drugs Dermatol 2025) match the bar heights measured from that letter's Figure 1 panel B to within 0.06 percentage points (pipelines/digitise/ohagan_2025_figure1_check.py)."
+}
