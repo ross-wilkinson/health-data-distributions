@@ -78,6 +78,25 @@ practice:
   which is the statistical form of the coach-versus-athlete distinction; the
   documentation should say so.
 
+### The people who use these tools are not one group either
+
+"Researcher" covers people with different questions, constraints, and
+readers. Each tool should be usable by all of them, and should not assume
+the resources of the best equipped.
+
+| Who | Their situation | What they need from a tool |
+|---|---|---|
+| Master's or PhD student | Learning the methods while using them; one study; little budget; must justify choices to a supervisor, a committee, and an ethics board | Explanations alongside answers, sensible defaults, worked examples, something citable |
+| Embedded industry researcher | Many studies under time pressure; must defend numbers to product, legal, and regulatory colleagues | Speed, defensible sources, precedent, demographic targets, output that drops into a protocol or report |
+| Product manager or algorithm designer | Decides what to build and what "good enough" means, often without running a study | The bar a feature must clear, what clearing it costs in people and time, a short answer with the source behind it |
+
+The first two rows are Ross's distinction, and the third is from his remark
+that the precedent lookup would have helped product managers and algorithm
+designers as well as researchers. The descriptions of what each needs are a
+first draft for Ross to correct. Other readers probably exist (academic lab
+heads, regulatory and clinical affairs staff, ethics board and journal
+reviewers) and have not been thought through.
+
 What every tool shares, and what makes the group worth more than its parts:
 
 - Each number is traceable to a public source or a script.
@@ -189,20 +208,29 @@ data used as test fixtures (`agreekit/PAPERS.md`).
 ## S5. Know the bar: Regulatory Precedent Lookup
 
 **End point:** a public lookup of what regulators have accepted for wearable
-health features: accuracy criteria, sample sizes, demographic composition, and
-reference methods, each taken from a public decision document and quoted.
+health features, and what the relevant standards require: accuracy criteria,
+sample sizes, demographic composition, and reference methods, each taken from
+a public decision document and quoted, or cited to the standard.
+
+Ross's own assessment (2026-10-06): this is the tool he would most have
+wanted when validating wearable features in industry, and it would have
+served product managers and algorithm designers as much as researchers. That
+makes the short-answer-with-source form matter as much as the full record.
 
 | # | Milestone | Done when | Status |
 |---|---|---|---|
 | S5.1 | Public-only protocol | A written rule that every fact cites a public document and nothing comes from memory of confidential work; Ross confirms there is no conflict with ongoing obligations | **Not started**. Gate: nothing else in S5 starts before this |
-| S5.2 | Source survey and prior art | The public databases and document types identified; what they do and do not contain; any existing lookup found | **Not started** |
+| S5.2 | Source survey and prior art | The public databases and document types identified, for regulatory decisions and for standards (for example ISO); what they do and do not contain; what may be quoted from each; any existing lookup found | **Not started** |
 | S5.3 | Single-entry proof | One cleared feature end to end, every field located in the decision document and quoted | **Not started** |
 | S5.4 | Format and validator | Reusing S2's machinery; fields for criterion, sample size, demographics, reference method, and what the document leaves unstated | **Not started** |
 | S5.5 | First set | Every decision found for one feature type (for example irregular rhythm notification), with the search logged | **Not started** |
 | S5.6 | Site and release | Browsable, citable, linked from the Designer's defaults | **Not started** |
 
-The source documents are government publications, so the copyright questions
-that slowed S2 should not arise. That is to be confirmed in S5.2, not assumed.
+Regulatory decision documents are government publications, so the copyright
+questions that slowed S2 should not arise for them. Standards are different:
+they are sold, not published freely, so the lookup can cite a standard and
+state what it requires in its own words but probably cannot reproduce its
+text. Both points are to be confirmed in S5.2, not assumed.
 
 ## H. The hub
 
