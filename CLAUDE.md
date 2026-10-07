@@ -56,6 +56,7 @@ pipelines/digitise/                             one measuring script per digitis
 entries/, CATALOG.md                            generated
 raw/                                            downloaded public data, figure images, and papers/; git-ignored
 PAPERS.md                                       index of the papers expected in raw/papers/
+ROADMAP.md                                      milestones and status for this project and its four siblings; update when a milestone changes
 .github/directives/                             pending directives; _completed/ after audit
 ACCESS_REQUESTS.md                              sources agents could not read, for Ross to obtain
 COPYRIGHT_QUESTIONS.md                          publication questions for Ross to close
