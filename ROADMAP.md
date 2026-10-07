@@ -1,7 +1,7 @@
 # Roadmap: tools for people who measure humans
 
 **Last updated:** 2026-10-06 (rewritten around the north star below, then
-reframed the same day around who it is ultimately for; the earlier version
+given a statement of why it matters the same day; the earlier version
 organised the same work as five separate projects, A to E).
 Update this file whenever a milestone changes status. State documents in
 `.github/directives/` are dated snapshots; this is the running record. It
@@ -12,17 +12,20 @@ Status: **Done**, **Started**, **Not started**, **Blocked** (says on what),
 
 ## North star
 
-**Purpose: protect the person wearing the device, and the truth about what it
-can tell them.** People make decisions about their health from numbers on a
-wrist. They deserve numbers that mean what they appear to mean, and an honest
-account of where they do not.
+**What we build:** free, citable tools for the people who validate
+measurements of the human body, whether a wearable feature, a sensor, or a
+field test, so that they can do the whole job well and say plainly what each
+number is fit for.
 
-**Means: make rigorous validation easier to do and harder to skip.** Most of
-what follows is built for the people who measure humans, because better
-research is the route by which a consumer ends up with a trustworthy number.
-Someone validating a measurement of the human body, whether a wearable
-feature, a sensor, or a field test, should be able to do the whole job with
-free, citable tools that say plainly what each number is fit for:
+**Why it matters:** the people who buy and rely on health wearables are
+helped indirectly. They never see a validation study, but its quality decides
+whether the number on their wrist means what it appears to mean. Making
+rigorous validation easier to do, and making it visible when it has not been
+done, holds the researchers and designers in this industry to a higher
+standard. That influence is hard to quantify and larger than it looks.
+
+The tools are for researchers and designers. They are not consumer products,
+and nothing here is written for the general public.
 
 | Stage | The question | Tool | State today |
 |---|---|---|---|
@@ -36,24 +39,44 @@ free, citable tools that say plainly what each number is fit for:
 one another at the point where a user would need the next one; and at least
 one published case study that went through every stage using them.
 
-The researcher is the user of these tools; the consumer is who they are for.
-That has four consequences for how the work is done:
+Three things follow from that purpose:
 
-- **A test for every piece.** Does this make it likelier that a person gets a
-  true number, or an honest statement that the number is unreliable for
-  someone like them? Work that only makes research more convenient ranks
-  below work that also does this.
+- **Make the right way the easy way, and the gaps visible.** Planning and
+  analysis tools (S1, S4) lower the cost of doing validation properly. The
+  reference tools (S2, S3, S5) make it plain what is known, what a device has
+  actually been shown to do, and what bar was actually cleared, so weak
+  evidence is harder to pass off as strong.
 - **Who is left out comes first.** Accuracy that holds on average but fails
-  for a group is the failure this work exists to expose: skin tone in
+  for a group is the failure a higher standard should catch: skin tone in
   oximetry, the people a questionnaire cannot classify, the populations a
   reference dataset never sampled.
-- **Something for the wearer directly.** Each stage should eventually have a
-  plain-language face (see P below), and two of the case studies are tools or
-  findings a consumer can use without reading a paper.
 - **Independence has to be visible.** No vendor funding, methods and data
   open, sources quoted, and Ross's own history stated: he validated wearable
   features for a manufacturer, which is both why he can do this and something
   a reader is entitled to know.
+
+### The people at the end of the chain are not one group
+
+A wearable's number is used differently by different people, who expect
+different things from it. A coach comparing athletes needs a number that is
+comparable between people. An athlete watching their own trend needs one that
+is stable within a person. A clinician screening needs known error rates. A
+casual user needs not to be misled. A researcher using a wearable as an
+instrument needs all of it documented.
+
+So "is it accurate?" is never the whole question. The standard to hold
+validation work to is: accurate enough **for which use, by whom**. In
+practice:
+
+- Guidance on every source (`use_for`, `do_not_use_for`) should name the kind
+  of use, not only the population.
+- The evidence index (S3) should record what use each study's design can
+  support: between-person comparison, within-person tracking, or screening.
+- The precedent lookup (S5) should record the intended use and intended user
+  that each decision was made for.
+- agreekit (S4) already separates between-subject from within-subject error,
+  which is the statistical form of the coach-versus-athlete distinction; the
+  documentation should say so.
 
 What every tool shares, and what makes the group worth more than its parts:
 
@@ -65,8 +88,8 @@ What every tool shares, and what makes the group worth more than its parts:
 
 Why Ross: a decade of human measurement research, validation of consumer
 wearable features at scale, and two regulatory submissions. The aim is to
-ease the load on people doing that work without those resources, so that more
-of what reaches consumers has been checked properly.
+ease the load on people doing that work without those resources, and to raise
+what is expected of the work.
 
 ## At a glance
 
@@ -78,7 +101,6 @@ of what reaches consumers has been checked properly.
 | S4 | agreekit | `C:\repos\agreekit` | 1 of 6 |
 | S5 | Regulatory Precedent Lookup | none yet | 0 of 6 |
 | H | The hub that joins them | none yet | 0 of 4 |
-| P | Plain-language layer for the wearer | none yet | 0 of 4 |
 | CS1 | Case study: pulse oximeter accuracy by skin tone | `C:\repos\spo2-skin-tone` | 0 of 8 |
 | CS2 | Case study: cadence-lock checker | `C:\repos\cadence-lock-investigator` | 0 of 4 new |
 | CS3 | Case study: wearable change-point false alarms | none yet | 0 of 6 |
@@ -189,36 +211,20 @@ each live tool, and says how to cite them.
 
 | # | Milestone | Done when | Status |
 |---|---|---|---|
-| H.1 | Name and framing | A name for the group and one paragraph saying who it is for and why. The working title names the users; the name should also carry the purpose | **Not started**. Decision for Ross |
+| H.1 | Name and framing | A name for the group and one paragraph saying who it is for and why it matters | **Not started**. Decision for Ross |
 | H.2 | Landing page | Live, linking whichever tools are live (the Designer is already) and marking the rest as coming | **Not started**. Cheap, and useful as soon as it exists |
 | H.3 | Cross-links | Each tool links to the next stage at the point a user needs it | **Not started** |
 | H.4 | Shared citation and look | A common citation format and enough visual consistency to read as one family | **Not started** |
-
-## P. Plain-language layer for the wearer
-
-**End point:** for each metric the tools cover, a short page a non-specialist
-can read that says what the number is, how far to trust it, for whom it is
-least reliable, and what would be a reason to see a clinician instead of a
-chart. Built from S2, S3, and S5, never from opinion.
-
-| # | Milestone | Done when | Status |
-|---|---|---|---|
-| P.1 | Safeguards and voice | Written rules: not medical advice and says so; every claim traces to an entry in S2, S3, or S5; no device is named except through published evidence; reviewed by a clinician before release; tested for alarm as well as for false comfort | **Not started**. Gate: nothing in P is published before this |
-| P.2 | One page as proof | A single metric (resting heart rate is the candidate, since S2 already has it) written, traced, and read by people outside the field | **Not started** |
-| P.3 | Pages for each covered metric | One per metric as S2 and S3 fill | **Not started** |
-| P.4 | What "cleared" means | A plain account, drawn from S5, of what regulatory clearance of a wearable feature does and does not establish | **Not started** (needs S5 content) |
-
-The hub (H) should have two doors: one for people who measure, one for people
-who wear.
 
 ---
 
 ## Case studies
 
 Each case study is a piece of applied work that uses the tools and shows they
-hold up. CS1 is the one intended to pass through all five stages. All three
-bear directly on the purpose: CS1 on who a device fails, CS2 on a failure a
-runner can check for themselves, CS3 on how often an alarm would be false.
+hold up. CS1 is the one intended to pass through all five stages. Each shows
+the standard applied to a real question: CS1 on who a device fails, CS2 on a
+known sensor failure and how to detect it, CS3 on how often an alarm rule
+would be false.
 
 ### CS1. Pulse oximeter accuracy by skin tone
 
@@ -270,7 +276,7 @@ person-year for wearable alarm rules. Prompted by Lautman et al. 2026.
 
 ## Order of work
 
-The group is large for one person: 63 milestones, 8 done, two of which
+The group is large for one person: 59 milestones, 8 done, two of which
 predate this roadmap. The order below
 favours unblocking, then finishing what exists, then one complete pass
 through the workflow, before starting the two new tools in earnest.
@@ -280,15 +286,9 @@ through the workflow, before starting the two new tools in earnest.
 | 0. Unblock | Clear the things only Ross can do, which cost little and gate much | CS3.1 (start wearing), CS1.1 (clearance), S5.1 (confidentiality check), S2.8 (copyright rows), H.1 (name) |
 | 1. Make what exists presentable | Two tools a visitor can use and understand | S2.6, S2.7, S4.2, H.2 |
 | 2. One full pass | The oximetry case study through every stage it can reach | CS1.2 to CS1.5, S1.1 to S1.3, S4.4 as needed |
-| 3. Prove the two new tools and the plain-language layer | A single convincing entry for each, and the gates passed | S5.2 to S5.4, S3.1 to S3.4, P.1, P.2 |
+| 3. Prove the two new tools | A single convincing entry for each, and both prior-art gates passed | S5.2 to S5.4, S3.1 to S3.4 |
 | 4. Publish the core | First releases | S2.9 to S2.13, S4.5, S4.6, CS1.6 to CS1.8, H.3, H.4 |
-| 5. Widen | Fill the new tools; the other two case studies; pages for the wearer | S5.5, S5.6, S3.5, S3.6, S1.4, CS2, CS3.2 to CS3.6, P.3, P.4 |
-
-The purpose test shifts the weight within these phases without reordering
-them. Between two milestones in the same phase, take the one that changes
-what a consumer can know: S3 (how wrong is the device) ahead of S1.4
-(convenience for planners); CS2 and CS3 ahead of the items listed as outside
-the north star.
+| 5. Widen | Fill the new tools; the other two case studies | S5.5, S5.6, S3.5, S3.6, S1.4, CS2, CS3.2 to CS3.6 |
 
 ## Decision gates
 
@@ -299,7 +299,6 @@ the north star.
 | S3.1, prior art | If the evidence index is already well covered elsewhere, S3 becomes a guided pointer page | Open |
 | CS1.2, inventory | If the data have no waveforms, CS1 is a statistics and dashboard study and the signal-processing weight rests on CS2 | Open |
 | S2.8, copyright | A source whose row cannot be cleared is reduced to a citation and guidance with no numbers | Open |
-| P.1, safeguards | If the plain-language pages cannot be reviewed by a clinician, they are not published; the tools stand without them | Open |
 | CS2.1, data | If runs from several people cannot be obtained, CS2 is published as a single-person investigation, not a checker | Open |
 | CS3.3, datasets | If no open dataset has long enough records, CS3 becomes a methods paper on simulation and Ross's own data | Open |
 
@@ -307,6 +306,10 @@ the north star.
 
 Worth doing, but not part of the workflow and not scheduled.
 
+- **Plain-language pages for wearers.** Considered and set aside on
+  2026-10-06: the group helps consumers indirectly, through the standard of
+  the research behind their devices, and is not a consumer product. If ever
+  revisited, it needs clinician review and its own safeguards first.
 - **World Food Map as a citable reference.** Downloadable country briefs and
   data, a methods page, a DOI. Already built in the same spirit; small effort.
 - **Test reliability reference.** Typical error and minimal detectable change
