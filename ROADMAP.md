@@ -118,7 +118,7 @@ what is expected of the work.
 | S2 | Health Data Distributions | `C:\repos\health-data-distributions` | 5 of 13 |
 | S3 | Wearable Validation Evidence Index | none yet | 0 of 6 |
 | S4 | agreekit | `C:\repos\agreekit` | 1 of 6 |
-| S5 | Regulatory Precedent Lookup | none yet | 0 of 6 |
+| S5 | Regulatory Precedent Lookup | none yet | 1 of 6 |
 | H | The hub that joins them | none yet | 0 of 4 |
 | CS1 | Case study: pulse oximeter accuracy by skin tone | `C:\repos\spo2-skin-tone` | 0 of 8 |
 | CS2 | Case study: cadence-lock checker | `C:\repos\cadence-lock-investigator` | 0 of 4 new |
@@ -183,8 +183,9 @@ study does and does not show.
 | S3.5 | First complete metric | All studies found for that metric entered, with the search logged | **Not started** |
 | S3.6 | Site and release | Browsable, citable, linked from S2 entries for the same metric | **Not started** |
 
-Standing rule: public literature only. Nothing from Ross's own unpublished
-validation work.
+Sourcing rule: every entry cites published literature and locates the
+passage, as S2 does. That is what makes an entry citable; it is not a
+confidentiality measure (Ross confirmed on 2026-10-06 there is none).
 
 ## S4. Analyse: agreekit
 
@@ -219,12 +220,17 @@ makes the short-answer-with-source form matter as much as the full record.
 
 | # | Milestone | Done when | Status |
 |---|---|---|---|
-| S5.1 | Public-only protocol | A written rule that every fact cites a public document and nothing comes from memory of confidential work; Ross confirms there is no conflict with ongoing obligations | **Not started**. Gate: nothing else in S5 starts before this |
+| S5.1 | Confidentiality check and sourcing rule | Ross confirms there is no confidentiality barrier; the sourcing rule below is written down | **Done**. Ross confirmed on 2026-10-06 that no confidentiality gate blocks any project in this group |
 | S5.2 | Source survey and prior art | The public databases and document types identified, for regulatory decisions and for standards (for example ISO); what they do and do not contain; what may be quoted from each; any existing lookup found | **Not started** |
 | S5.3 | Single-entry proof | One cleared feature end to end, every field located in the decision document and quoted | **Not started** |
 | S5.4 | Format and validator | Reusing S2's machinery; fields for criterion, sample size, demographics, reference method, and what the document leaves unstated | **Not started** |
 | S5.5 | First set | Every decision found for one feature type (for example irregular rhythm notification), with the search logged | **Not started** |
 | S5.6 | Site and release | Browsable, citable, linked from the Designer's defaults | **Not started** |
+
+Sourcing rule, which is the tool's method and not a confidentiality measure:
+every fact in the lookup cites a public document and quotes or locates the
+passage, exactly as S2 does. A fact that cannot be traced to one does not go
+in, however well it is known.
 
 Regulatory decision documents are government publications, so the copyright
 questions that slowed S2 should not arise for them. Standards are different:
@@ -260,7 +266,7 @@ would be false.
 
 | # | Milestone | Done when | Status |
 |---|---|---|---|
-| CS1.1 | Clearance | The Google-era question in the Designer's `HANDOFF.md` section 7 resolved; data terms confirmed to allow publishing aggregates | **Not started** |
+| CS1.1 | Clearance | The Google-era question in the Designer's `HANDOFF.md` section 7 resolved; data terms confirmed to allow publishing aggregates | **Started**: Ross confirmed on 2026-10-06 that no confidentiality gate blocks these projects, which settles the first part. The data terms still need reading for the second |
 | CS1.2 | Inventory | `scripts/inventory.py` run by Ross on the download and its report reviewed | **Started**: script written; download not confirmed complete |
 | CS1.3 | Analysis plan | Estimands, subgroups, thresholds, and small-cell rules committed before any results are seen. Uses S1 for size and precision, S2's skin tone entry for stratification, S5 for thresholds | **Not started** |
 | CS1.4 | Data pipeline | Cleaning, pairing, exclusions; run locally by Ross | **Not started** |
@@ -304,14 +310,14 @@ person-year for wearable alarm rules. Prompted by Lautman et al. 2026.
 
 ## Order of work
 
-The group is large for one person: 59 milestones, 8 done, two of which
+The group is large for one person: 59 milestones, 9 done, two of which
 predate this roadmap. The order below
 favours unblocking, then finishing what exists, then one complete pass
 through the workflow, before starting the two new tools in earnest.
 
 | Phase | Goal | Milestones |
 |---|---|---|
-| 0. Unblock | Clear the things only Ross can do, which cost little and gate much | CS3.1 (start wearing), CS1.1 (clearance), S5.1 (confidentiality check), S2.8 (copyright rows), H.1 (name) |
+| 0. Unblock | Clear the things only Ross can do, which cost little and gate much | CS3.1 (start wearing), CS1.1 (data terms; confidentiality part done), S2.8 (copyright rows), H.1 (name). S5.1 is done |
 | 1. Make what exists presentable | Two tools a visitor can use and understand | S2.6, S2.7, S4.2, H.2 |
 | 2. One full pass | The oximetry case study through every stage it can reach | CS1.2 to CS1.5, S1.1 to S1.3, S4.4 as needed |
 | 3. Prove the two new tools | A single convincing entry for each, and both prior-art gates passed | S5.2 to S5.4, S3.1 to S3.4 |
@@ -322,8 +328,8 @@ through the workflow, before starting the two new tools in earnest.
 
 | Gate | If it goes the wrong way | Status |
 |---|---|---|
-| S5.1, confidentiality | If Ross cannot be confident of building S5 from public documents alone, S5 is dropped and stage 5 becomes a short guide to finding precedent | Open |
-| CS1.1, clearance | If refused, the oximetry case study is reframed before more work goes in | Open |
+| S5.1, confidentiality | If Ross cannot be confident of building S5 from public documents alone, S5 is dropped and stage 5 becomes a short guide to finding precedent | **Passed** 2026-10-06 |
+| CS1.1, clearance | If refused, the oximetry case study is reframed before more work goes in | Confidentiality part passed 2026-10-06; data terms open |
 | S3.1, prior art | If the evidence index is already well covered elsewhere, S3 becomes a guided pointer page | Open |
 | CS1.2, inventory | If the data have no waveforms, CS1 is a statistics and dashboard study and the signal-processing weight rests on CS2 | Open |
 | S2.8, copyright | A source whose row cannot be cleared is reduced to a citation and guidance with no numbers | Open |
