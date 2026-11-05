@@ -4,9 +4,7 @@
   "category": "Cardiovascular",
   "units": "mmHg",
   "priority": 2,
-  "status": "planned",
-  "candidate_sources": [
-    "NHANES examination data"
-  ],
-  "note": "Same files as resting pulse, so the cheapest second entry. Auscultatory and oscillometric cycles need separate entries."
+  "status": "available",
+  "definition": "Auscultatory systolic and diastolic blood pressure in mmHg measured by physician examiners using a calibrated mercury sphygmomanometer after 5 minutes of seated rest.",
+  "comparison_note": "Auscultatory clinic blood pressure reflects daytime resting arterial pressure and incorporates situational alerting (white-coat) effects. Continuous cuffless wearable estimates (optical pulse transit time, PTT) and ambulatory 24-hour recordings (ABPM) are distinct physiological measurement paradigms and must not be pooled with clinic auscultation."
 }

@@ -1,0 +1,360 @@
+{
+  "version": "1.0.0",
+  "generated_at": "2026-10-25T06:52:46.721138+00:00",
+  "total_metrics": 15,
+  "available_metrics": 4,
+  "planned_metrics": 11,
+  "metrics": [
+    {
+      "id": "resting_heart_rate",
+      "name": "Resting heart rate and pulse",
+      "category": "Cardiovascular",
+      "units": "beats/min",
+      "priority": 1,
+      "status": "available",
+      "definition": "Heart or pulse rate, in beats per minute, while the person is at rest. The value depends on how and when it is taken, so each source below states its method.",
+      "source_count": 3,
+      "sources": [
+        {
+          "id": "nhanes_2015_2018_clinic_pulse",
+          "title": "NHANES 2015-2018, clinic pulse",
+          "origin": "recomputed",
+          "statistic_form": "percentiles",
+          "group": null,
+          "n": 10848
+        },
+        {
+          "id": "quer_2020_fitbit_92457_adults",
+          "title": "Quer et al. 2020, Fitbit wearable cohort (92,457 US adults), daily resting heart rate",
+          "origin": "transcribed",
+          "statistic_form": "moments",
+          "group": null,
+          "n": 92457
+        },
+        {
+          "id": "quer_2020_fitbit_fig2_digitised",
+          "title": "Fitbit daily resting heart rate by sex, 92,457 US adults, 2016-2018 (Quer et al. 2020, distribution digitised from Fig 2)",
+          "origin": "digitised",
+          "statistic_form": "percentiles",
+          "group": null,
+          "n": 92457
+        }
+      ],
+      "academy_module": "Module 3 (Repeated Measures) & Module 5 (Cadence Lock)",
+      "methodological_warning": "Never pool clinic seated pulse (NHANES 30s count) with ambulatory/nocturnal wearable resting heart rate (Fitbit). A 7 bpm physiological offset exists between seated clinic exam counts and waking basal wearable rates."
+    },
+    {
+      "id": "blood_pressure",
+      "name": "Blood pressure (systolic and diastolic)",
+      "category": "Cardiovascular",
+      "units": "mmHg",
+      "priority": 2,
+      "status": "available",
+      "definition": "Auscultatory systolic and diastolic blood pressure in mmHg measured by physician examiners using a calibrated mercury sphygmomanometer after 5 minutes of seated rest.",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "nhanes_2015_2018_clinic_diastolic",
+          "title": "NHANES 2015-2018, clinic diastolic blood pressure",
+          "origin": "recomputed",
+          "statistic_form": "percentiles",
+          "group": null,
+          "n": 10818
+        },
+        {
+          "id": "nhanes_2015_2018_clinic_systolic",
+          "title": "NHANES 2015-2018, clinic systolic blood pressure",
+          "origin": "recomputed",
+          "statistic_form": "percentiles",
+          "group": null,
+          "n": 10818
+        }
+      ],
+      "academy_module": null,
+      "methodological_warning": "Auscultatory clinic blood pressure reflects daytime resting arterial pressure and incorporates situational alerting (white-coat) effects. Continuous cuffless wearable estimates (optical pulse transit time, PTT) and ambulatory 24-hour recordings (ABPM) are distinct physiological measurement paradigms and must not be pooled with clinic auscultation."
+    },
+    {
+      "id": "body_size",
+      "name": "Height, body mass, and BMI",
+      "category": "Anthropometry",
+      "units": "kg/m2, cm",
+      "priority": 3,
+      "status": "available",
+      "definition": "Anthropometric body dimensions (Body Mass Index in kg/m^2 and mid-upper arm circumference in cm) measured by trained examiners following standardized CDC health examination protocols.",
+      "source_count": 2,
+      "sources": [
+        {
+          "id": "nhanes_2015_2018_arm_circumference",
+          "title": "NHANES 2015-2018, mid-upper arm circumference (cm)",
+          "origin": "recomputed",
+          "statistic_form": "percentiles",
+          "group": null,
+          "n": 10676
+        },
+        {
+          "id": "nhanes_2015_2018_body_mass_index",
+          "title": "NHANES 2015-2018, body mass index (BMI)",
+          "origin": "recomputed",
+          "statistic_form": "percentiles",
+          "group": null,
+          "n": 11096
+        }
+      ],
+      "academy_module": "Module 2 & Hardware Tiers (ADR-012 Tier 1: Mechanical/Coupling)",
+      "methodological_warning": "Wrist and arm circumference directly govern sensor optical coupling and motion artifact vulnerability. Subcutaneous adipose tissue (BMI) alters optical photon path lengths."
+    },
+    {
+      "id": "waist_circumference",
+      "name": "Waist circumference",
+      "category": "Anthropometry",
+      "units": "cm",
+      "priority": 4,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": null,
+      "methodological_warning": "Measurement method is part of the data. Do not pool."
+    },
+    {
+      "id": "wrist_circumference",
+      "name": "Wrist and arm circumference",
+      "category": "Anthropometry",
+      "units": "cm",
+      "priority": 5,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": null,
+      "methodological_warning": "Measurement method is part of the data. Do not pool."
+    },
+    {
+      "id": "skin_tone",
+      "name": "Skin tone (Monk, Fitzpatrick, individual typology angle)",
+      "category": "Demographics",
+      "units": "scale category or degrees",
+      "priority": 6,
+      "status": "available",
+      "definition": "How light or dark a person's skin is, recorded on one of three kinds of scale. Fitzpatrick skin type (I to VI) classifies people by their response to sun exposure, in terms of tanning and burning. The Monk Skin Tone scale is a 10-shade scale of colour swatches that a person or an observer matches to the skin. The individual typology angle (ITA) is a number in degrees calculated from CIELAB lightness (L*) and yellow-blue (b*) readings taken with a colorimeter or spectrophotometer.",
+      "source_count": 12,
+      "sources": [
+        {
+          "id": "fitzpatrick_central_italy_men_18_19_1999",
+          "title": "Self-reported Fitzpatrick phototype I to IV, men aged about 18 at the military medical visit, Abruzzo and Ascoli Piceno (Italy), 1990",
+          "origin": "transcribed",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 5318
+        },
+        {
+          "id": "he_2014_us_self_reported_fitzpatrick_by_race",
+          "title": "Self-reported Fitzpatrick phototype I to VI by self-reported race, US adults in a convenience survey enriched for minority groups (He et al. 2014)",
+          "origin": "transcribed",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 3386
+        },
+        {
+          "id": "heldreth_2024_us_online_survey_light_medium_dark",
+          "title": "Self-reported light, medium, or dark skin tone, US adults in a weighted online survey, 2021 (Heldreth et al. 2024)",
+          "origin": "transcribed",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 2214
+        },
+        {
+          "id": "ita_colorimetry_gap",
+          "title": "Individual typology angle and other colorimeter measures: no population distribution found in this search",
+          "origin": "gap",
+          "statistic_form": "none",
+          "group": null,
+          "n": null
+        },
+        {
+          "id": "monk_skin_tone_gap",
+          "title": "Monk Skin Tone scale: no population distribution found in this search",
+          "origin": "gap",
+          "statistic_form": "none",
+          "group": null,
+          "n": null
+        },
+        {
+          "id": "nhanes_2003_2004_fitzpatrick_image_readers",
+          "title": "NHANES 2003-2004, Fitzpatrick skin type assigned by two dermatologist image readers, adults aged 20-59",
+          "origin": "recomputed",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 2693
+        },
+        {
+          "id": "pichon_2010_california_black_adults_fitzpatrick_with_none",
+          "title": "Self-reported Fitzpatrick type I to IV with a \"none of the above\" option, random household sample of Black adults, California (Pichon et al. 2010)",
+          "origin": "transcribed",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 2085
+        },
+        {
+          "id": "scin_2023_fitzpatrick_self_and_dermatologist",
+          "title": "Fitzpatrick type, self-reported and dermatologist-estimated for the same contributors, SCIN dermatology image dataset, United States, 2023",
+          "origin": "recomputed",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 4302
+        },
+        {
+          "id": "scin_2023_monk_lay_annotators",
+          "title": "Monk Skin Tone assigned from photographs by trained lay annotators, SCIN dermatology image dataset, United States, 2023",
+          "origin": "recomputed",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 5019
+        },
+        {
+          "id": "sommers_2019_lstar_by_self_reported_fitzpatrick",
+          "title": "Skin lightness (CIELAB L*) on the inner upper arm, by self-reported Fitzpatrick type, women in Philadelphia and San Juan (Sommers et al. 2019)",
+          "origin": "transcribed",
+          "statistic_form": "moments",
+          "group": null,
+          "n": 446
+        },
+        {
+          "id": "sommers_2019_women_self_reported_fitzpatrick_by_race",
+          "title": "Self-reported Fitzpatrick type I to VI by race group, using descriptions that name skin colour, women in Philadelphia and San Juan (Sommers et al. 2019)",
+          "origin": "transcribed",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 446
+        },
+        {
+          "id": "wilkes_2015_pretoria_ita_categories_digitised",
+          "title": "ITA skin colour category measured by colorimeter, staff of one research campus, Pretoria, South Africa, 2014 (Wilkes et al. 2015, digitised)",
+          "origin": "digitised",
+          "statistic_form": "proportions",
+          "group": null,
+          "n": 556
+        }
+      ],
+      "academy_module": "Module 4: Regulatory SpO2 & Demographic Quotas (ISO 80601-2-61)",
+      "methodological_warning": "Never pool self-reported Fitzpatrick phototypes with dermatologist photograph ratings or instrument ITA. Never apply hierarchical shrinkage across skin tones (ADR-006: anti-whitewashing invariant)."
+    },
+    {
+      "id": "spo2",
+      "name": "Blood oxygen saturation",
+      "category": "Respiratory",
+      "units": "%",
+      "priority": 7,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": "Module 4: Regulatory SpO2 & Demographic Quotas (ISO 80601-2-61)",
+      "methodological_warning": "Never pool normoxic ambient baseline saturation with controlled laboratory hypoxic desaturation (70%-100%). Never pool transmission finger-clip hospital monitors with reflective wrist optical sensors."
+    },
+    {
+      "id": "respiratory_rate",
+      "name": "Respiratory rate",
+      "category": "Respiratory",
+      "units": "breaths/min",
+      "priority": 8,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": null,
+      "methodological_warning": "Measurement method is part of the data. Do not pool."
+    },
+    {
+      "id": "cardiorespiratory_fitness",
+      "name": "Cardiorespiratory fitness (VO2max)",
+      "category": "Fitness",
+      "units": "mL/kg/min",
+      "priority": 9,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": null,
+      "methodological_warning": "Measurement method is part of the data. Do not pool."
+    },
+    {
+      "id": "heart_rate_variability",
+      "name": "Heart rate variability",
+      "category": "Cardiovascular",
+      "units": "ms",
+      "priority": 10,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": "Module 3: HIIT Repeated Measures & Variance Decomposition (sigma_b vs sigma_w)",
+      "methodological_warning": "Never pool daytime short-epoch (5-minute seated) ECG HRV with nocturnal continuous PPG HRV. Autonomic circadian rhythms and breathing rates create non-stationary baselines."
+    },
+    {
+      "id": "daily_activity",
+      "name": "Daily physical activity volume and step count",
+      "category": "Activity",
+      "units": "steps/day, activity units/day",
+      "priority": 11,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": null,
+      "methodological_warning": "Measurement method is part of the data. Do not pool."
+    },
+    {
+      "id": "sleep_duration",
+      "name": "Sleep duration",
+      "category": "Sleep",
+      "units": "hours/night",
+      "priority": 12,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": "Meridian PulseBand 2 Feature Validation",
+      "methodological_warning": "Self-reported questionnaire sleep hours and wearable actigraphy/PPG sleep duration systematically diverge. Questionnaires reflect time in bed; sensors reflect detected immobility."
+    },
+    {
+      "id": "sleep_architecture",
+      "name": "Sleep stage proportions",
+      "category": "Sleep",
+      "units": "% of total sleep time",
+      "priority": 13,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": "Meridian PulseBand 2 Feature Validation",
+      "methodological_warning": "Never pool gold-standard in-lab polysomnography (PSG 30s EEG epochs) with wearable surrogate stage heuristics. Wake after sleep onset (WASO) is systematically underestimated by optical/motion sensors."
+    },
+    {
+      "id": "gait_speed",
+      "name": "Walking speed",
+      "category": "Mobility",
+      "units": "m/s",
+      "priority": 14,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": null,
+      "methodological_warning": "Measurement method is part of the data. Do not pool."
+    },
+    {
+      "id": "glycemia",
+      "name": "Fasting glucose and HbA1c",
+      "category": "Metabolic",
+      "units": "mg/dL, %",
+      "priority": 15,
+      "status": "planned",
+      "definition": "",
+      "source_count": 0,
+      "sources": [],
+      "academy_module": null,
+      "methodological_warning": "Measurement method is part of the data. Do not pool."
+    }
+  ]
+}

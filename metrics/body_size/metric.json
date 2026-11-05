@@ -2,11 +2,9 @@
   "id": "body_size",
   "name": "Height, body mass, and BMI",
   "category": "Anthropometry",
-  "units": "cm, kg, kg/m2",
+  "units": "kg/m2, cm",
   "priority": 3,
-  "status": "planned",
-  "candidate_sources": [
-    "NHANES body measures"
-  ],
-  "note": "CDC already publishes reference tables as PDFs; the value here is machine-readable subgroups."
+  "status": "available",
+  "definition": "Anthropometric body dimensions (Body Mass Index in kg/m^2 and mid-upper arm circumference in cm) measured by trained examiners following standardized CDC health examination protocols.",
+  "comparison_note": "Direct stadiometer and digital scale measurements are clinic physical determinations and must not be pooled with self-reported survey height and weight, which exhibit systematic under-reporting of body weight and over-reporting of height."
 }

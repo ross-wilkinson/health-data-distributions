@@ -1,0 +1,18 @@
+{
+  "id": "wrist_circumference",
+  "name": "Wrist and arm circumference",
+  "category": "Anthropometry",
+  "units": "cm",
+  "priority": 5,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Measurement method is part of the data. Do not pool.",
+  "academy_module": null,
+  "candidate_sources": [
+    "To be identified; NHANES has arm circumference"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}

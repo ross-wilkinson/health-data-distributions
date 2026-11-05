@@ -1,0 +1,5485 @@
+{
+  "id": "blood_pressure",
+  "name": "Blood pressure (systolic and diastolic)",
+  "category": "Cardiovascular",
+  "units": "mmHg",
+  "priority": 2,
+  "status": "available",
+  "definition": "Auscultatory systolic and diastolic blood pressure in mmHg measured by physician examiners using a calibrated mercury sphygmomanometer after 5 minutes of seated rest.",
+  "comparison_note": "Auscultatory clinic blood pressure reflects daytime resting arterial pressure and incorporates situational alerting (white-coat) effects. Continuous cuffless wearable estimates (optical pulse transit time, PTT) and ambulatory 24-hour recordings (ABPM) are distinct physiological measurement paradigms and must not be pooled with clinic auscultation.",
+  "methodological_warning": "Auscultatory clinic blood pressure reflects daytime resting arterial pressure and incorporates situational alerting (white-coat) effects. Continuous cuffless wearable estimates (optical pulse transit time, PTT) and ambulatory 24-hour recordings (ABPM) are distinct physiological measurement paradigms and must not be pooled with clinic auscultation.",
+  "academy_module": null,
+  "candidate_sources": [],
+  "sources": [
+    {
+      "id": "nhanes_2015_2018_clinic_diastolic",
+      "title": "NHANES 2015-2018, clinic diastolic blood pressure",
+      "origin": "recomputed",
+      "statistic_form": "percentiles",
+      "group": null,
+      "population": {
+        "description": "Civilian, non-institutionalised US residents aged 18 and over examined in the mobile examination centre, two survey cycles combined (2015-2016 and 2017-2018).",
+        "country": "United States",
+        "years": "2015-2018",
+        "age_range": "18 and over",
+        "n": 10818,
+        "n_eligible": 11268,
+        "sampling": "probability sample",
+        "exclusions": "None for antihypertensive medication, cardiovascular conditions, pregnancy, or arrhythmias. Zero diastolic values (Korotkoff phase 5 not heard) are treated as missing."
+      },
+      "measurement": {
+        "method": "Auscultatory diastolic blood pressure (fifth Korotkoff sound, disappearance of sound) measured using a mercury sphygmomanometer by a certified physician examiner.",
+        "device": "Baumanometer mercury sphygmomanometer with calibrated adult/large cuff sizes.",
+        "protocol": "Seated quietly for 5 minutes in a private exam room; standard CDC protocol averages readings 2 and 3 (the initial reading is discarded to mitigate acute situational anxiety)."
+      },
+      "analysis": [
+        "Estimates use the examination sampling weights (WTMEC2YR), halved for the two combined cycles.",
+        "Percentiles are calculated from the survey-weighted empirical distribution.",
+        "95% confidence intervals are derived from 500 Rao-Wu bootstrap resamples of primary sampling units within strata.",
+        "Subgroups with fewer than 50 examined individuals are suppressed."
+      ],
+      "use_for": [
+        "Sizing clinical trials evaluating non-invasive blood pressure monitoring devices against auscultatory mercury reference standards.",
+        "Establishing empirical population distributions and between-subject standard deviations (sigma_b) for clinic diastolic blood pressure."
+      ],
+      "do_not_use_for": [
+        "A direct reference for 24-hour ambulatory blood pressure monitoring (ABPM) or continuous nocturnal wearable estimates.",
+        "A filtered 'normotensive' reference cohort: general population participants were not excluded for hypertension or antihypertensive pharmacology."
+      ],
+      "caveats": [
+        "**Clinic auscultation, not wearable PTT.** Disappearance of Korotkoff sound represents diastolic vascular resistance at rest.",
+        "**General population reference.** Participants taking antihypertensive pharmacology are included.",
+        "**Age 80 and over is top-coded** at 80 years in accordance with NCHS participant disclosure rules."
+      ],
+      "review_status": "draft",
+      "citation": {
+        "text": "Centers for Disease Control and Prevention, National Center for Health Statistics. National Health and Nutrition Examination Survey Data, 2015-2018. Hyattsville, MD: U.S. Department of Health and Human Services.",
+        "url": "https://www.cdc.gov/nchs/nhanes/",
+        "license": "NCHS public-use data file. Users must use data for statistical reporting and analysis only."
+      },
+      "provenance": {
+        "pipeline": "pipelines/blood_pressure.py",
+        "raw_files": [
+          "raw/nhanes/DEMO_I.xpt",
+          "raw/nhanes/BPX_I.xpt",
+          "raw/nhanes/DEMO_J.xpt",
+          "raw/nhanes/BPX_J.xpt"
+        ]
+      },
+      "verification": "The overall survey-weighted diastolic mean of 71.3 mmHg aligns with published CDC National Health Statistics Reports for the 2015-2018 cycle.",
+      "subgroup_columns": [
+        "sex",
+        "age_band",
+        "race_ethnicity"
+      ],
+      "subgroups": [
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "All"
+          },
+          "n": 10818,
+          "statistics": {
+            "mean": {
+              "estimate": 71.12,
+              "ci_low": 70.31,
+              "ci_high": 71.9
+            },
+            "sd": {
+              "estimate": 12.11,
+              "ci_low": 11.75,
+              "ci_high": 12.47
+            },
+            "p1": {
+              "estimate": 42.0,
+              "ci_low": 40.48,
+              "ci_high": 44.0
+            },
+            "p2.5": {
+              "estimate": 49.0,
+              "ci_low": 48.0,
+              "ci_high": 50.0
+            },
+            "p5": {
+              "estimate": 53.0,
+              "ci_low": 52.0,
+              "ci_high": 54.0
+            },
+            "p10": {
+              "estimate": 57.0,
+              "ci_low": 56.0,
+              "ci_high": 58.0
+            },
+            "p25": {
+              "estimate": 64.0,
+              "ci_low": 63.0,
+              "ci_high": 65.0
+            },
+            "p50": {
+              "estimate": 71.0,
+              "ci_low": 70.0,
+              "ci_high": 72.0
+            },
+            "p75": {
+              "estimate": 78.0,
+              "ci_low": 77.48,
+              "ci_high": 79.0
+            },
+            "p90": {
+              "estimate": 86.0,
+              "ci_low": 85.0,
+              "ci_high": 87.0
+            },
+            "p95": {
+              "estimate": 90.0,
+              "ci_low": 89.0,
+              "ci_high": 92.0
+            },
+            "p97.5": {
+              "estimate": 94.0,
+              "ci_low": 93.0,
+              "ci_high": 95.0
+            },
+            "p99": {
+              "estimate": 100.0,
+              "ci_low": 98.0,
+              "ci_high": 102.0
+            }
+          },
+          "summary": {
+            "mean": 71.12,
+            "ci_mean": [
+              70.31,
+              71.9
+            ],
+            "sd": 12.11,
+            "median": 71.0,
+            "iqr": 14.0,
+            "p25": 64.0,
+            "p75": 78.0,
+            "p5": 53.0,
+            "p95": 90.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "All",
+            "race_ethnicity": "All"
+          },
+          "n": 5578,
+          "statistics": {
+            "mean": {
+              "estimate": 69.49,
+              "ci_low": 68.73,
+              "ci_high": 70.25
+            },
+            "sd": {
+              "estimate": 11.96,
+              "ci_low": 11.47,
+              "ci_high": 12.5
+            },
+            "p1": {
+              "estimate": 39.0,
+              "ci_low": 31.0,
+              "ci_high": 42.0
+            },
+            "p2.5": {
+              "estimate": 47.0,
+              "ci_low": 46.0,
+              "ci_high": 49.0
+            },
+            "p5": {
+              "estimate": 52.0,
+              "ci_low": 51.0,
+              "ci_high": 53.0
+            },
+            "p10": {
+              "estimate": 56.0,
+              "ci_low": 55.0,
+              "ci_high": 57.0
+            },
+            "p25": {
+              "estimate": 63.0,
+              "ci_low": 62.0,
+              "ci_high": 64.0
+            },
+            "p50": {
+              "estimate": 69.0,
+              "ci_low": 69.0,
+              "ci_high": 70.0
+            },
+            "p75": {
+              "estimate": 77.0,
+              "ci_low": 76.0,
+              "ci_high": 77.0
+            },
+            "p90": {
+              "estimate": 84.0,
+              "ci_low": 82.0,
+              "ci_high": 84.0
+            },
+            "p95": {
+              "estimate": 88.0,
+              "ci_low": 87.0,
+              "ci_high": 89.0
+            },
+            "p97.5": {
+              "estimate": 92.0,
+              "ci_low": 91.0,
+              "ci_high": 94.0
+            },
+            "p99": {
+              "estimate": 98.0,
+              "ci_low": 96.0,
+              "ci_high": 100.0
+            }
+          },
+          "summary": {
+            "mean": 69.49,
+            "ci_mean": [
+              68.73,
+              70.25
+            ],
+            "sd": 11.96,
+            "median": 69.0,
+            "iqr": 14.0,
+            "p25": 63.0,
+            "p75": 77.0,
+            "p5": 52.0,
+            "p95": 88.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "All",
+            "race_ethnicity": "All"
+          },
+          "n": 5240,
+          "statistics": {
+            "mean": {
+              "estimate": 72.85,
+              "ci_low": 71.85,
+              "ci_high": 73.85
+            },
+            "sd": {
+              "estimate": 12.03,
+              "ci_low": 11.59,
+              "ci_high": 12.44
+            },
+            "p1": {
+              "estimate": 45.0,
+              "ci_low": 42.48,
+              "ci_high": 47.0
+            },
+            "p2.5": {
+              "estimate": 51.0,
+              "ci_low": 49.0,
+              "ci_high": 52.0
+            },
+            "p5": {
+              "estimate": 54.0,
+              "ci_low": 53.0,
+              "ci_high": 55.0
+            },
+            "p10": {
+              "estimate": 58.0,
+              "ci_low": 57.0,
+              "ci_high": 60.0
+            },
+            "p25": {
+              "estimate": 66.0,
+              "ci_low": 65.0,
+              "ci_high": 67.0
+            },
+            "p50": {
+              "estimate": 73.0,
+              "ci_low": 72.0,
+              "ci_high": 74.0
+            },
+            "p75": {
+              "estimate": 80.0,
+              "ci_low": 79.0,
+              "ci_high": 81.0
+            },
+            "p90": {
+              "estimate": 88.0,
+              "ci_low": 86.0,
+              "ci_high": 89.0
+            },
+            "p95": {
+              "estimate": 92.0,
+              "ci_low": 90.0,
+              "ci_high": 93.0
+            },
+            "p97.5": {
+              "estimate": 96.0,
+              "ci_low": 94.0,
+              "ci_high": 98.0
+            },
+            "p99": {
+              "estimate": 101.0,
+              "ci_low": 99.0,
+              "ci_high": 102.0
+            }
+          },
+          "summary": {
+            "mean": 72.85,
+            "ci_mean": [
+              71.85,
+              73.85
+            ],
+            "sd": 12.03,
+            "median": 73.0,
+            "iqr": 14.0,
+            "p25": 66.0,
+            "p75": 80.0,
+            "p5": 54.0,
+            "p95": 92.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "18-29",
+            "race_ethnicity": "All"
+          },
+          "n": 2135,
+          "statistics": {
+            "mean": {
+              "estimate": 66.68,
+              "ci_low": 65.61,
+              "ci_high": 67.8
+            },
+            "sd": {
+              "estimate": 10.2,
+              "ci_low": 9.66,
+              "ci_high": 10.69
+            },
+            "p1": {
+              "estimate": 44.0,
+              "ci_low": 42.0,
+              "ci_high": 45.0
+            },
+            "p2.5": {
+              "estimate": 48.0,
+              "ci_low": 46.0,
+              "ci_high": 49.0
+            },
+            "p5": {
+              "estimate": 51.0,
+              "ci_low": 49.0,
+              "ci_high": 52.0
+            },
+            "p10": {
+              "estimate": 54.0,
+              "ci_low": 53.0,
+              "ci_high": 55.0
+            },
+            "p25": {
+              "estimate": 60.0,
+              "ci_low": 59.0,
+              "ci_high": 62.0
+            },
+            "p50": {
+              "estimate": 67.0,
+              "ci_low": 65.0,
+              "ci_high": 68.0
+            },
+            "p75": {
+              "estimate": 73.0,
+              "ci_low": 72.0,
+              "ci_high": 74.0
+            },
+            "p90": {
+              "estimate": 79.0,
+              "ci_low": 78.0,
+              "ci_high": 81.0
+            },
+            "p95": {
+              "estimate": 82.0,
+              "ci_low": 82.0,
+              "ci_high": 83.0
+            },
+            "p97.5": {
+              "estimate": 85.0,
+              "ci_low": 84.0,
+              "ci_high": 86.0
+            },
+            "p99": {
+              "estimate": 91.0,
+              "ci_low": 88.0,
+              "ci_high": 94.0
+            }
+          },
+          "summary": {
+            "mean": 66.68,
+            "ci_mean": [
+              65.61,
+              67.8
+            ],
+            "sd": 10.2,
+            "median": 67.0,
+            "iqr": 13.0,
+            "p25": 60.0,
+            "p75": 73.0,
+            "p5": 51.0,
+            "p95": 82.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "30-39",
+            "race_ethnicity": "All"
+          },
+          "n": 1656,
+          "statistics": {
+            "mean": {
+              "estimate": 72.85,
+              "ci_low": 71.94,
+              "ci_high": 73.8
+            },
+            "sd": {
+              "estimate": 10.96,
+              "ci_low": 10.46,
+              "ci_high": 11.39
+            },
+            "p1": {
+              "estimate": 50.0,
+              "ci_low": 49.0,
+              "ci_high": 52.0
+            },
+            "p2.5": {
+              "estimate": 54.0,
+              "ci_low": 52.0,
+              "ci_high": 55.0
+            },
+            "p5": {
+              "estimate": 56.0,
+              "ci_low": 55.0,
+              "ci_high": 58.0
+            },
+            "p10": {
+              "estimate": 60.0,
+              "ci_low": 59.0,
+              "ci_high": 61.0
+            },
+            "p25": {
+              "estimate": 65.0,
+              "ci_low": 64.0,
+              "ci_high": 66.0
+            },
+            "p50": {
+              "estimate": 72.0,
+              "ci_low": 71.0,
+              "ci_high": 73.0
+            },
+            "p75": {
+              "estimate": 79.0,
+              "ci_low": 78.0,
+              "ci_high": 80.0
+            },
+            "p90": {
+              "estimate": 86.0,
+              "ci_low": 85.0,
+              "ci_high": 88.0
+            },
+            "p95": {
+              "estimate": 92.0,
+              "ci_low": 91.0,
+              "ci_high": 94.0
+            },
+            "p97.5": {
+              "estimate": 97.0,
+              "ci_low": 95.0,
+              "ci_high": 101.0
+            },
+            "p99": {
+              "estimate": 102.0,
+              "ci_low": 99.0,
+              "ci_high": 104.0
+            }
+          },
+          "summary": {
+            "mean": 72.85,
+            "ci_mean": [
+              71.94,
+              73.8
+            ],
+            "sd": 10.96,
+            "median": 72.0,
+            "iqr": 14.0,
+            "p25": 65.0,
+            "p75": 79.0,
+            "p5": 56.0,
+            "p95": 92.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "40-49",
+            "race_ethnicity": "All"
+          },
+          "n": 1626,
+          "statistics": {
+            "mean": {
+              "estimate": 75.62,
+              "ci_low": 74.64,
+              "ci_high": 76.68
+            },
+            "sd": {
+              "estimate": 10.46,
+              "ci_low": 9.94,
+              "ci_high": 10.94
+            },
+            "p1": {
+              "estimate": 52.0,
+              "ci_low": 51.0,
+              "ci_high": 54.0
+            },
+            "p2.5": {
+              "estimate": 55.0,
+              "ci_low": 54.0,
+              "ci_high": 58.0
+            },
+            "p5": {
+              "estimate": 58.0,
+              "ci_low": 58.0,
+              "ci_high": 61.0
+            },
+            "p10": {
+              "estimate": 63.0,
+              "ci_low": 61.0,
+              "ci_high": 64.0
+            },
+            "p25": {
+              "estimate": 69.0,
+              "ci_low": 67.0,
+              "ci_high": 70.0
+            },
+            "p50": {
+              "estimate": 75.0,
+              "ci_low": 74.0,
+              "ci_high": 76.0
+            },
+            "p75": {
+              "estimate": 83.0,
+              "ci_low": 81.0,
+              "ci_high": 84.0
+            },
+            "p90": {
+              "estimate": 89.0,
+              "ci_low": 88.0,
+              "ci_high": 91.0
+            },
+            "p95": {
+              "estimate": 92.0,
+              "ci_low": 92.0,
+              "ci_high": 94.0
+            },
+            "p97.5": {
+              "estimate": 97.0,
+              "ci_low": 95.0,
+              "ci_high": 98.0
+            },
+            "p99": {
+              "estimate": 102.0,
+              "ci_low": 98.0,
+              "ci_high": 104.0
+            }
+          },
+          "summary": {
+            "mean": 75.62,
+            "ci_mean": [
+              74.64,
+              76.68
+            ],
+            "sd": 10.46,
+            "median": 75.0,
+            "iqr": 14.0,
+            "p25": 69.0,
+            "p75": 83.0,
+            "p5": 58.0,
+            "p95": 92.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "50-59",
+            "race_ethnicity": "All"
+          },
+          "n": 1704,
+          "statistics": {
+            "mean": {
+              "estimate": 75.28,
+              "ci_low": 74.1,
+              "ci_high": 76.41
+            },
+            "sd": {
+              "estimate": 11.45,
+              "ci_low": 10.38,
+              "ci_high": 12.41
+            },
+            "p1": {
+              "estimate": 49.0,
+              "ci_low": 28.0,
+              "ci_high": 53.0
+            },
+            "p2.5": {
+              "estimate": 54.0,
+              "ci_low": 53.0,
+              "ci_high": 56.0
+            },
+            "p5": {
+              "estimate": 58.0,
+              "ci_low": 56.0,
+              "ci_high": 60.0
+            },
+            "p10": {
+              "estimate": 63.0,
+              "ci_low": 61.0,
+              "ci_high": 65.0
+            },
+            "p25": {
+              "estimate": 69.0,
+              "ci_low": 67.0,
+              "ci_high": 70.0
+            },
+            "p50": {
+              "estimate": 75.0,
+              "ci_low": 75.0,
+              "ci_high": 76.0
+            },
+            "p75": {
+              "estimate": 82.0,
+              "ci_low": 80.0,
+              "ci_high": 83.0
+            },
+            "p90": {
+              "estimate": 90.0,
+              "ci_low": 87.0,
+              "ci_high": 91.0
+            },
+            "p95": {
+              "estimate": 93.0,
+              "ci_low": 91.0,
+              "ci_high": 94.0
+            },
+            "p97.5": {
+              "estimate": 97.0,
+              "ci_low": 94.0,
+              "ci_high": 100.0
+            },
+            "p99": {
+              "estimate": 103.0,
+              "ci_low": 99.0,
+              "ci_high": 111.0
+            }
+          },
+          "summary": {
+            "mean": 75.28,
+            "ci_mean": [
+              74.1,
+              76.41
+            ],
+            "sd": 11.45,
+            "median": 75.0,
+            "iqr": 13.0,
+            "p25": 69.0,
+            "p75": 82.0,
+            "p5": 58.0,
+            "p95": 93.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "60-69",
+            "race_ethnicity": "All"
+          },
+          "n": 1922,
+          "statistics": {
+            "mean": {
+              "estimate": 71.23,
+              "ci_low": 70.28,
+              "ci_high": 72.11
+            },
+            "sd": {
+              "estimate": 11.78,
+              "ci_low": 11.12,
+              "ci_high": 12.37
+            },
+            "p1": {
+              "estimate": 41.0,
+              "ci_low": 31.0,
+              "ci_high": 46.0
+            },
+            "p2.5": {
+              "estimate": 48.0,
+              "ci_low": 46.0,
+              "ci_high": 51.0
+            },
+            "p5": {
+              "estimate": 54.0,
+              "ci_low": 50.0,
+              "ci_high": 56.0
+            },
+            "p10": {
+              "estimate": 58.0,
+              "ci_low": 57.0,
+              "ci_high": 60.0
+            },
+            "p25": {
+              "estimate": 64.0,
+              "ci_low": 63.0,
+              "ci_high": 66.0
+            },
+            "p50": {
+              "estimate": 71.0,
+              "ci_low": 70.0,
+              "ci_high": 72.0
+            },
+            "p75": {
+              "estimate": 78.0,
+              "ci_low": 77.0,
+              "ci_high": 80.0
+            },
+            "p90": {
+              "estimate": 86.0,
+              "ci_low": 84.0,
+              "ci_high": 86.0
+            },
+            "p95": {
+              "estimate": 89.0,
+              "ci_low": 87.0,
+              "ci_high": 91.0
+            },
+            "p97.5": {
+              "estimate": 93.0,
+              "ci_low": 91.0,
+              "ci_high": 95.0
+            },
+            "p99": {
+              "estimate": 99.0,
+              "ci_low": 95.0,
+              "ci_high": 102.0
+            }
+          },
+          "summary": {
+            "mean": 71.23,
+            "ci_mean": [
+              70.28,
+              72.11
+            ],
+            "sd": 11.78,
+            "median": 71.0,
+            "iqr": 14.0,
+            "p25": 64.0,
+            "p75": 78.0,
+            "p5": 54.0,
+            "p95": 89.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "70-79",
+            "race_ethnicity": "All"
+          },
+          "n": 1089,
+          "statistics": {
+            "mean": {
+              "estimate": 65.57,
+              "ci_low": 64.4,
+              "ci_high": 66.75
+            },
+            "sd": {
+              "estimate": 12.84,
+              "ci_low": 11.24,
+              "ci_high": 14.41
+            },
+            "p1": {
+              "estimate": 2.0,
+              "ci_low": 0.0,
+              "ci_high": 41.0
+            },
+            "p2.5": {
+              "estimate": 44.0,
+              "ci_low": 27.0,
+              "ci_high": 48.0
+            },
+            "p5": {
+              "estimate": 49.0,
+              "ci_low": 47.0,
+              "ci_high": 50.0
+            },
+            "p10": {
+              "estimate": 53.0,
+              "ci_low": 51.0,
+              "ci_high": 55.0
+            },
+            "p25": {
+              "estimate": 59.0,
+              "ci_low": 57.0,
+              "ci_high": 61.0
+            },
+            "p50": {
+              "estimate": 66.0,
+              "ci_low": 65.0,
+              "ci_high": 67.0
+            },
+            "p75": {
+              "estimate": 73.0,
+              "ci_low": 72.0,
+              "ci_high": 74.0
+            },
+            "p90": {
+              "estimate": 80.0,
+              "ci_low": 78.0,
+              "ci_high": 82.0
+            },
+            "p95": {
+              "estimate": 84.0,
+              "ci_low": 82.0,
+              "ci_high": 86.0
+            },
+            "p97.5": {
+              "estimate": 89.0,
+              "ci_low": 84.0,
+              "ci_high": 91.0
+            },
+            "p99": {
+              "estimate": 92.0,
+              "ci_low": 89.48,
+              "ci_high": 96.52
+            }
+          },
+          "summary": {
+            "mean": 65.57,
+            "ci_mean": [
+              64.4,
+              66.75
+            ],
+            "sd": 12.84,
+            "median": 66.0,
+            "iqr": 14.0,
+            "p25": 59.0,
+            "p75": 73.0,
+            "p5": 49.0,
+            "p95": 84.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "80+",
+            "race_ethnicity": "All"
+          },
+          "n": 686,
+          "statistics": {
+            "mean": {
+              "estimate": 61.89,
+              "ci_low": 60.49,
+              "ci_high": 63.46
+            },
+            "sd": {
+              "estimate": 15.73,
+              "ci_low": 14.11,
+              "ci_high": 17.24
+            },
+            "p1": {
+              "estimate": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 6.0
+            },
+            "p2.5": {
+              "estimate": 21.0,
+              "ci_low": 0.0,
+              "ci_high": 33.52
+            },
+            "p5": {
+              "estimate": 37.0,
+              "ci_low": 30.0,
+              "ci_high": 43.0
+            },
+            "p10": {
+              "estimate": 46.0,
+              "ci_low": 42.0,
+              "ci_high": 49.52
+            },
+            "p25": {
+              "estimate": 55.0,
+              "ci_low": 53.0,
+              "ci_high": 57.0
+            },
+            "p50": {
+              "estimate": 63.0,
+              "ci_low": 62.0,
+              "ci_high": 64.0
+            },
+            "p75": {
+              "estimate": 71.0,
+              "ci_low": 70.0,
+              "ci_high": 73.0
+            },
+            "p90": {
+              "estimate": 79.0,
+              "ci_low": 77.0,
+              "ci_high": 81.0
+            },
+            "p95": {
+              "estimate": 84.0,
+              "ci_low": 81.0,
+              "ci_high": 85.0
+            },
+            "p97.5": {
+              "estimate": 88.0,
+              "ci_low": 85.0,
+              "ci_high": 92.0
+            },
+            "p99": {
+              "estimate": 94.0,
+              "ci_low": 88.0,
+              "ci_high": 100.0
+            }
+          },
+          "summary": {
+            "mean": 61.89,
+            "ci_mean": [
+              60.49,
+              63.46
+            ],
+            "sd": 15.73,
+            "median": 63.0,
+            "iqr": 16.0,
+            "p25": 55.0,
+            "p75": 71.0,
+            "p5": 37.0,
+            "p95": 84.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "18-29",
+            "race_ethnicity": "All"
+          },
+          "n": 1103,
+          "statistics": {
+            "mean": {
+              "estimate": 65.49,
+              "ci_low": 64.27,
+              "ci_high": 66.65
+            },
+            "sd": {
+              "estimate": 9.47,
+              "ci_low": 8.94,
+              "ci_high": 9.96
+            },
+            "p1": {
+              "estimate": 45.0,
+              "ci_low": 44.0,
+              "ci_high": 46.0
+            },
+            "p2.5": {
+              "estimate": 47.0,
+              "ci_low": 45.0,
+              "ci_high": 49.0
+            },
+            "p5": {
+              "estimate": 49.0,
+              "ci_low": 48.0,
+              "ci_high": 51.0
+            },
+            "p10": {
+              "estimate": 53.0,
+              "ci_low": 52.0,
+              "ci_high": 54.0
+            },
+            "p25": {
+              "estimate": 60.0,
+              "ci_low": 58.0,
+              "ci_high": 61.0
+            },
+            "p50": {
+              "estimate": 66.0,
+              "ci_low": 64.0,
+              "ci_high": 67.0
+            },
+            "p75": {
+              "estimate": 72.0,
+              "ci_low": 70.0,
+              "ci_high": 73.0
+            },
+            "p90": {
+              "estimate": 78.0,
+              "ci_low": 75.0,
+              "ci_high": 79.0
+            },
+            "p95": {
+              "estimate": 81.0,
+              "ci_low": 79.0,
+              "ci_high": 82.0
+            },
+            "p97.5": {
+              "estimate": 82.0,
+              "ci_low": 81.0,
+              "ci_high": 84.0
+            },
+            "p99": {
+              "estimate": 88.0,
+              "ci_low": 84.0,
+              "ci_high": 90.0
+            }
+          },
+          "summary": {
+            "mean": 65.49,
+            "ci_mean": [
+              64.27,
+              66.65
+            ],
+            "sd": 9.47,
+            "median": 66.0,
+            "iqr": 12.0,
+            "p25": 60.0,
+            "p75": 72.0,
+            "p5": 49.0,
+            "p95": 81.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "18-29",
+            "race_ethnicity": "All"
+          },
+          "n": 1032,
+          "statistics": {
+            "mean": {
+              "estimate": 67.84,
+              "ci_low": 66.6,
+              "ci_high": 69.17
+            },
+            "sd": {
+              "estimate": 10.73,
+              "ci_low": 9.97,
+              "ci_high": 11.48
+            },
+            "p1": {
+              "estimate": 43.0,
+              "ci_low": 41.0,
+              "ci_high": 47.0
+            },
+            "p2.5": {
+              "estimate": 48.0,
+              "ci_low": 46.0,
+              "ci_high": 51.0
+            },
+            "p5": {
+              "estimate": 52.0,
+              "ci_low": 50.0,
+              "ci_high": 53.0
+            },
+            "p10": {
+              "estimate": 55.0,
+              "ci_low": 54.0,
+              "ci_high": 57.0
+            },
+            "p25": {
+              "estimate": 61.0,
+              "ci_low": 59.0,
+              "ci_high": 63.0
+            },
+            "p50": {
+              "estimate": 68.0,
+              "ci_low": 66.0,
+              "ci_high": 69.0
+            },
+            "p75": {
+              "estimate": 75.0,
+              "ci_low": 73.0,
+              "ci_high": 76.0
+            },
+            "p90": {
+              "estimate": 81.0,
+              "ci_low": 79.0,
+              "ci_high": 82.0
+            },
+            "p95": {
+              "estimate": 84.0,
+              "ci_low": 83.0,
+              "ci_high": 85.0
+            },
+            "p97.5": {
+              "estimate": 86.0,
+              "ci_low": 85.0,
+              "ci_high": 91.0
+            },
+            "p99": {
+              "estimate": 94.0,
+              "ci_low": 89.0,
+              "ci_high": 100.0
+            }
+          },
+          "summary": {
+            "mean": 67.84,
+            "ci_mean": [
+              66.6,
+              69.17
+            ],
+            "sd": 10.73,
+            "median": 68.0,
+            "iqr": 14.0,
+            "p25": 61.0,
+            "p75": 75.0,
+            "p5": 52.0,
+            "p95": 84.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "30-39",
+            "race_ethnicity": "All"
+          },
+          "n": 872,
+          "statistics": {
+            "mean": {
+              "estimate": 69.96,
+              "ci_low": 69.08,
+              "ci_high": 70.76
+            },
+            "sd": {
+              "estimate": 10.12,
+              "ci_low": 9.57,
+              "ci_high": 10.68
+            },
+            "p1": {
+              "estimate": 50.0,
+              "ci_low": 44.0,
+              "ci_high": 52.0
+            },
+            "p2.5": {
+              "estimate": 52.0,
+              "ci_low": 50.0,
+              "ci_high": 54.0
+            },
+            "p5": {
+              "estimate": 55.0,
+              "ci_low": 54.0,
+              "ci_high": 57.0
+            },
+            "p10": {
+              "estimate": 58.0,
+              "ci_low": 57.0,
+              "ci_high": 60.0
+            },
+            "p25": {
+              "estimate": 63.0,
+              "ci_low": 62.0,
+              "ci_high": 64.0
+            },
+            "p50": {
+              "estimate": 69.0,
+              "ci_low": 68.0,
+              "ci_high": 71.0
+            },
+            "p75": {
+              "estimate": 76.0,
+              "ci_low": 75.0,
+              "ci_high": 76.0
+            },
+            "p90": {
+              "estimate": 82.0,
+              "ci_low": 80.0,
+              "ci_high": 84.0
+            },
+            "p95": {
+              "estimate": 87.0,
+              "ci_low": 84.0,
+              "ci_high": 89.0
+            },
+            "p97.5": {
+              "estimate": 95.0,
+              "ci_low": 90.0,
+              "ci_high": 97.0
+            },
+            "p99": {
+              "estimate": 102.0,
+              "ci_low": 96.0,
+              "ci_high": 104.0
+            }
+          },
+          "summary": {
+            "mean": 69.96,
+            "ci_mean": [
+              69.08,
+              70.76
+            ],
+            "sd": 10.12,
+            "median": 69.0,
+            "iqr": 13.0,
+            "p25": 63.0,
+            "p75": 76.0,
+            "p5": 55.0,
+            "p95": 87.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "30-39",
+            "race_ethnicity": "All"
+          },
+          "n": 784,
+          "statistics": {
+            "mean": {
+              "estimate": 75.76,
+              "ci_low": 74.44,
+              "ci_high": 77.12
+            },
+            "sd": {
+              "estimate": 11.0,
+              "ci_low": 10.17,
+              "ci_high": 11.69
+            },
+            "p1": {
+              "estimate": 51.0,
+              "ci_low": 49.0,
+              "ci_high": 55.0
+            },
+            "p2.5": {
+              "estimate": 55.0,
+              "ci_low": 54.0,
+              "ci_high": 57.0
+            },
+            "p5": {
+              "estimate": 59.0,
+              "ci_low": 57.0,
+              "ci_high": 60.0
+            },
+            "p10": {
+              "estimate": 62.0,
+              "ci_low": 61.0,
+              "ci_high": 64.0
+            },
+            "p25": {
+              "estimate": 68.0,
+              "ci_low": 67.0,
+              "ci_high": 69.0
+            },
+            "p50": {
+              "estimate": 76.0,
+              "ci_low": 74.0,
+              "ci_high": 77.0
+            },
+            "p75": {
+              "estimate": 82.0,
+              "ci_low": 81.0,
+              "ci_high": 84.0
+            },
+            "p90": {
+              "estimate": 91.0,
+              "ci_low": 87.0,
+              "ci_high": 92.0
+            },
+            "p95": {
+              "estimate": 95.0,
+              "ci_low": 92.0,
+              "ci_high": 98.0
+            },
+            "p97.5": {
+              "estimate": 100.0,
+              "ci_low": 95.0,
+              "ci_high": 101.0
+            },
+            "p99": {
+              "estimate": 102.0,
+              "ci_low": 99.48,
+              "ci_high": 105.0
+            }
+          },
+          "summary": {
+            "mean": 75.76,
+            "ci_mean": [
+              74.44,
+              77.12
+            ],
+            "sd": 11.0,
+            "median": 76.0,
+            "iqr": 14.0,
+            "p25": 68.0,
+            "p75": 82.0,
+            "p5": 59.0,
+            "p95": 95.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "40-49",
+            "race_ethnicity": "All"
+          },
+          "n": 879,
+          "statistics": {
+            "mean": {
+              "estimate": 73.38,
+              "ci_low": 72.07,
+              "ci_high": 74.7
+            },
+            "sd": {
+              "estimate": 10.31,
+              "ci_low": 9.56,
+              "ci_high": 10.9
+            },
+            "p1": {
+              "estimate": 51.0,
+              "ci_low": 45.0,
+              "ci_high": 54.0
+            },
+            "p2.5": {
+              "estimate": 54.0,
+              "ci_low": 52.0,
+              "ci_high": 57.0
+            },
+            "p5": {
+              "estimate": 57.0,
+              "ci_low": 55.0,
+              "ci_high": 59.0
+            },
+            "p10": {
+              "estimate": 61.0,
+              "ci_low": 58.0,
+              "ci_high": 63.0
+            },
+            "p25": {
+              "estimate": 66.0,
+              "ci_low": 65.0,
+              "ci_high": 68.0
+            },
+            "p50": {
+              "estimate": 73.0,
+              "ci_low": 71.0,
+              "ci_high": 75.0
+            },
+            "p75": {
+              "estimate": 79.0,
+              "ci_low": 78.0,
+              "ci_high": 81.0
+            },
+            "p90": {
+              "estimate": 87.0,
+              "ci_low": 85.0,
+              "ci_high": 88.0
+            },
+            "p95": {
+              "estimate": 91.0,
+              "ci_low": 89.0,
+              "ci_high": 92.0
+            },
+            "p97.5": {
+              "estimate": 94.0,
+              "ci_low": 92.0,
+              "ci_high": 97.52
+            },
+            "p99": {
+              "estimate": 101.0,
+              "ci_low": 95.0,
+              "ci_high": 104.0
+            }
+          },
+          "summary": {
+            "mean": 73.38,
+            "ci_mean": [
+              72.07,
+              74.7
+            ],
+            "sd": 10.31,
+            "median": 73.0,
+            "iqr": 13.0,
+            "p25": 66.0,
+            "p75": 79.0,
+            "p5": 57.0,
+            "p95": 91.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "40-49",
+            "race_ethnicity": "All"
+          },
+          "n": 747,
+          "statistics": {
+            "mean": {
+              "estimate": 77.97,
+              "ci_low": 76.83,
+              "ci_high": 79.1
+            },
+            "sd": {
+              "estimate": 10.09,
+              "ci_low": 9.34,
+              "ci_high": 10.82
+            },
+            "p1": {
+              "estimate": 55.0,
+              "ci_low": 53.0,
+              "ci_high": 59.0
+            },
+            "p2.5": {
+              "estimate": 58.0,
+              "ci_low": 57.0,
+              "ci_high": 61.0
+            },
+            "p5": {
+              "estimate": 61.0,
+              "ci_low": 59.0,
+              "ci_high": 63.0
+            },
+            "p10": {
+              "estimate": 66.0,
+              "ci_low": 63.0,
+              "ci_high": 67.0
+            },
+            "p25": {
+              "estimate": 72.0,
+              "ci_low": 70.0,
+              "ci_high": 73.52
+            },
+            "p50": {
+              "estimate": 77.0,
+              "ci_low": 75.0,
+              "ci_high": 78.0
+            },
+            "p75": {
+              "estimate": 85.0,
+              "ci_low": 84.0,
+              "ci_high": 87.0
+            },
+            "p90": {
+              "estimate": 91.0,
+              "ci_low": 89.0,
+              "ci_high": 92.0
+            },
+            "p95": {
+              "estimate": 94.0,
+              "ci_low": 92.0,
+              "ci_high": 97.0
+            },
+            "p97.5": {
+              "estimate": 98.0,
+              "ci_low": 95.0,
+              "ci_high": 100.0
+            },
+            "p99": {
+              "estimate": 102.0,
+              "ci_low": 98.0,
+              "ci_high": 105.0
+            }
+          },
+          "summary": {
+            "mean": 77.97,
+            "ci_mean": [
+              76.83,
+              79.1
+            ],
+            "sd": 10.09,
+            "median": 77.0,
+            "iqr": 13.0,
+            "p25": 72.0,
+            "p75": 85.0,
+            "p5": 61.0,
+            "p95": 94.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "50-59",
+            "race_ethnicity": "All"
+          },
+          "n": 888,
+          "statistics": {
+            "mean": {
+              "estimate": 74.3,
+              "ci_low": 73.09,
+              "ci_high": 75.62
+            },
+            "sd": {
+              "estimate": 11.37,
+              "ci_low": 10.04,
+              "ci_high": 12.68
+            },
+            "p1": {
+              "estimate": 44.0,
+              "ci_low": 28.0,
+              "ci_high": 53.0
+            },
+            "p2.5": {
+              "estimate": 53.0,
+              "ci_low": 50.0,
+              "ci_high": 55.0
+            },
+            "p5": {
+              "estimate": 56.0,
+              "ci_low": 55.0,
+              "ci_high": 59.0
+            },
+            "p10": {
+              "estimate": 62.0,
+              "ci_low": 59.0,
+              "ci_high": 64.0
+            },
+            "p25": {
+              "estimate": 68.0,
+              "ci_low": 66.0,
+              "ci_high": 70.0
+            },
+            "p50": {
+              "estimate": 75.0,
+              "ci_low": 73.0,
+              "ci_high": 75.0
+            },
+            "p75": {
+              "estimate": 80.0,
+              "ci_low": 79.0,
+              "ci_high": 82.0
+            },
+            "p90": {
+              "estimate": 87.0,
+              "ci_low": 86.0,
+              "ci_high": 90.52
+            },
+            "p95": {
+              "estimate": 92.0,
+              "ci_low": 90.0,
+              "ci_high": 94.0
+            },
+            "p97.5": {
+              "estimate": 94.0,
+              "ci_low": 92.0,
+              "ci_high": 99.0
+            },
+            "p99": {
+              "estimate": 102.0,
+              "ci_low": 97.0,
+              "ci_high": 107.0
+            }
+          },
+          "summary": {
+            "mean": 74.3,
+            "ci_mean": [
+              73.09,
+              75.62
+            ],
+            "sd": 11.37,
+            "median": 75.0,
+            "iqr": 12.0,
+            "p25": 68.0,
+            "p75": 80.0,
+            "p5": 56.0,
+            "p95": 92.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "50-59",
+            "race_ethnicity": "All"
+          },
+          "n": 816,
+          "statistics": {
+            "mean": {
+              "estimate": 76.31,
+              "ci_low": 74.84,
+              "ci_high": 77.69
+            },
+            "sd": {
+              "estimate": 11.45,
+              "ci_low": 9.82,
+              "ci_high": 12.93
+            },
+            "p1": {
+              "estimate": 53.0,
+              "ci_low": 44.0,
+              "ci_high": 54.0
+            },
+            "p2.5": {
+              "estimate": 56.0,
+              "ci_low": 54.0,
+              "ci_high": 58.0
+            },
+            "p5": {
+              "estimate": 60.0,
+              "ci_low": 58.0,
+              "ci_high": 63.0
+            },
+            "p10": {
+              "estimate": 63.0,
+              "ci_low": 62.0,
+              "ci_high": 66.0
+            },
+            "p25": {
+              "estimate": 69.0,
+              "ci_low": 68.0,
+              "ci_high": 71.0
+            },
+            "p50": {
+              "estimate": 76.0,
+              "ci_low": 75.0,
+              "ci_high": 77.0
+            },
+            "p75": {
+              "estimate": 83.0,
+              "ci_low": 81.0,
+              "ci_high": 86.0
+            },
+            "p90": {
+              "estimate": 90.0,
+              "ci_low": 87.0,
+              "ci_high": 92.0
+            },
+            "p95": {
+              "estimate": 93.0,
+              "ci_low": 91.0,
+              "ci_high": 95.0
+            },
+            "p97.5": {
+              "estimate": 98.0,
+              "ci_low": 93.0,
+              "ci_high": 101.0
+            },
+            "p99": {
+              "estimate": 107.0,
+              "ci_low": 98.0,
+              "ci_high": 111.0
+            }
+          },
+          "summary": {
+            "mean": 76.31,
+            "ci_mean": [
+              74.84,
+              77.69
+            ],
+            "sd": 11.45,
+            "median": 76.0,
+            "iqr": 14.0,
+            "p25": 69.0,
+            "p75": 83.0,
+            "p5": 60.0,
+            "p95": 93.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "60-69",
+            "race_ethnicity": "All"
+          },
+          "n": 960,
+          "statistics": {
+            "mean": {
+              "estimate": 69.74,
+              "ci_low": 68.62,
+              "ci_high": 70.84
+            },
+            "sd": {
+              "estimate": 11.79,
+              "ci_low": 10.77,
+              "ci_high": 12.71
+            },
+            "p1": {
+              "estimate": 31.0,
+              "ci_low": 28.9,
+              "ci_high": 48.0
+            },
+            "p2.5": {
+              "estimate": 48.0,
+              "ci_low": 41.0,
+              "ci_high": 50.0
+            },
+            "p5": {
+              "estimate": 52.0,
+              "ci_low": 48.0,
+              "ci_high": 55.0
+            },
+            "p10": {
+              "estimate": 57.0,
+              "ci_low": 55.0,
+              "ci_high": 59.0
+            },
+            "p25": {
+              "estimate": 63.0,
+              "ci_low": 62.0,
+              "ci_high": 64.0
+            },
+            "p50": {
+              "estimate": 69.0,
+              "ci_low": 68.0,
+              "ci_high": 71.0
+            },
+            "p75": {
+              "estimate": 77.0,
+              "ci_low": 75.0,
+              "ci_high": 78.0
+            },
+            "p90": {
+              "estimate": 84.0,
+              "ci_low": 82.0,
+              "ci_high": 86.0
+            },
+            "p95": {
+              "estimate": 87.0,
+              "ci_low": 86.0,
+              "ci_high": 88.0
+            },
+            "p97.5": {
+              "estimate": 91.0,
+              "ci_low": 88.0,
+              "ci_high": 93.0
+            },
+            "p99": {
+              "estimate": 96.0,
+              "ci_low": 92.0,
+              "ci_high": 100.0
+            }
+          },
+          "summary": {
+            "mean": 69.74,
+            "ci_mean": [
+              68.62,
+              70.84
+            ],
+            "sd": 11.79,
+            "median": 69.0,
+            "iqr": 14.0,
+            "p25": 63.0,
+            "p75": 77.0,
+            "p5": 52.0,
+            "p95": 87.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "60-69",
+            "race_ethnicity": "All"
+          },
+          "n": 962,
+          "statistics": {
+            "mean": {
+              "estimate": 72.88,
+              "ci_low": 71.56,
+              "ci_high": 74.07
+            },
+            "sd": {
+              "estimate": 11.55,
+              "ci_low": 10.66,
+              "ci_high": 12.5
+            },
+            "p1": {
+              "estimate": 46.0,
+              "ci_low": 38.0,
+              "ci_high": 50.0
+            },
+            "p2.5": {
+              "estimate": 50.0,
+              "ci_low": 46.0,
+              "ci_high": 55.0
+            },
+            "p5": {
+              "estimate": 56.0,
+              "ci_low": 53.0,
+              "ci_high": 57.0
+            },
+            "p10": {
+              "estimate": 59.0,
+              "ci_low": 57.0,
+              "ci_high": 61.0
+            },
+            "p25": {
+              "estimate": 66.0,
+              "ci_low": 65.0,
+              "ci_high": 68.0
+            },
+            "p50": {
+              "estimate": 73.0,
+              "ci_low": 71.0,
+              "ci_high": 74.0
+            },
+            "p75": {
+              "estimate": 80.0,
+              "ci_low": 78.0,
+              "ci_high": 82.0
+            },
+            "p90": {
+              "estimate": 86.0,
+              "ci_low": 85.0,
+              "ci_high": 88.0
+            },
+            "p95": {
+              "estimate": 91.0,
+              "ci_low": 88.0,
+              "ci_high": 92.0
+            },
+            "p97.5": {
+              "estimate": 95.0,
+              "ci_low": 91.0,
+              "ci_high": 99.0
+            },
+            "p99": {
+              "estimate": 102.0,
+              "ci_low": 96.0,
+              "ci_high": 105.0
+            }
+          },
+          "summary": {
+            "mean": 72.88,
+            "ci_mean": [
+              71.56,
+              74.07
+            ],
+            "sd": 11.55,
+            "median": 73.0,
+            "iqr": 14.0,
+            "p25": 66.0,
+            "p75": 80.0,
+            "p5": 56.0,
+            "p95": 91.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "70-79",
+            "race_ethnicity": "All"
+          },
+          "n": 523,
+          "statistics": {
+            "mean": {
+              "estimate": 64.88,
+              "ci_low": 63.24,
+              "ci_high": 66.65
+            },
+            "sd": {
+              "estimate": 14.1,
+              "ci_low": 11.47,
+              "ci_high": 16.43
+            },
+            "p1": {
+              "estimate": 2.0,
+              "ci_low": 0.0,
+              "ci_high": 42.0
+            },
+            "p2.5": {
+              "estimate": 35.0,
+              "ci_low": 2.0,
+              "ci_high": 48.0
+            },
+            "p5": {
+              "estimate": 48.0,
+              "ci_low": 42.0,
+              "ci_high": 50.52
+            },
+            "p10": {
+              "estimate": 52.0,
+              "ci_low": 50.0,
+              "ci_high": 55.0
+            },
+            "p25": {
+              "estimate": 58.0,
+              "ci_low": 56.0,
+              "ci_high": 60.0
+            },
+            "p50": {
+              "estimate": 65.0,
+              "ci_low": 64.0,
+              "ci_high": 66.0
+            },
+            "p75": {
+              "estimate": 73.0,
+              "ci_low": 71.0,
+              "ci_high": 74.0
+            },
+            "p90": {
+              "estimate": 81.0,
+              "ci_low": 78.0,
+              "ci_high": 82.0
+            },
+            "p95": {
+              "estimate": 84.0,
+              "ci_low": 82.0,
+              "ci_high": 89.0
+            },
+            "p97.5": {
+              "estimate": 90.0,
+              "ci_low": 84.0,
+              "ci_high": 91.0
+            },
+            "p99": {
+              "estimate": 92.0,
+              "ci_low": 89.0,
+              "ci_high": 106.0
+            }
+          },
+          "summary": {
+            "mean": 64.88,
+            "ci_mean": [
+              63.24,
+              66.65
+            ],
+            "sd": 14.1,
+            "median": 65.0,
+            "iqr": 15.0,
+            "p25": 58.0,
+            "p75": 73.0,
+            "p5": 48.0,
+            "p95": 84.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "70-79",
+            "race_ethnicity": "All"
+          },
+          "n": 566,
+          "statistics": {
+            "mean": {
+              "estimate": 66.41,
+              "ci_low": 65.08,
+              "ci_high": 67.75
+            },
+            "sd": {
+              "estimate": 11.05,
+              "ci_low": 9.85,
+              "ci_high": 12.24
+            },
+            "p1": {
+              "estimate": 41.0,
+              "ci_low": 20.0,
+              "ci_high": 46.0
+            },
+            "p2.5": {
+              "estimate": 48.0,
+              "ci_low": 43.0,
+              "ci_high": 49.0
+            },
+            "p5": {
+              "estimate": 49.0,
+              "ci_low": 48.0,
+              "ci_high": 52.0
+            },
+            "p10": {
+              "estimate": 53.0,
+              "ci_low": 51.0,
+              "ci_high": 55.0
+            },
+            "p25": {
+              "estimate": 61.0,
+              "ci_low": 59.0,
+              "ci_high": 62.0
+            },
+            "p50": {
+              "estimate": 67.0,
+              "ci_low": 65.0,
+              "ci_high": 68.0
+            },
+            "p75": {
+              "estimate": 73.0,
+              "ci_low": 71.0,
+              "ci_high": 75.0
+            },
+            "p90": {
+              "estimate": 79.0,
+              "ci_low": 77.0,
+              "ci_high": 82.0
+            },
+            "p95": {
+              "estimate": 83.0,
+              "ci_low": 80.0,
+              "ci_high": 86.0
+            },
+            "p97.5": {
+              "estimate": 86.0,
+              "ci_low": 83.0,
+              "ci_high": 90.0
+            },
+            "p99": {
+              "estimate": 93.0,
+              "ci_low": 88.0,
+              "ci_high": 96.0
+            }
+          },
+          "summary": {
+            "mean": 66.41,
+            "ci_mean": [
+              65.08,
+              67.75
+            ],
+            "sd": 11.05,
+            "median": 67.0,
+            "iqr": 12.0,
+            "p25": 61.0,
+            "p75": 73.0,
+            "p5": 49.0,
+            "p95": 83.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "80+",
+            "race_ethnicity": "All"
+          },
+          "n": 353,
+          "statistics": {
+            "mean": {
+              "estimate": 61.61,
+              "ci_low": 59.8,
+              "ci_high": 63.39
+            },
+            "sd": {
+              "estimate": 16.34,
+              "ci_low": 14.01,
+              "ci_high": 18.34
+            },
+            "p1": {
+              "estimate": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 24.0
+            },
+            "p2.5": {
+              "estimate": 21.0,
+              "ci_low": 0.0,
+              "ci_high": 32.0
+            },
+            "p5": {
+              "estimate": 34.0,
+              "ci_low": 25.0,
+              "ci_high": 40.52
+            },
+            "p10": {
+              "estimate": 43.0,
+              "ci_low": 38.0,
+              "ci_high": 49.0
+            },
+            "p25": {
+              "estimate": 55.0,
+              "ci_low": 53.0,
+              "ci_high": 57.0
+            },
+            "p50": {
+              "estimate": 63.0,
+              "ci_low": 62.0,
+              "ci_high": 65.0
+            },
+            "p75": {
+              "estimate": 72.0,
+              "ci_low": 70.0,
+              "ci_high": 73.0
+            },
+            "p90": {
+              "estimate": 79.0,
+              "ci_low": 76.0,
+              "ci_high": 82.0
+            },
+            "p95": {
+              "estimate": 84.0,
+              "ci_low": 81.0,
+              "ci_high": 86.0
+            },
+            "p97.5": {
+              "estimate": 88.0,
+              "ci_low": 85.0,
+              "ci_high": 95.0
+            },
+            "p99": {
+              "estimate": 95.0,
+              "ci_low": 86.0,
+              "ci_high": 103.0
+            }
+          },
+          "summary": {
+            "mean": 61.61,
+            "ci_mean": [
+              59.8,
+              63.39
+            ],
+            "sd": 16.34,
+            "median": 63.0,
+            "iqr": 17.0,
+            "p25": 55.0,
+            "p75": 72.0,
+            "p5": 34.0,
+            "p95": 84.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "80+",
+            "race_ethnicity": "All"
+          },
+          "n": 333,
+          "statistics": {
+            "mean": {
+              "estimate": 62.3,
+              "ci_low": 60.33,
+              "ci_high": 64.34
+            },
+            "sd": {
+              "estimate": 14.76,
+              "ci_low": 12.88,
+              "ci_high": 16.36
+            },
+            "p1": {
+              "estimate": 0.0,
+              "ci_low": 0.0,
+              "ci_high": 17.0
+            },
+            "p2.5": {
+              "estimate": 21.0,
+              "ci_low": 0.0,
+              "ci_high": 41.0
+            },
+            "p5": {
+              "estimate": 42.0,
+              "ci_low": 41.0,
+              "ci_high": 45.0
+            },
+            "p10": {
+              "estimate": 48.0,
+              "ci_low": 44.0,
+              "ci_high": 52.0
+            },
+            "p25": {
+              "estimate": 55.0,
+              "ci_low": 53.0,
+              "ci_high": 58.0
+            },
+            "p50": {
+              "estimate": 63.0,
+              "ci_low": 61.0,
+              "ci_high": 65.0
+            },
+            "p75": {
+              "estimate": 71.0,
+              "ci_low": 68.0,
+              "ci_high": 74.0
+            },
+            "p90": {
+              "estimate": 78.0,
+              "ci_low": 76.0,
+              "ci_high": 81.0
+            },
+            "p95": {
+              "estimate": 83.0,
+              "ci_low": 79.0,
+              "ci_high": 88.0
+            },
+            "p97.5": {
+              "estimate": 90.0,
+              "ci_low": 83.0,
+              "ci_high": 93.0
+            },
+            "p99": {
+              "estimate": 93.0,
+              "ci_low": 88.0,
+              "ci_high": 100.0
+            }
+          },
+          "summary": {
+            "mean": 62.3,
+            "ci_mean": [
+              60.33,
+              64.34
+            ],
+            "sd": 14.76,
+            "median": 63.0,
+            "iqr": 16.0,
+            "p25": 55.0,
+            "p75": 71.0,
+            "p5": 42.0,
+            "p95": 83.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Mexican American"
+          },
+          "n": 1701,
+          "statistics": {
+            "mean": {
+              "estimate": 70.39,
+              "ci_low": 69.55,
+              "ci_high": 71.39
+            },
+            "sd": {
+              "estimate": 12.3,
+              "ci_low": 11.46,
+              "ci_high": 12.98
+            },
+            "p1": {
+              "estimate": 44.0,
+              "ci_low": 24.0,
+              "ci_high": 47.0
+            },
+            "p2.5": {
+              "estimate": 49.0,
+              "ci_low": 47.0,
+              "ci_high": 51.0
+            },
+            "p5": {
+              "estimate": 53.0,
+              "ci_low": 52.0,
+              "ci_high": 54.0
+            },
+            "p10": {
+              "estimate": 56.0,
+              "ci_low": 55.0,
+              "ci_high": 57.0
+            },
+            "p25": {
+              "estimate": 63.0,
+              "ci_low": 62.0,
+              "ci_high": 65.0
+            },
+            "p50": {
+              "estimate": 70.0,
+              "ci_low": 69.0,
+              "ci_high": 72.0
+            },
+            "p75": {
+              "estimate": 78.0,
+              "ci_low": 77.0,
+              "ci_high": 78.0
+            },
+            "p90": {
+              "estimate": 85.0,
+              "ci_low": 84.0,
+              "ci_high": 86.0
+            },
+            "p95": {
+              "estimate": 90.0,
+              "ci_low": 88.0,
+              "ci_high": 91.0
+            },
+            "p97.5": {
+              "estimate": 95.0,
+              "ci_low": 92.48,
+              "ci_high": 97.0
+            },
+            "p99": {
+              "estimate": 99.0,
+              "ci_low": 97.0,
+              "ci_high": 102.0
+            }
+          },
+          "summary": {
+            "mean": 70.39,
+            "ci_mean": [
+              69.55,
+              71.39
+            ],
+            "sd": 12.3,
+            "median": 70.0,
+            "iqr": 15.0,
+            "p25": 63.0,
+            "p75": 78.0,
+            "p5": 53.0,
+            "p95": 90.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Non-Hispanic Asian"
+          },
+          "n": 1385,
+          "statistics": {
+            "mean": {
+              "estimate": 72.65,
+              "ci_low": 72.02,
+              "ci_high": 73.33
+            },
+            "sd": {
+              "estimate": 11.72,
+              "ci_low": 10.92,
+              "ci_high": 12.55
+            },
+            "p1": {
+              "estimate": 45.0,
+              "ci_low": 43.0,
+              "ci_high": 48.0
+            },
+            "p2.5": {
+              "estimate": 50.0,
+              "ci_low": 48.0,
+              "ci_high": 52.0
+            },
+            "p5": {
+              "estimate": 54.0,
+              "ci_low": 53.0,
+              "ci_high": 56.0
+            },
+            "p10": {
+              "estimate": 59.0,
+              "ci_low": 58.0,
+              "ci_high": 60.0
+            },
+            "p25": {
+              "estimate": 66.0,
+              "ci_low": 65.0,
+              "ci_high": 67.0
+            },
+            "p50": {
+              "estimate": 73.0,
+              "ci_low": 72.0,
+              "ci_high": 74.0
+            },
+            "p75": {
+              "estimate": 80.0,
+              "ci_low": 79.0,
+              "ci_high": 81.0
+            },
+            "p90": {
+              "estimate": 86.0,
+              "ci_low": 85.0,
+              "ci_high": 87.0
+            },
+            "p95": {
+              "estimate": 91.0,
+              "ci_low": 89.0,
+              "ci_high": 93.0
+            },
+            "p97.5": {
+              "estimate": 95.0,
+              "ci_low": 93.0,
+              "ci_high": 98.0
+            },
+            "p99": {
+              "estimate": 102.0,
+              "ci_low": 97.0,
+              "ci_high": 104.0
+            }
+          },
+          "summary": {
+            "mean": 72.65,
+            "ci_mean": [
+              72.02,
+              73.33
+            ],
+            "sd": 11.72,
+            "median": 73.0,
+            "iqr": 14.0,
+            "p25": 66.0,
+            "p75": 80.0,
+            "p5": 54.0,
+            "p95": 91.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Non-Hispanic Black"
+          },
+          "n": 2408,
+          "statistics": {
+            "mean": {
+              "estimate": 72.42,
+              "ci_low": 71.27,
+              "ci_high": 73.74
+            },
+            "sd": {
+              "estimate": 13.6,
+              "ci_low": 13.02,
+              "ci_high": 14.19
+            },
+            "p1": {
+              "estimate": 39.0,
+              "ci_low": 34.0,
+              "ci_high": 44.0
+            },
+            "p2.5": {
+              "estimate": 48.0,
+              "ci_low": 46.0,
+              "ci_high": 49.0
+            },
+            "p5": {
+              "estimate": 52.0,
+              "ci_low": 51.0,
+              "ci_high": 54.0
+            },
+            "p10": {
+              "estimate": 57.0,
+              "ci_low": 55.0,
+              "ci_high": 59.0
+            },
+            "p25": {
+              "estimate": 64.0,
+              "ci_low": 63.0,
+              "ci_high": 65.0
+            },
+            "p50": {
+              "estimate": 72.0,
+              "ci_low": 71.0,
+              "ci_high": 74.0
+            },
+            "p75": {
+              "estimate": 80.0,
+              "ci_low": 79.0,
+              "ci_high": 82.0
+            },
+            "p90": {
+              "estimate": 89.0,
+              "ci_low": 88.0,
+              "ci_high": 91.0
+            },
+            "p95": {
+              "estimate": 95.0,
+              "ci_low": 93.0,
+              "ci_high": 96.0
+            },
+            "p97.5": {
+              "estimate": 100.0,
+              "ci_low": 97.0,
+              "ci_high": 102.0
+            },
+            "p99": {
+              "estimate": 107.0,
+              "ci_low": 104.0,
+              "ci_high": 108.0
+            }
+          },
+          "summary": {
+            "mean": 72.42,
+            "ci_mean": [
+              71.27,
+              73.74
+            ],
+            "sd": 13.6,
+            "median": 72.0,
+            "iqr": 16.0,
+            "p25": 64.0,
+            "p75": 80.0,
+            "p5": 52.0,
+            "p95": 95.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Non-Hispanic White"
+          },
+          "n": 3625,
+          "statistics": {
+            "mean": {
+              "estimate": 70.84,
+              "ci_low": 69.94,
+              "ci_high": 71.74
+            },
+            "sd": {
+              "estimate": 11.87,
+              "ci_low": 11.36,
+              "ci_high": 12.34
+            },
+            "p1": {
+              "estimate": 41.0,
+              "ci_low": 38.0,
+              "ci_high": 45.0
+            },
+            "p2.5": {
+              "estimate": 49.0,
+              "ci_low": 47.0,
+              "ci_high": 50.0
+            },
+            "p5": {
+              "estimate": 53.0,
+              "ci_low": 52.0,
+              "ci_high": 54.0
+            },
+            "p10": {
+              "estimate": 57.0,
+              "ci_low": 56.0,
+              "ci_high": 58.0
+            },
+            "p25": {
+              "estimate": 64.0,
+              "ci_low": 63.0,
+              "ci_high": 65.0
+            },
+            "p50": {
+              "estimate": 71.0,
+              "ci_low": 70.0,
+              "ci_high": 72.0
+            },
+            "p75": {
+              "estimate": 78.0,
+              "ci_low": 77.0,
+              "ci_high": 79.0
+            },
+            "p90": {
+              "estimate": 85.0,
+              "ci_low": 84.0,
+              "ci_high": 86.0
+            },
+            "p95": {
+              "estimate": 90.0,
+              "ci_low": 88.0,
+              "ci_high": 91.0
+            },
+            "p97.5": {
+              "estimate": 92.0,
+              "ci_low": 92.0,
+              "ci_high": 94.0
+            },
+            "p99": {
+              "estimate": 98.0,
+              "ci_low": 95.0,
+              "ci_high": 101.0
+            }
+          },
+          "summary": {
+            "mean": 70.84,
+            "ci_mean": [
+              69.94,
+              71.74
+            ],
+            "sd": 11.87,
+            "median": 71.0,
+            "iqr": 14.0,
+            "p25": 64.0,
+            "p75": 78.0,
+            "p5": 53.0,
+            "p95": 90.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Other Hispanic"
+          },
+          "n": 1210,
+          "statistics": {
+            "mean": {
+              "estimate": 70.57,
+              "ci_low": 69.32,
+              "ci_high": 72.08
+            },
+            "sd": {
+              "estimate": 11.92,
+              "ci_low": 11.19,
+              "ci_high": 12.44
+            },
+            "p1": {
+              "estimate": 43.0,
+              "ci_low": 42.0,
+              "ci_high": 46.0
+            },
+            "p2.5": {
+              "estimate": 49.0,
+              "ci_low": 46.0,
+              "ci_high": 52.0
+            },
+            "p5": {
+              "estimate": 52.0,
+              "ci_low": 51.0,
+              "ci_high": 55.0
+            },
+            "p10": {
+              "estimate": 57.0,
+              "ci_low": 55.0,
+              "ci_high": 58.0
+            },
+            "p25": {
+              "estimate": 63.0,
+              "ci_low": 61.0,
+              "ci_high": 64.0
+            },
+            "p50": {
+              "estimate": 71.0,
+              "ci_low": 69.0,
+              "ci_high": 72.0
+            },
+            "p75": {
+              "estimate": 77.0,
+              "ci_low": 76.0,
+              "ci_high": 79.0
+            },
+            "p90": {
+              "estimate": 85.0,
+              "ci_low": 83.0,
+              "ci_high": 88.0
+            },
+            "p95": {
+              "estimate": 92.0,
+              "ci_low": 88.0,
+              "ci_high": 93.0
+            },
+            "p97.5": {
+              "estimate": 96.0,
+              "ci_low": 92.48,
+              "ci_high": 99.0
+            },
+            "p99": {
+              "estimate": 101.0,
+              "ci_low": 96.0,
+              "ci_high": 105.0
+            }
+          },
+          "summary": {
+            "mean": 70.57,
+            "ci_mean": [
+              69.32,
+              72.08
+            ],
+            "sd": 11.92,
+            "median": 71.0,
+            "iqr": 14.0,
+            "p25": 63.0,
+            "p75": 77.0,
+            "p5": 52.0,
+            "p95": 92.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Other or multiracial"
+          },
+          "n": 489,
+          "statistics": {
+            "mean": {
+              "estimate": 72.01,
+              "ci_low": 70.92,
+              "ci_high": 72.97
+            },
+            "sd": {
+              "estimate": 11.34,
+              "ci_low": 10.38,
+              "ci_high": 12.2
+            },
+            "p1": {
+              "estimate": 46.0,
+              "ci_low": 42.0,
+              "ci_high": 52.0
+            },
+            "p2.5": {
+              "estimate": 49.0,
+              "ci_low": 48.0,
+              "ci_high": 55.0
+            },
+            "p5": {
+              "estimate": 55.0,
+              "ci_low": 52.0,
+              "ci_high": 57.0
+            },
+            "p10": {
+              "estimate": 59.0,
+              "ci_low": 55.0,
+              "ci_high": 61.0
+            },
+            "p25": {
+              "estimate": 65.0,
+              "ci_low": 64.0,
+              "ci_high": 66.0
+            },
+            "p50": {
+              "estimate": 72.0,
+              "ci_low": 70.0,
+              "ci_high": 73.0
+            },
+            "p75": {
+              "estimate": 78.0,
+              "ci_low": 76.0,
+              "ci_high": 80.0
+            },
+            "p90": {
+              "estimate": 86.0,
+              "ci_low": 84.0,
+              "ci_high": 88.0
+            },
+            "p95": {
+              "estimate": 92.0,
+              "ci_low": 87.0,
+              "ci_high": 93.0
+            },
+            "p97.5": {
+              "estimate": 95.0,
+              "ci_low": 92.0,
+              "ci_high": 102.0
+            },
+            "p99": {
+              "estimate": 106.0,
+              "ci_low": 95.0,
+              "ci_high": 111.0
+            }
+          },
+          "summary": {
+            "mean": 72.01,
+            "ci_mean": [
+              70.92,
+              72.97
+            ],
+            "sd": 11.34,
+            "median": 72.0,
+            "iqr": 13.0,
+            "p25": 65.0,
+            "p75": 78.0,
+            "p5": 55.0,
+            "p95": 92.0
+          }
+        }
+      ]
+    },
+    {
+      "id": "nhanes_2015_2018_clinic_systolic",
+      "title": "NHANES 2015-2018, clinic systolic blood pressure",
+      "origin": "recomputed",
+      "statistic_form": "percentiles",
+      "group": null,
+      "population": {
+        "description": "Civilian, non-institutionalised US residents aged 18 and over examined in the mobile examination centre, two survey cycles combined (2015-2016 and 2017-2018).",
+        "country": "United States",
+        "years": "2015-2018",
+        "age_range": "18 and over",
+        "n": 10818,
+        "n_eligible": 11268,
+        "sampling": "probability sample",
+        "exclusions": "None for antihypertensive medication, cardiovascular conditions, pregnancy, or arrhythmias. Adults examined without valid blood pressure determinations are left out."
+      },
+      "measurement": {
+        "method": "Auscultatory systolic blood pressure (first Korotkoff sound) measured using a mercury sphygmomanometer by a certified physician examiner.",
+        "device": "Baumanometer mercury sphygmomanometer with calibrated adult/large cuff sizes.",
+        "protocol": "Seated quietly for 5 minutes in a private exam room; standard CDC protocol averages readings 2 and 3 (the initial reading is discarded to mitigate acute situational anxiety)."
+      },
+      "analysis": [
+        "Estimates use the examination sampling weights (WTMEC2YR), halved for the two combined cycles.",
+        "Percentiles are calculated from the survey-weighted empirical distribution.",
+        "95% confidence intervals are derived from 500 Rao-Wu bootstrap resamples of primary sampling units within strata.",
+        "Subgroups with fewer than 50 examined individuals are suppressed."
+      ],
+      "use_for": [
+        "Sizing clinical trials evaluating non-invasive blood pressure monitoring devices against auscultatory mercury reference standards.",
+        "Establishing empirical population distributions and between-subject standard deviations (sigma_b) for clinic systolic blood pressure."
+      ],
+      "do_not_use_for": [
+        "A direct reference for 24-hour ambulatory blood pressure monitoring (ABPM) or continuous nocturnal wearable estimates: daytime clinic auscultations exhibit higher white-coat alerting bias.",
+        "A filtered 'normotensive' reference cohort: general population participants were not excluded for hypertension or antihypertensive pharmacology."
+      ],
+      "caveats": [
+        "**Clinic auscultation, not wearable PTT.** Continuous optical pulse transit time (PTT) and cuffless optical sensors measure different arterial dynamics.",
+        "**General population reference.** Participants taking ACE inhibitors, beta-blockers, or calcium channel blockers are included.",
+        "**Age 80 and over is top-coded** at 80 years in accordance with NCHS participant disclosure rules."
+      ],
+      "review_status": "draft",
+      "citation": {
+        "text": "Centers for Disease Control and Prevention, National Center for Health Statistics. National Health and Nutrition Examination Survey Data, 2015-2018. Hyattsville, MD: U.S. Department of Health and Human Services.",
+        "url": "https://www.cdc.gov/nchs/nhanes/",
+        "license": "NCHS public-use data file. Users must use data for statistical reporting and analysis only."
+      },
+      "provenance": {
+        "pipeline": "pipelines/blood_pressure.py",
+        "raw_files": [
+          "raw/nhanes/DEMO_I.xpt",
+          "raw/nhanes/BPX_I.xpt",
+          "raw/nhanes/DEMO_J.xpt",
+          "raw/nhanes/BPX_J.xpt"
+        ]
+      },
+      "verification": "The overall survey-weighted systolic mean of 122.8 mmHg aligns with published CDC National Health Statistics Reports for the 2015-2018 cycle.",
+      "subgroup_columns": [
+        "sex",
+        "age_band",
+        "race_ethnicity"
+      ],
+      "subgroups": [
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "All"
+          },
+          "n": 10818,
+          "statistics": {
+            "mean": {
+              "estimate": 123.2,
+              "ci_low": 122.57,
+              "ci_high": 123.77
+            },
+            "sd": {
+              "estimate": 17.63,
+              "ci_low": 17.22,
+              "ci_high": 18.02
+            },
+            "p1": {
+              "estimate": 93.0,
+              "ci_low": 92.0,
+              "ci_high": 94.0
+            },
+            "p2.5": {
+              "estimate": 96.0,
+              "ci_low": 96.0,
+              "ci_high": 97.0
+            },
+            "p5": {
+              "estimate": 100.0,
+              "ci_low": 99.0,
+              "ci_high": 101.0
+            },
+            "p10": {
+              "estimate": 103.0,
+              "ci_low": 103.0,
+              "ci_high": 104.0
+            },
+            "p25": {
+              "estimate": 111.0,
+              "ci_low": 110.0,
+              "ci_high": 112.0
+            },
+            "p50": {
+              "estimate": 121.0,
+              "ci_low": 120.0,
+              "ci_high": 121.0
+            },
+            "p75": {
+              "estimate": 132.0,
+              "ci_low": 132.0,
+              "ci_high": 133.0
+            },
+            "p90": {
+              "estimate": 146.0,
+              "ci_low": 145.0,
+              "ci_high": 147.0
+            },
+            "p95": {
+              "estimate": 156.0,
+              "ci_low": 154.0,
+              "ci_high": 157.0
+            },
+            "p97.5": {
+              "estimate": 166.0,
+              "ci_low": 164.0,
+              "ci_high": 167.0
+            },
+            "p99": {
+              "estimate": 180.0,
+              "ci_low": 175.48,
+              "ci_high": 183.0
+            }
+          },
+          "summary": {
+            "mean": 123.2,
+            "ci_mean": [
+              122.57,
+              123.77
+            ],
+            "sd": 17.63,
+            "median": 121.0,
+            "iqr": 21.0,
+            "p25": 111.0,
+            "p75": 132.0,
+            "p5": 100.0,
+            "p95": 156.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "All",
+            "race_ethnicity": "All"
+          },
+          "n": 5578,
+          "statistics": {
+            "mean": {
+              "estimate": 121.91,
+              "ci_low": 121.1,
+              "ci_high": 122.7
+            },
+            "sd": {
+              "estimate": 18.92,
+              "ci_low": 18.4,
+              "ci_high": 19.44
+            },
+            "p1": {
+              "estimate": 92.0,
+              "ci_low": 90.0,
+              "ci_high": 93.0
+            },
+            "p2.5": {
+              "estimate": 95.0,
+              "ci_low": 94.0,
+              "ci_high": 96.0
+            },
+            "p5": {
+              "estimate": 98.0,
+              "ci_low": 97.0,
+              "ci_high": 99.0
+            },
+            "p10": {
+              "estimate": 102.0,
+              "ci_low": 101.0,
+              "ci_high": 102.0
+            },
+            "p25": {
+              "estimate": 108.0,
+              "ci_low": 107.0,
+              "ci_high": 109.0
+            },
+            "p50": {
+              "estimate": 118.0,
+              "ci_low": 118.0,
+              "ci_high": 119.0
+            },
+            "p75": {
+              "estimate": 132.0,
+              "ci_low": 130.0,
+              "ci_high": 132.52
+            },
+            "p90": {
+              "estimate": 147.0,
+              "ci_low": 146.0,
+              "ci_high": 149.0
+            },
+            "p95": {
+              "estimate": 158.0,
+              "ci_low": 156.0,
+              "ci_high": 160.0
+            },
+            "p97.5": {
+              "estimate": 168.0,
+              "ci_low": 166.0,
+              "ci_high": 172.0
+            },
+            "p99": {
+              "estimate": 182.0,
+              "ci_low": 178.0,
+              "ci_high": 188.0
+            }
+          },
+          "summary": {
+            "mean": 121.91,
+            "ci_mean": [
+              121.1,
+              122.7
+            ],
+            "sd": 18.92,
+            "median": 118.0,
+            "iqr": 24.0,
+            "p25": 108.0,
+            "p75": 132.0,
+            "p5": 98.0,
+            "p95": 158.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "All",
+            "race_ethnicity": "All"
+          },
+          "n": 5240,
+          "statistics": {
+            "mean": {
+              "estimate": 124.58,
+              "ci_low": 123.84,
+              "ci_high": 125.24
+            },
+            "sd": {
+              "estimate": 16.03,
+              "ci_low": 15.52,
+              "ci_high": 16.5
+            },
+            "p1": {
+              "estimate": 96.0,
+              "ci_low": 95.0,
+              "ci_high": 97.0
+            },
+            "p2.5": {
+              "estimate": 100.0,
+              "ci_low": 98.0,
+              "ci_high": 101.0
+            },
+            "p5": {
+              "estimate": 102.0,
+              "ci_low": 102.0,
+              "ci_high": 103.0
+            },
+            "p10": {
+              "estimate": 107.0,
+              "ci_low": 106.0,
+              "ci_high": 107.0
+            },
+            "p25": {
+              "estimate": 114.0,
+              "ci_low": 113.0,
+              "ci_high": 114.0
+            },
+            "p50": {
+              "estimate": 123.0,
+              "ci_low": 122.0,
+              "ci_high": 123.0
+            },
+            "p75": {
+              "estimate": 133.0,
+              "ci_low": 132.0,
+              "ci_high": 134.0
+            },
+            "p90": {
+              "estimate": 145.0,
+              "ci_low": 143.0,
+              "ci_high": 146.0
+            },
+            "p95": {
+              "estimate": 154.0,
+              "ci_low": 152.0,
+              "ci_high": 155.0
+            },
+            "p97.5": {
+              "estimate": 162.0,
+              "ci_low": 160.0,
+              "ci_high": 165.0
+            },
+            "p99": {
+              "estimate": 174.0,
+              "ci_low": 170.0,
+              "ci_high": 179.0
+            }
+          },
+          "summary": {
+            "mean": 124.58,
+            "ci_mean": [
+              123.84,
+              125.24
+            ],
+            "sd": 16.03,
+            "median": 123.0,
+            "iqr": 19.0,
+            "p25": 114.0,
+            "p75": 133.0,
+            "p5": 102.0,
+            "p95": 154.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "18-29",
+            "race_ethnicity": "All"
+          },
+          "n": 2135,
+          "statistics": {
+            "mean": {
+              "estimate": 114.18,
+              "ci_low": 113.44,
+              "ci_high": 114.93
+            },
+            "sd": {
+              "estimate": 11.21,
+              "ci_low": 10.66,
+              "ci_high": 11.71
+            },
+            "p1": {
+              "estimate": 92.0,
+              "ci_low": 90.0,
+              "ci_high": 93.0
+            },
+            "p2.5": {
+              "estimate": 95.0,
+              "ci_low": 93.0,
+              "ci_high": 96.0
+            },
+            "p5": {
+              "estimate": 97.0,
+              "ci_low": 97.0,
+              "ci_high": 98.0
+            },
+            "p10": {
+              "estimate": 101.0,
+              "ci_low": 100.0,
+              "ci_high": 102.0
+            },
+            "p25": {
+              "estimate": 106.0,
+              "ci_low": 105.0,
+              "ci_high": 107.0
+            },
+            "p50": {
+              "estimate": 114.0,
+              "ci_low": 113.0,
+              "ci_high": 115.0
+            },
+            "p75": {
+              "estimate": 121.0,
+              "ci_low": 120.0,
+              "ci_high": 122.0
+            },
+            "p90": {
+              "estimate": 128.0,
+              "ci_low": 127.0,
+              "ci_high": 130.0
+            },
+            "p95": {
+              "estimate": 133.0,
+              "ci_low": 132.0,
+              "ci_high": 135.0
+            },
+            "p97.5": {
+              "estimate": 138.0,
+              "ci_low": 136.0,
+              "ci_high": 139.0
+            },
+            "p99": {
+              "estimate": 142.0,
+              "ci_low": 141.0,
+              "ci_high": 146.0
+            }
+          },
+          "summary": {
+            "mean": 114.18,
+            "ci_mean": [
+              113.44,
+              114.93
+            ],
+            "sd": 11.21,
+            "median": 114.0,
+            "iqr": 15.0,
+            "p25": 106.0,
+            "p75": 121.0,
+            "p5": 97.0,
+            "p95": 133.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "30-39",
+            "race_ethnicity": "All"
+          },
+          "n": 1656,
+          "statistics": {
+            "mean": {
+              "estimate": 117.14,
+              "ci_low": 116.11,
+              "ci_high": 118.14
+            },
+            "sd": {
+              "estimate": 14.06,
+              "ci_low": 13.39,
+              "ci_high": 14.69
+            },
+            "p1": {
+              "estimate": 93.0,
+              "ci_low": 90.0,
+              "ci_high": 95.0
+            },
+            "p2.5": {
+              "estimate": 96.0,
+              "ci_low": 95.0,
+              "ci_high": 96.0
+            },
+            "p5": {
+              "estimate": 98.0,
+              "ci_low": 97.0,
+              "ci_high": 99.0
+            },
+            "p10": {
+              "estimate": 101.0,
+              "ci_low": 100.0,
+              "ci_high": 102.0
+            },
+            "p25": {
+              "estimate": 107.0,
+              "ci_low": 106.0,
+              "ci_high": 108.0
+            },
+            "p50": {
+              "estimate": 116.0,
+              "ci_low": 114.0,
+              "ci_high": 116.52
+            },
+            "p75": {
+              "estimate": 124.0,
+              "ci_low": 124.0,
+              "ci_high": 125.0
+            },
+            "p90": {
+              "estimate": 135.0,
+              "ci_low": 133.0,
+              "ci_high": 136.52
+            },
+            "p95": {
+              "estimate": 142.0,
+              "ci_low": 139.0,
+              "ci_high": 145.0
+            },
+            "p97.5": {
+              "estimate": 152.0,
+              "ci_low": 148.48,
+              "ci_high": 156.0
+            },
+            "p99": {
+              "estimate": 162.0,
+              "ci_low": 155.0,
+              "ci_high": 166.0
+            }
+          },
+          "summary": {
+            "mean": 117.14,
+            "ci_mean": [
+              116.11,
+              118.14
+            ],
+            "sd": 14.06,
+            "median": 116.0,
+            "iqr": 17.0,
+            "p25": 107.0,
+            "p75": 124.0,
+            "p5": 98.0,
+            "p95": 142.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "40-49",
+            "race_ethnicity": "All"
+          },
+          "n": 1626,
+          "statistics": {
+            "mean": {
+              "estimate": 121.09,
+              "ci_low": 120.17,
+              "ci_high": 122.13
+            },
+            "sd": {
+              "estimate": 14.86,
+              "ci_low": 14.1,
+              "ci_high": 15.71
+            },
+            "p1": {
+              "estimate": 94.0,
+              "ci_low": 92.0,
+              "ci_high": 95.0
+            },
+            "p2.5": {
+              "estimate": 97.0,
+              "ci_low": 96.0,
+              "ci_high": 99.0
+            },
+            "p5": {
+              "estimate": 101.0,
+              "ci_low": 99.0,
+              "ci_high": 102.0
+            },
+            "p10": {
+              "estimate": 104.0,
+              "ci_low": 103.0,
+              "ci_high": 105.0
+            },
+            "p25": {
+              "estimate": 111.0,
+              "ci_low": 110.0,
+              "ci_high": 112.0
+            },
+            "p50": {
+              "estimate": 119.0,
+              "ci_low": 118.0,
+              "ci_high": 121.0
+            },
+            "p75": {
+              "estimate": 130.0,
+              "ci_low": 128.0,
+              "ci_high": 131.0
+            },
+            "p90": {
+              "estimate": 138.0,
+              "ci_low": 137.0,
+              "ci_high": 140.0
+            },
+            "p95": {
+              "estimate": 146.0,
+              "ci_low": 144.0,
+              "ci_high": 148.0
+            },
+            "p97.5": {
+              "estimate": 156.0,
+              "ci_low": 150.0,
+              "ci_high": 160.0
+            },
+            "p99": {
+              "estimate": 171.0,
+              "ci_low": 161.0,
+              "ci_high": 178.0
+            }
+          },
+          "summary": {
+            "mean": 121.09,
+            "ci_mean": [
+              120.17,
+              122.13
+            ],
+            "sd": 14.86,
+            "median": 119.0,
+            "iqr": 19.0,
+            "p25": 111.0,
+            "p75": 130.0,
+            "p5": 101.0,
+            "p95": 146.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "50-59",
+            "race_ethnicity": "All"
+          },
+          "n": 1704,
+          "statistics": {
+            "mean": {
+              "estimate": 126.4,
+              "ci_low": 125.22,
+              "ci_high": 127.66
+            },
+            "sd": {
+              "estimate": 17.53,
+              "ci_low": 16.58,
+              "ci_high": 18.33
+            },
+            "p1": {
+              "estimate": 93.0,
+              "ci_low": 90.0,
+              "ci_high": 96.0
+            },
+            "p2.5": {
+              "estimate": 96.0,
+              "ci_low": 95.0,
+              "ci_high": 100.0
+            },
+            "p5": {
+              "estimate": 101.0,
+              "ci_low": 99.0,
+              "ci_high": 103.0
+            },
+            "p10": {
+              "estimate": 105.0,
+              "ci_low": 103.0,
+              "ci_high": 107.0
+            },
+            "p25": {
+              "estimate": 115.0,
+              "ci_low": 114.0,
+              "ci_high": 116.0
+            },
+            "p50": {
+              "estimate": 125.0,
+              "ci_low": 124.0,
+              "ci_high": 126.0
+            },
+            "p75": {
+              "estimate": 137.0,
+              "ci_low": 135.0,
+              "ci_high": 138.0
+            },
+            "p90": {
+              "estimate": 148.0,
+              "ci_low": 146.0,
+              "ci_high": 150.0
+            },
+            "p95": {
+              "estimate": 156.0,
+              "ci_low": 153.0,
+              "ci_high": 159.0
+            },
+            "p97.5": {
+              "estimate": 166.0,
+              "ci_low": 161.0,
+              "ci_high": 173.0
+            },
+            "p99": {
+              "estimate": 176.0,
+              "ci_low": 172.0,
+              "ci_high": 182.0
+            }
+          },
+          "summary": {
+            "mean": 126.4,
+            "ci_mean": [
+              125.22,
+              127.66
+            ],
+            "sd": 17.53,
+            "median": 125.0,
+            "iqr": 22.0,
+            "p25": 115.0,
+            "p75": 137.0,
+            "p5": 101.0,
+            "p95": 156.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "60-69",
+            "race_ethnicity": "All"
+          },
+          "n": 1922,
+          "statistics": {
+            "mean": {
+              "estimate": 129.69,
+              "ci_low": 128.14,
+              "ci_high": 131.18
+            },
+            "sd": {
+              "estimate": 18.51,
+              "ci_low": 17.72,
+              "ci_high": 19.29
+            },
+            "p1": {
+              "estimate": 96.0,
+              "ci_low": 94.0,
+              "ci_high": 100.0
+            },
+            "p2.5": {
+              "estimate": 100.0,
+              "ci_low": 96.0,
+              "ci_high": 103.52
+            },
+            "p5": {
+              "estimate": 104.0,
+              "ci_low": 103.0,
+              "ci_high": 106.0
+            },
+            "p10": {
+              "estimate": 108.0,
+              "ci_low": 106.0,
+              "ci_high": 111.0
+            },
+            "p25": {
+              "estimate": 117.0,
+              "ci_low": 115.0,
+              "ci_high": 119.0
+            },
+            "p50": {
+              "estimate": 127.0,
+              "ci_low": 126.0,
+              "ci_high": 128.0
+            },
+            "p75": {
+              "estimate": 140.0,
+              "ci_low": 137.0,
+              "ci_high": 142.0
+            },
+            "p90": {
+              "estimate": 154.0,
+              "ci_low": 152.0,
+              "ci_high": 156.0
+            },
+            "p95": {
+              "estimate": 162.0,
+              "ci_low": 158.0,
+              "ci_high": 165.0
+            },
+            "p97.5": {
+              "estimate": 174.0,
+              "ci_low": 166.0,
+              "ci_high": 182.0
+            },
+            "p99": {
+              "estimate": 188.0,
+              "ci_low": 180.0,
+              "ci_high": 190.0
+            }
+          },
+          "summary": {
+            "mean": 129.69,
+            "ci_mean": [
+              128.14,
+              131.18
+            ],
+            "sd": 18.51,
+            "median": 127.0,
+            "iqr": 23.0,
+            "p25": 117.0,
+            "p75": 140.0,
+            "p5": 104.0,
+            "p95": 162.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "70-79",
+            "race_ethnicity": "All"
+          },
+          "n": 1089,
+          "statistics": {
+            "mean": {
+              "estimate": 133.34,
+              "ci_low": 131.82,
+              "ci_high": 134.83
+            },
+            "sd": {
+              "estimate": 18.86,
+              "ci_low": 17.95,
+              "ci_high": 19.63
+            },
+            "p1": {
+              "estimate": 94.0,
+              "ci_low": 93.0,
+              "ci_high": 98.0
+            },
+            "p2.5": {
+              "estimate": 101.0,
+              "ci_low": 98.0,
+              "ci_high": 105.0
+            },
+            "p5": {
+              "estimate": 106.0,
+              "ci_low": 104.0,
+              "ci_high": 108.0
+            },
+            "p10": {
+              "estimate": 111.0,
+              "ci_low": 108.0,
+              "ci_high": 113.52
+            },
+            "p25": {
+              "estimate": 120.0,
+              "ci_low": 118.0,
+              "ci_high": 122.0
+            },
+            "p50": {
+              "estimate": 131.0,
+              "ci_low": 129.0,
+              "ci_high": 133.0
+            },
+            "p75": {
+              "estimate": 145.0,
+              "ci_low": 143.0,
+              "ci_high": 147.0
+            },
+            "p90": {
+              "estimate": 159.0,
+              "ci_low": 156.0,
+              "ci_high": 161.0
+            },
+            "p95": {
+              "estimate": 167.0,
+              "ci_low": 164.0,
+              "ci_high": 170.0
+            },
+            "p97.5": {
+              "estimate": 175.0,
+              "ci_low": 170.0,
+              "ci_high": 178.52
+            },
+            "p99": {
+              "estimate": 184.0,
+              "ci_low": 176.0,
+              "ci_high": 188.0
+            }
+          },
+          "summary": {
+            "mean": 133.34,
+            "ci_mean": [
+              131.82,
+              134.83
+            ],
+            "sd": 18.86,
+            "median": 131.0,
+            "iqr": 25.0,
+            "p25": 120.0,
+            "p75": 145.0,
+            "p5": 106.0,
+            "p95": 167.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "80+",
+            "race_ethnicity": "All"
+          },
+          "n": 686,
+          "statistics": {
+            "mean": {
+              "estimate": 141.87,
+              "ci_low": 140.18,
+              "ci_high": 143.52
+            },
+            "sd": {
+              "estimate": 22.28,
+              "ci_low": 20.91,
+              "ci_high": 23.74
+            },
+            "p1": {
+              "estimate": 102.0,
+              "ci_low": 94.0,
+              "ci_high": 104.0
+            },
+            "p2.5": {
+              "estimate": 105.0,
+              "ci_low": 103.0,
+              "ci_high": 107.0
+            },
+            "p5": {
+              "estimate": 109.0,
+              "ci_low": 107.0,
+              "ci_high": 111.0
+            },
+            "p10": {
+              "estimate": 116.0,
+              "ci_low": 113.0,
+              "ci_high": 118.0
+            },
+            "p25": {
+              "estimate": 126.0,
+              "ci_low": 124.0,
+              "ci_high": 128.0
+            },
+            "p50": {
+              "estimate": 140.0,
+              "ci_low": 136.0,
+              "ci_high": 143.0
+            },
+            "p75": {
+              "estimate": 155.0,
+              "ci_low": 152.0,
+              "ci_high": 157.0
+            },
+            "p90": {
+              "estimate": 170.0,
+              "ci_low": 168.0,
+              "ci_high": 175.0
+            },
+            "p95": {
+              "estimate": 184.0,
+              "ci_low": 177.0,
+              "ci_high": 190.0
+            },
+            "p97.5": {
+              "estimate": 194.0,
+              "ci_low": 189.0,
+              "ci_high": 198.0
+            },
+            "p99": {
+              "estimate": 204.0,
+              "ci_low": 196.0,
+              "ci_high": 206.0
+            }
+          },
+          "summary": {
+            "mean": 141.87,
+            "ci_mean": [
+              140.18,
+              143.52
+            ],
+            "sd": 22.28,
+            "median": 140.0,
+            "iqr": 29.0,
+            "p25": 126.0,
+            "p75": 155.0,
+            "p5": 109.0,
+            "p95": 184.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "18-29",
+            "race_ethnicity": "All"
+          },
+          "n": 1103,
+          "statistics": {
+            "mean": {
+              "estimate": 110.39,
+              "ci_low": 109.55,
+              "ci_high": 111.26
+            },
+            "sd": {
+              "estimate": 9.85,
+              "ci_low": 9.17,
+              "ci_high": 10.45
+            },
+            "p1": {
+              "estimate": 90.0,
+              "ci_low": 89.0,
+              "ci_high": 92.0
+            },
+            "p2.5": {
+              "estimate": 93.0,
+              "ci_low": 92.0,
+              "ci_high": 95.0
+            },
+            "p5": {
+              "estimate": 96.0,
+              "ci_low": 94.0,
+              "ci_high": 97.0
+            },
+            "p10": {
+              "estimate": 98.0,
+              "ci_low": 98.0,
+              "ci_high": 100.0
+            },
+            "p25": {
+              "estimate": 103.0,
+              "ci_low": 103.0,
+              "ci_high": 105.0
+            },
+            "p50": {
+              "estimate": 110.0,
+              "ci_low": 109.0,
+              "ci_high": 111.0
+            },
+            "p75": {
+              "estimate": 116.0,
+              "ci_low": 115.0,
+              "ci_high": 117.0
+            },
+            "p90": {
+              "estimate": 123.0,
+              "ci_low": 121.0,
+              "ci_high": 124.0
+            },
+            "p95": {
+              "estimate": 127.0,
+              "ci_low": 125.0,
+              "ci_high": 130.0
+            },
+            "p97.5": {
+              "estimate": 132.0,
+              "ci_low": 128.0,
+              "ci_high": 135.0
+            },
+            "p99": {
+              "estimate": 137.0,
+              "ci_low": 135.0,
+              "ci_high": 140.0
+            }
+          },
+          "summary": {
+            "mean": 110.39,
+            "ci_mean": [
+              109.55,
+              111.26
+            ],
+            "sd": 9.85,
+            "median": 110.0,
+            "iqr": 13.0,
+            "p25": 103.0,
+            "p75": 116.0,
+            "p5": 96.0,
+            "p95": 127.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "18-29",
+            "race_ethnicity": "All"
+          },
+          "n": 1032,
+          "statistics": {
+            "mean": {
+              "estimate": 117.87,
+              "ci_low": 116.95,
+              "ci_high": 118.76
+            },
+            "sd": {
+              "estimate": 11.22,
+              "ci_low": 10.39,
+              "ci_high": 12.04
+            },
+            "p1": {
+              "estimate": 93.0,
+              "ci_low": 91.0,
+              "ci_high": 97.0
+            },
+            "p2.5": {
+              "estimate": 98.0,
+              "ci_low": 96.0,
+              "ci_high": 100.0
+            },
+            "p5": {
+              "estimate": 101.0,
+              "ci_low": 98.48,
+              "ci_high": 102.0
+            },
+            "p10": {
+              "estimate": 104.0,
+              "ci_low": 103.0,
+              "ci_high": 106.0
+            },
+            "p25": {
+              "estimate": 110.0,
+              "ci_low": 109.0,
+              "ci_high": 112.0
+            },
+            "p50": {
+              "estimate": 118.0,
+              "ci_low": 116.0,
+              "ci_high": 119.0
+            },
+            "p75": {
+              "estimate": 124.0,
+              "ci_low": 123.0,
+              "ci_high": 126.0
+            },
+            "p90": {
+              "estimate": 132.0,
+              "ci_low": 130.0,
+              "ci_high": 133.0
+            },
+            "p95": {
+              "estimate": 136.0,
+              "ci_low": 135.0,
+              "ci_high": 138.0
+            },
+            "p97.5": {
+              "estimate": 140.0,
+              "ci_low": 138.0,
+              "ci_high": 142.0
+            },
+            "p99": {
+              "estimate": 146.0,
+              "ci_low": 143.0,
+              "ci_high": 150.0
+            }
+          },
+          "summary": {
+            "mean": 117.87,
+            "ci_mean": [
+              116.95,
+              118.76
+            ],
+            "sd": 11.22,
+            "median": 118.0,
+            "iqr": 14.0,
+            "p25": 110.0,
+            "p75": 124.0,
+            "p5": 101.0,
+            "p95": 136.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "30-39",
+            "race_ethnicity": "All"
+          },
+          "n": 872,
+          "statistics": {
+            "mean": {
+              "estimate": 112.46,
+              "ci_low": 111.45,
+              "ci_high": 113.52
+            },
+            "sd": {
+              "estimate": 12.68,
+              "ci_low": 11.29,
+              "ci_high": 13.91
+            },
+            "p1": {
+              "estimate": 90.0,
+              "ci_low": 89.0,
+              "ci_high": 94.0
+            },
+            "p2.5": {
+              "estimate": 94.0,
+              "ci_low": 92.0,
+              "ci_high": 95.0
+            },
+            "p5": {
+              "estimate": 96.0,
+              "ci_low": 95.0,
+              "ci_high": 96.0
+            },
+            "p10": {
+              "estimate": 98.0,
+              "ci_low": 97.0,
+              "ci_high": 100.0
+            },
+            "p25": {
+              "estimate": 104.0,
+              "ci_low": 103.0,
+              "ci_high": 105.0
+            },
+            "p50": {
+              "estimate": 110.0,
+              "ci_low": 110.0,
+              "ci_high": 111.52
+            },
+            "p75": {
+              "estimate": 119.0,
+              "ci_low": 117.0,
+              "ci_high": 120.0
+            },
+            "p90": {
+              "estimate": 128.0,
+              "ci_low": 124.0,
+              "ci_high": 132.52
+            },
+            "p95": {
+              "estimate": 135.0,
+              "ci_low": 132.48,
+              "ci_high": 138.0
+            },
+            "p97.5": {
+              "estimate": 141.0,
+              "ci_low": 136.0,
+              "ci_high": 153.0
+            },
+            "p99": {
+              "estimate": 156.0,
+              "ci_low": 143.0,
+              "ci_high": 162.0
+            }
+          },
+          "summary": {
+            "mean": 112.46,
+            "ci_mean": [
+              111.45,
+              113.52
+            ],
+            "sd": 12.68,
+            "median": 110.0,
+            "iqr": 15.0,
+            "p25": 104.0,
+            "p75": 119.0,
+            "p5": 96.0,
+            "p95": 135.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "30-39",
+            "race_ethnicity": "All"
+          },
+          "n": 784,
+          "statistics": {
+            "mean": {
+              "estimate": 121.85,
+              "ci_low": 120.27,
+              "ci_high": 123.23
+            },
+            "sd": {
+              "estimate": 13.81,
+              "ci_low": 12.58,
+              "ci_high": 14.8
+            },
+            "p1": {
+              "estimate": 98.0,
+              "ci_low": 96.0,
+              "ci_high": 100.0
+            },
+            "p2.5": {
+              "estimate": 100.0,
+              "ci_low": 98.0,
+              "ci_high": 101.0
+            },
+            "p5": {
+              "estimate": 102.0,
+              "ci_low": 101.0,
+              "ci_high": 104.0
+            },
+            "p10": {
+              "estimate": 105.0,
+              "ci_low": 104.0,
+              "ci_high": 107.0
+            },
+            "p25": {
+              "estimate": 113.0,
+              "ci_low": 112.0,
+              "ci_high": 114.0
+            },
+            "p50": {
+              "estimate": 121.0,
+              "ci_low": 119.0,
+              "ci_high": 122.0
+            },
+            "p75": {
+              "estimate": 129.0,
+              "ci_low": 127.0,
+              "ci_high": 131.0
+            },
+            "p90": {
+              "estimate": 139.0,
+              "ci_low": 135.0,
+              "ci_high": 142.0
+            },
+            "p95": {
+              "estimate": 149.0,
+              "ci_low": 141.0,
+              "ci_high": 152.0
+            },
+            "p97.5": {
+              "estimate": 154.0,
+              "ci_low": 150.0,
+              "ci_high": 161.52
+            },
+            "p99": {
+              "estimate": 164.0,
+              "ci_low": 154.0,
+              "ci_high": 169.0
+            }
+          },
+          "summary": {
+            "mean": 121.85,
+            "ci_mean": [
+              120.27,
+              123.23
+            ],
+            "sd": 13.81,
+            "median": 121.0,
+            "iqr": 16.0,
+            "p25": 113.0,
+            "p75": 129.0,
+            "p5": 102.0,
+            "p95": 149.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "40-49",
+            "race_ethnicity": "All"
+          },
+          "n": 879,
+          "statistics": {
+            "mean": {
+              "estimate": 118.74,
+              "ci_low": 117.46,
+              "ci_high": 120.22
+            },
+            "sd": {
+              "estimate": 15.02,
+              "ci_low": 13.73,
+              "ci_high": 16.31
+            },
+            "p1": {
+              "estimate": 92.0,
+              "ci_low": 88.0,
+              "ci_high": 93.0
+            },
+            "p2.5": {
+              "estimate": 95.0,
+              "ci_low": 94.0,
+              "ci_high": 97.0
+            },
+            "p5": {
+              "estimate": 99.0,
+              "ci_low": 97.0,
+              "ci_high": 101.0
+            },
+            "p10": {
+              "estimate": 102.0,
+              "ci_low": 102.0,
+              "ci_high": 104.0
+            },
+            "p25": {
+              "estimate": 109.0,
+              "ci_low": 107.0,
+              "ci_high": 111.0
+            },
+            "p50": {
+              "estimate": 117.0,
+              "ci_low": 115.0,
+              "ci_high": 119.0
+            },
+            "p75": {
+              "estimate": 127.0,
+              "ci_low": 125.0,
+              "ci_high": 129.0
+            },
+            "p90": {
+              "estimate": 136.0,
+              "ci_low": 134.0,
+              "ci_high": 138.0
+            },
+            "p95": {
+              "estimate": 146.0,
+              "ci_low": 141.48,
+              "ci_high": 149.0
+            },
+            "p97.5": {
+              "estimate": 154.0,
+              "ci_low": 149.0,
+              "ci_high": 160.0
+            },
+            "p99": {
+              "estimate": 164.0,
+              "ci_low": 159.0,
+              "ci_high": 178.0
+            }
+          },
+          "summary": {
+            "mean": 118.74,
+            "ci_mean": [
+              117.46,
+              120.22
+            ],
+            "sd": 15.02,
+            "median": 117.0,
+            "iqr": 18.0,
+            "p25": 109.0,
+            "p75": 127.0,
+            "p5": 99.0,
+            "p95": 146.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "40-49",
+            "race_ethnicity": "All"
+          },
+          "n": 747,
+          "statistics": {
+            "mean": {
+              "estimate": 123.56,
+              "ci_low": 122.19,
+              "ci_high": 124.85
+            },
+            "sd": {
+              "estimate": 14.28,
+              "ci_low": 13.31,
+              "ci_high": 15.11
+            },
+            "p1": {
+              "estimate": 97.0,
+              "ci_low": 94.0,
+              "ci_high": 100.0
+            },
+            "p2.5": {
+              "estimate": 100.0,
+              "ci_low": 97.48,
+              "ci_high": 102.0
+            },
+            "p5": {
+              "estimate": 102.0,
+              "ci_low": 101.0,
+              "ci_high": 105.0
+            },
+            "p10": {
+              "estimate": 107.0,
+              "ci_low": 104.0,
+              "ci_high": 109.0
+            },
+            "p25": {
+              "estimate": 114.0,
+              "ci_low": 112.0,
+              "ci_high": 115.0
+            },
+            "p50": {
+              "estimate": 122.0,
+              "ci_low": 121.0,
+              "ci_high": 124.0
+            },
+            "p75": {
+              "estimate": 133.0,
+              "ci_low": 130.0,
+              "ci_high": 134.0
+            },
+            "p90": {
+              "estimate": 140.0,
+              "ci_low": 138.0,
+              "ci_high": 142.0
+            },
+            "p95": {
+              "estimate": 146.0,
+              "ci_low": 144.0,
+              "ci_high": 149.0
+            },
+            "p97.5": {
+              "estimate": 157.0,
+              "ci_low": 150.0,
+              "ci_high": 161.0
+            },
+            "p99": {
+              "estimate": 172.0,
+              "ci_low": 160.0,
+              "ci_high": 178.0
+            }
+          },
+          "summary": {
+            "mean": 123.56,
+            "ci_mean": [
+              122.19,
+              124.85
+            ],
+            "sd": 14.28,
+            "median": 122.0,
+            "iqr": 19.0,
+            "p25": 114.0,
+            "p75": 133.0,
+            "p5": 102.0,
+            "p95": 146.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "50-59",
+            "race_ethnicity": "All"
+          },
+          "n": 888,
+          "statistics": {
+            "mean": {
+              "estimate": 126.08,
+              "ci_low": 124.55,
+              "ci_high": 127.7
+            },
+            "sd": {
+              "estimate": 18.14,
+              "ci_low": 16.85,
+              "ci_high": 19.31
+            },
+            "p1": {
+              "estimate": 93.0,
+              "ci_low": 88.0,
+              "ci_high": 96.0
+            },
+            "p2.5": {
+              "estimate": 96.0,
+              "ci_low": 94.0,
+              "ci_high": 100.0
+            },
+            "p5": {
+              "estimate": 100.0,
+              "ci_low": 96.0,
+              "ci_high": 102.0
+            },
+            "p10": {
+              "estimate": 103.0,
+              "ci_low": 101.0,
+              "ci_high": 107.0
+            },
+            "p25": {
+              "estimate": 114.0,
+              "ci_low": 112.0,
+              "ci_high": 116.0
+            },
+            "p50": {
+              "estimate": 125.0,
+              "ci_low": 123.0,
+              "ci_high": 127.0
+            },
+            "p75": {
+              "estimate": 136.0,
+              "ci_low": 134.0,
+              "ci_high": 138.0
+            },
+            "p90": {
+              "estimate": 149.0,
+              "ci_low": 145.0,
+              "ci_high": 151.0
+            },
+            "p95": {
+              "estimate": 159.0,
+              "ci_low": 153.0,
+              "ci_high": 164.0
+            },
+            "p97.5": {
+              "estimate": 172.0,
+              "ci_low": 160.0,
+              "ci_high": 173.0
+            },
+            "p99": {
+              "estimate": 175.0,
+              "ci_low": 172.0,
+              "ci_high": 180.0
+            }
+          },
+          "summary": {
+            "mean": 126.08,
+            "ci_mean": [
+              124.55,
+              127.7
+            ],
+            "sd": 18.14,
+            "median": 125.0,
+            "iqr": 22.0,
+            "p25": 114.0,
+            "p75": 136.0,
+            "p5": 100.0,
+            "p95": 159.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "50-59",
+            "race_ethnicity": "All"
+          },
+          "n": 816,
+          "statistics": {
+            "mean": {
+              "estimate": 126.74,
+              "ci_low": 125.47,
+              "ci_high": 128.11
+            },
+            "sd": {
+              "estimate": 16.86,
+              "ci_low": 15.7,
+              "ci_high": 17.91
+            },
+            "p1": {
+              "estimate": 95.0,
+              "ci_low": 92.0,
+              "ci_high": 97.0
+            },
+            "p2.5": {
+              "estimate": 98.0,
+              "ci_low": 95.0,
+              "ci_high": 103.0
+            },
+            "p5": {
+              "estimate": 103.0,
+              "ci_low": 101.0,
+              "ci_high": 106.0
+            },
+            "p10": {
+              "estimate": 107.0,
+              "ci_low": 106.0,
+              "ci_high": 110.0
+            },
+            "p25": {
+              "estimate": 116.0,
+              "ci_low": 114.0,
+              "ci_high": 117.0
+            },
+            "p50": {
+              "estimate": 125.0,
+              "ci_low": 124.0,
+              "ci_high": 127.0
+            },
+            "p75": {
+              "estimate": 137.0,
+              "ci_low": 134.0,
+              "ci_high": 139.0
+            },
+            "p90": {
+              "estimate": 147.0,
+              "ci_low": 145.0,
+              "ci_high": 150.0
+            },
+            "p95": {
+              "estimate": 154.0,
+              "ci_low": 152.0,
+              "ci_high": 157.0
+            },
+            "p97.5": {
+              "estimate": 164.0,
+              "ci_low": 159.0,
+              "ci_high": 170.0
+            },
+            "p99": {
+              "estimate": 180.0,
+              "ci_low": 169.0,
+              "ci_high": 186.0
+            }
+          },
+          "summary": {
+            "mean": 126.74,
+            "ci_mean": [
+              125.47,
+              128.11
+            ],
+            "sd": 16.86,
+            "median": 125.0,
+            "iqr": 21.0,
+            "p25": 116.0,
+            "p75": 137.0,
+            "p5": 103.0,
+            "p95": 154.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "60-69",
+            "race_ethnicity": "All"
+          },
+          "n": 960,
+          "statistics": {
+            "mean": {
+              "estimate": 129.51,
+              "ci_low": 127.52,
+              "ci_high": 131.42
+            },
+            "sd": {
+              "estimate": 19.08,
+              "ci_low": 17.75,
+              "ci_high": 20.3
+            },
+            "p1": {
+              "estimate": 95.0,
+              "ci_low": 93.0,
+              "ci_high": 102.0
+            },
+            "p2.5": {
+              "estimate": 100.0,
+              "ci_low": 96.0,
+              "ci_high": 104.0
+            },
+            "p5": {
+              "estimate": 104.0,
+              "ci_low": 103.0,
+              "ci_high": 106.0
+            },
+            "p10": {
+              "estimate": 107.0,
+              "ci_low": 105.0,
+              "ci_high": 109.0
+            },
+            "p25": {
+              "estimate": 118.0,
+              "ci_low": 115.0,
+              "ci_high": 119.0
+            },
+            "p50": {
+              "estimate": 127.0,
+              "ci_low": 125.0,
+              "ci_high": 129.0
+            },
+            "p75": {
+              "estimate": 140.0,
+              "ci_low": 137.0,
+              "ci_high": 143.0
+            },
+            "p90": {
+              "estimate": 154.0,
+              "ci_low": 149.0,
+              "ci_high": 157.0
+            },
+            "p95": {
+              "estimate": 162.0,
+              "ci_low": 158.0,
+              "ci_high": 172.0
+            },
+            "p97.5": {
+              "estimate": 180.0,
+              "ci_low": 168.0,
+              "ci_high": 188.0
+            },
+            "p99": {
+              "estimate": 188.0,
+              "ci_low": 180.0,
+              "ci_high": 194.0
+            }
+          },
+          "summary": {
+            "mean": 129.51,
+            "ci_mean": [
+              127.52,
+              131.42
+            ],
+            "sd": 19.08,
+            "median": 127.0,
+            "iqr": 22.0,
+            "p25": 118.0,
+            "p75": 140.0,
+            "p5": 104.0,
+            "p95": 162.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "60-69",
+            "race_ethnicity": "All"
+          },
+          "n": 962,
+          "statistics": {
+            "mean": {
+              "estimate": 129.88,
+              "ci_low": 128.21,
+              "ci_high": 131.71
+            },
+            "sd": {
+              "estimate": 17.86,
+              "ci_low": 16.61,
+              "ci_high": 19.07
+            },
+            "p1": {
+              "estimate": 98.0,
+              "ci_low": 94.0,
+              "ci_high": 100.0
+            },
+            "p2.5": {
+              "estimate": 101.0,
+              "ci_low": 98.0,
+              "ci_high": 105.0
+            },
+            "p5": {
+              "estimate": 105.0,
+              "ci_low": 101.0,
+              "ci_high": 110.0
+            },
+            "p10": {
+              "estimate": 111.0,
+              "ci_low": 107.48,
+              "ci_high": 112.0
+            },
+            "p25": {
+              "estimate": 117.0,
+              "ci_low": 115.0,
+              "ci_high": 120.0
+            },
+            "p50": {
+              "estimate": 127.0,
+              "ci_low": 125.0,
+              "ci_high": 130.0
+            },
+            "p75": {
+              "estimate": 141.0,
+              "ci_low": 138.0,
+              "ci_high": 145.0
+            },
+            "p90": {
+              "estimate": 155.0,
+              "ci_low": 151.0,
+              "ci_high": 156.0
+            },
+            "p95": {
+              "estimate": 162.0,
+              "ci_low": 157.0,
+              "ci_high": 165.0
+            },
+            "p97.5": {
+              "estimate": 166.0,
+              "ci_low": 163.0,
+              "ci_high": 174.0
+            },
+            "p99": {
+              "estimate": 184.0,
+              "ci_low": 170.0,
+              "ci_high": 184.0
+            }
+          },
+          "summary": {
+            "mean": 129.88,
+            "ci_mean": [
+              128.21,
+              131.71
+            ],
+            "sd": 17.86,
+            "median": 127.0,
+            "iqr": 24.0,
+            "p25": 117.0,
+            "p75": 141.0,
+            "p5": 105.0,
+            "p95": 162.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "70-79",
+            "race_ethnicity": "All"
+          },
+          "n": 523,
+          "statistics": {
+            "mean": {
+              "estimate": 135.49,
+              "ci_low": 133.74,
+              "ci_high": 137.15
+            },
+            "sd": {
+              "estimate": 19.71,
+              "ci_low": 18.51,
+              "ci_high": 20.75
+            },
+            "p1": {
+              "estimate": 93.0,
+              "ci_low": 92.0,
+              "ci_high": 99.0
+            },
+            "p2.5": {
+              "estimate": 99.0,
+              "ci_low": 94.0,
+              "ci_high": 108.0
+            },
+            "p5": {
+              "estimate": 108.0,
+              "ci_low": 101.0,
+              "ci_high": 111.0
+            },
+            "p10": {
+              "estimate": 113.0,
+              "ci_low": 111.0,
+              "ci_high": 116.0
+            },
+            "p25": {
+              "estimate": 121.0,
+              "ci_low": 119.0,
+              "ci_high": 124.0
+            },
+            "p50": {
+              "estimate": 134.0,
+              "ci_low": 131.0,
+              "ci_high": 136.0
+            },
+            "p75": {
+              "estimate": 148.0,
+              "ci_low": 146.0,
+              "ci_high": 152.0
+            },
+            "p90": {
+              "estimate": 162.0,
+              "ci_low": 157.0,
+              "ci_high": 166.0
+            },
+            "p95": {
+              "estimate": 172.0,
+              "ci_low": 167.0,
+              "ci_high": 176.0
+            },
+            "p97.5": {
+              "estimate": 178.0,
+              "ci_low": 172.0,
+              "ci_high": 183.0
+            },
+            "p99": {
+              "estimate": 184.0,
+              "ci_low": 176.0,
+              "ci_high": 190.0
+            }
+          },
+          "summary": {
+            "mean": 135.49,
+            "ci_mean": [
+              133.74,
+              137.15
+            ],
+            "sd": 19.71,
+            "median": 134.0,
+            "iqr": 27.0,
+            "p25": 121.0,
+            "p75": 148.0,
+            "p5": 108.0,
+            "p95": 172.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "70-79",
+            "race_ethnicity": "All"
+          },
+          "n": 566,
+          "statistics": {
+            "mean": {
+              "estimate": 130.71,
+              "ci_low": 128.68,
+              "ci_high": 132.87
+            },
+            "sd": {
+              "estimate": 17.41,
+              "ci_low": 16.29,
+              "ci_high": 18.4
+            },
+            "p1": {
+              "estimate": 97.0,
+              "ci_low": 94.0,
+              "ci_high": 103.0
+            },
+            "p2.5": {
+              "estimate": 102.0,
+              "ci_low": 99.0,
+              "ci_high": 105.0
+            },
+            "p5": {
+              "estimate": 106.0,
+              "ci_low": 103.0,
+              "ci_high": 108.0
+            },
+            "p10": {
+              "estimate": 108.0,
+              "ci_low": 107.0,
+              "ci_high": 113.0
+            },
+            "p25": {
+              "estimate": 118.0,
+              "ci_low": 116.0,
+              "ci_high": 121.0
+            },
+            "p50": {
+              "estimate": 129.0,
+              "ci_low": 126.0,
+              "ci_high": 132.0
+            },
+            "p75": {
+              "estimate": 141.0,
+              "ci_low": 138.0,
+              "ci_high": 143.0
+            },
+            "p90": {
+              "estimate": 154.0,
+              "ci_low": 152.0,
+              "ci_high": 158.0
+            },
+            "p95": {
+              "estimate": 161.0,
+              "ci_low": 159.0,
+              "ci_high": 164.0
+            },
+            "p97.5": {
+              "estimate": 166.0,
+              "ci_low": 162.0,
+              "ci_high": 170.0
+            },
+            "p99": {
+              "estimate": 178.0,
+              "ci_low": 170.0,
+              "ci_high": 187.0
+            }
+          },
+          "summary": {
+            "mean": 130.71,
+            "ci_mean": [
+              128.68,
+              132.87
+            ],
+            "sd": 17.41,
+            "median": 129.0,
+            "iqr": 23.0,
+            "p25": 118.0,
+            "p75": 141.0,
+            "p5": 106.0,
+            "p95": 161.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Female",
+            "age_band": "80+",
+            "race_ethnicity": "All"
+          },
+          "n": 353,
+          "statistics": {
+            "mean": {
+              "estimate": 145.49,
+              "ci_low": 143.0,
+              "ci_high": 147.99
+            },
+            "sd": {
+              "estimate": 22.42,
+              "ci_low": 20.23,
+              "ci_high": 24.52
+            },
+            "p1": {
+              "estimate": 102.0,
+              "ci_low": 93.0,
+              "ci_high": 107.0
+            },
+            "p2.5": {
+              "estimate": 105.0,
+              "ci_low": 102.0,
+              "ci_high": 111.0
+            },
+            "p5": {
+              "estimate": 115.0,
+              "ci_low": 107.0,
+              "ci_high": 117.0
+            },
+            "p10": {
+              "estimate": 120.0,
+              "ci_low": 118.0,
+              "ci_high": 123.0
+            },
+            "p25": {
+              "estimate": 130.0,
+              "ci_low": 127.0,
+              "ci_high": 133.0
+            },
+            "p50": {
+              "estimate": 144.0,
+              "ci_low": 140.0,
+              "ci_high": 146.0
+            },
+            "p75": {
+              "estimate": 159.0,
+              "ci_low": 155.0,
+              "ci_high": 163.0
+            },
+            "p90": {
+              "estimate": 174.0,
+              "ci_low": 168.0,
+              "ci_high": 181.0
+            },
+            "p95": {
+              "estimate": 189.0,
+              "ci_low": 179.0,
+              "ci_high": 196.0
+            },
+            "p97.5": {
+              "estimate": 198.0,
+              "ci_low": 191.0,
+              "ci_high": 204.0
+            },
+            "p99": {
+              "estimate": 204.0,
+              "ci_low": 198.0,
+              "ci_high": 206.0
+            }
+          },
+          "summary": {
+            "mean": 145.49,
+            "ci_mean": [
+              143.0,
+              147.99
+            ],
+            "sd": 22.42,
+            "median": 144.0,
+            "iqr": 29.0,
+            "p25": 130.0,
+            "p75": 159.0,
+            "p5": 115.0,
+            "p95": 189.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "Male",
+            "age_band": "80+",
+            "race_ethnicity": "All"
+          },
+          "n": 333,
+          "statistics": {
+            "mean": {
+              "estimate": 136.48,
+              "ci_low": 133.98,
+              "ci_high": 139.04
+            },
+            "sd": {
+              "estimate": 20.95,
+              "ci_low": 19.3,
+              "ci_high": 22.46
+            },
+            "p1": {
+              "estimate": 100.0,
+              "ci_low": 97.0,
+              "ci_high": 104.0
+            },
+            "p2.5": {
+              "estimate": 104.0,
+              "ci_low": 101.0,
+              "ci_high": 107.0
+            },
+            "p5": {
+              "estimate": 107.0,
+              "ci_low": 105.0,
+              "ci_high": 109.52
+            },
+            "p10": {
+              "estimate": 111.0,
+              "ci_low": 109.0,
+              "ci_high": 112.0
+            },
+            "p25": {
+              "estimate": 122.0,
+              "ci_low": 119.0,
+              "ci_high": 125.0
+            },
+            "p50": {
+              "estimate": 133.0,
+              "ci_low": 130.0,
+              "ci_high": 138.52
+            },
+            "p75": {
+              "estimate": 148.0,
+              "ci_low": 146.0,
+              "ci_high": 153.0
+            },
+            "p90": {
+              "estimate": 164.0,
+              "ci_low": 160.0,
+              "ci_high": 170.0
+            },
+            "p95": {
+              "estimate": 176.0,
+              "ci_low": 170.0,
+              "ci_high": 186.0
+            },
+            "p97.5": {
+              "estimate": 187.0,
+              "ci_low": 179.0,
+              "ci_high": 190.0
+            },
+            "p99": {
+              "estimate": 190.0,
+              "ci_low": 187.0,
+              "ci_high": 194.0
+            }
+          },
+          "summary": {
+            "mean": 136.48,
+            "ci_mean": [
+              133.98,
+              139.04
+            ],
+            "sd": 20.95,
+            "median": 133.0,
+            "iqr": 26.0,
+            "p25": 122.0,
+            "p75": 148.0,
+            "p5": 107.0,
+            "p95": 176.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Mexican American"
+          },
+          "n": 1701,
+          "statistics": {
+            "mean": {
+              "estimate": 121.07,
+              "ci_low": 120.0,
+              "ci_high": 122.16
+            },
+            "sd": {
+              "estimate": 16.45,
+              "ci_low": 15.25,
+              "ci_high": 17.25
+            },
+            "p1": {
+              "estimate": 92.0,
+              "ci_low": 90.0,
+              "ci_high": 94.52
+            },
+            "p2.5": {
+              "estimate": 95.0,
+              "ci_low": 94.0,
+              "ci_high": 98.0
+            },
+            "p5": {
+              "estimate": 99.0,
+              "ci_low": 98.0,
+              "ci_high": 101.0
+            },
+            "p10": {
+              "estimate": 103.0,
+              "ci_low": 102.0,
+              "ci_high": 104.0
+            },
+            "p25": {
+              "estimate": 110.0,
+              "ci_low": 109.0,
+              "ci_high": 111.0
+            },
+            "p50": {
+              "estimate": 119.0,
+              "ci_low": 118.0,
+              "ci_high": 120.0
+            },
+            "p75": {
+              "estimate": 129.0,
+              "ci_low": 128.0,
+              "ci_high": 131.0
+            },
+            "p90": {
+              "estimate": 141.0,
+              "ci_low": 139.0,
+              "ci_high": 143.0
+            },
+            "p95": {
+              "estimate": 150.0,
+              "ci_low": 146.0,
+              "ci_high": 153.0
+            },
+            "p97.5": {
+              "estimate": 162.0,
+              "ci_low": 156.0,
+              "ci_high": 165.0
+            },
+            "p99": {
+              "estimate": 176.0,
+              "ci_low": 164.0,
+              "ci_high": 184.0
+            }
+          },
+          "summary": {
+            "mean": 121.07,
+            "ci_mean": [
+              120.0,
+              122.16
+            ],
+            "sd": 16.45,
+            "median": 119.0,
+            "iqr": 19.0,
+            "p25": 110.0,
+            "p75": 129.0,
+            "p5": 99.0,
+            "p95": 150.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Non-Hispanic Asian"
+          },
+          "n": 1385,
+          "statistics": {
+            "mean": {
+              "estimate": 121.24,
+              "ci_low": 120.15,
+              "ci_high": 122.53
+            },
+            "sd": {
+              "estimate": 17.87,
+              "ci_low": 17.01,
+              "ci_high": 18.7
+            },
+            "p1": {
+              "estimate": 93.0,
+              "ci_low": 91.0,
+              "ci_high": 94.0
+            },
+            "p2.5": {
+              "estimate": 95.0,
+              "ci_low": 93.0,
+              "ci_high": 96.0
+            },
+            "p5": {
+              "estimate": 97.0,
+              "ci_low": 96.0,
+              "ci_high": 98.0
+            },
+            "p10": {
+              "estimate": 101.0,
+              "ci_low": 100.0,
+              "ci_high": 102.0
+            },
+            "p25": {
+              "estimate": 109.0,
+              "ci_low": 108.0,
+              "ci_high": 110.0
+            },
+            "p50": {
+              "estimate": 118.0,
+              "ci_low": 117.0,
+              "ci_high": 119.0
+            },
+            "p75": {
+              "estimate": 131.0,
+              "ci_low": 129.0,
+              "ci_high": 132.0
+            },
+            "p90": {
+              "estimate": 146.0,
+              "ci_low": 142.0,
+              "ci_high": 149.52
+            },
+            "p95": {
+              "estimate": 156.0,
+              "ci_low": 153.0,
+              "ci_high": 160.0
+            },
+            "p97.5": {
+              "estimate": 163.0,
+              "ci_low": 160.0,
+              "ci_high": 166.0
+            },
+            "p99": {
+              "estimate": 174.0,
+              "ci_low": 170.0,
+              "ci_high": 177.0
+            }
+          },
+          "summary": {
+            "mean": 121.24,
+            "ci_mean": [
+              120.15,
+              122.53
+            ],
+            "sd": 17.87,
+            "median": 118.0,
+            "iqr": 22.0,
+            "p25": 109.0,
+            "p75": 131.0,
+            "p5": 97.0,
+            "p95": 156.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Non-Hispanic Black"
+          },
+          "n": 2408,
+          "statistics": {
+            "mean": {
+              "estimate": 127.41,
+              "ci_low": 126.54,
+              "ci_high": 128.34
+            },
+            "sd": {
+              "estimate": 19.96,
+              "ci_low": 19.31,
+              "ci_high": 20.6
+            },
+            "p1": {
+              "estimate": 96.0,
+              "ci_low": 95.0,
+              "ci_high": 97.0
+            },
+            "p2.5": {
+              "estimate": 99.0,
+              "ci_low": 98.0,
+              "ci_high": 100.0
+            },
+            "p5": {
+              "estimate": 102.0,
+              "ci_low": 101.0,
+              "ci_high": 103.0
+            },
+            "p10": {
+              "estimate": 106.0,
+              "ci_low": 105.0,
+              "ci_high": 107.0
+            },
+            "p25": {
+              "estimate": 113.0,
+              "ci_low": 112.0,
+              "ci_high": 114.0
+            },
+            "p50": {
+              "estimate": 124.0,
+              "ci_low": 123.0,
+              "ci_high": 125.0
+            },
+            "p75": {
+              "estimate": 137.0,
+              "ci_low": 136.0,
+              "ci_high": 138.0
+            },
+            "p90": {
+              "estimate": 154.0,
+              "ci_low": 152.0,
+              "ci_high": 156.0
+            },
+            "p95": {
+              "estimate": 166.0,
+              "ci_low": 162.0,
+              "ci_high": 168.0
+            },
+            "p97.5": {
+              "estimate": 178.0,
+              "ci_low": 173.0,
+              "ci_high": 180.0
+            },
+            "p99": {
+              "estimate": 190.0,
+              "ci_low": 185.0,
+              "ci_high": 194.0
+            }
+          },
+          "summary": {
+            "mean": 127.41,
+            "ci_mean": [
+              126.54,
+              128.34
+            ],
+            "sd": 19.96,
+            "median": 124.0,
+            "iqr": 24.0,
+            "p25": 113.0,
+            "p75": 137.0,
+            "p5": 102.0,
+            "p95": 166.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Non-Hispanic White"
+          },
+          "n": 3625,
+          "statistics": {
+            "mean": {
+              "estimate": 123.17,
+              "ci_low": 122.43,
+              "ci_high": 123.87
+            },
+            "sd": {
+              "estimate": 17.15,
+              "ci_low": 16.65,
+              "ci_high": 17.64
+            },
+            "p1": {
+              "estimate": 94.0,
+              "ci_low": 93.0,
+              "ci_high": 95.0
+            },
+            "p2.5": {
+              "estimate": 97.0,
+              "ci_low": 96.0,
+              "ci_high": 98.0
+            },
+            "p5": {
+              "estimate": 100.0,
+              "ci_low": 99.0,
+              "ci_high": 101.0
+            },
+            "p10": {
+              "estimate": 104.0,
+              "ci_low": 103.0,
+              "ci_high": 104.0
+            },
+            "p25": {
+              "estimate": 111.0,
+              "ci_low": 110.0,
+              "ci_high": 112.0
+            },
+            "p50": {
+              "estimate": 121.0,
+              "ci_low": 120.0,
+              "ci_high": 122.0
+            },
+            "p75": {
+              "estimate": 132.0,
+              "ci_low": 131.0,
+              "ci_high": 133.0
+            },
+            "p90": {
+              "estimate": 146.0,
+              "ci_low": 144.0,
+              "ci_high": 147.0
+            },
+            "p95": {
+              "estimate": 154.0,
+              "ci_low": 152.0,
+              "ci_high": 156.0
+            },
+            "p97.5": {
+              "estimate": 164.0,
+              "ci_low": 161.0,
+              "ci_high": 166.0
+            },
+            "p99": {
+              "estimate": 176.0,
+              "ci_low": 172.0,
+              "ci_high": 180.0
+            }
+          },
+          "summary": {
+            "mean": 123.17,
+            "ci_mean": [
+              122.43,
+              123.87
+            ],
+            "sd": 17.15,
+            "median": 121.0,
+            "iqr": 21.0,
+            "p25": 111.0,
+            "p75": 132.0,
+            "p5": 100.0,
+            "p95": 154.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Other Hispanic"
+          },
+          "n": 1210,
+          "statistics": {
+            "mean": {
+              "estimate": 121.71,
+              "ci_low": 120.53,
+              "ci_high": 122.73
+            },
+            "sd": {
+              "estimate": 18.02,
+              "ci_low": 16.9,
+              "ci_high": 19.15
+            },
+            "p1": {
+              "estimate": 92.0,
+              "ci_low": 87.0,
+              "ci_high": 92.0
+            },
+            "p2.5": {
+              "estimate": 95.0,
+              "ci_low": 93.0,
+              "ci_high": 96.0
+            },
+            "p5": {
+              "estimate": 97.0,
+              "ci_low": 96.0,
+              "ci_high": 98.0
+            },
+            "p10": {
+              "estimate": 102.0,
+              "ci_low": 100.0,
+              "ci_high": 103.0
+            },
+            "p25": {
+              "estimate": 109.0,
+              "ci_low": 107.0,
+              "ci_high": 110.0
+            },
+            "p50": {
+              "estimate": 120.0,
+              "ci_low": 118.0,
+              "ci_high": 121.0
+            },
+            "p75": {
+              "estimate": 131.0,
+              "ci_low": 130.0,
+              "ci_high": 133.0
+            },
+            "p90": {
+              "estimate": 146.0,
+              "ci_low": 143.0,
+              "ci_high": 149.0
+            },
+            "p95": {
+              "estimate": 156.0,
+              "ci_low": 154.0,
+              "ci_high": 158.0
+            },
+            "p97.5": {
+              "estimate": 165.0,
+              "ci_low": 159.0,
+              "ci_high": 169.0
+            },
+            "p99": {
+              "estimate": 179.0,
+              "ci_low": 167.0,
+              "ci_high": 184.0
+            }
+          },
+          "summary": {
+            "mean": 121.71,
+            "ci_mean": [
+              120.53,
+              122.73
+            ],
+            "sd": 18.02,
+            "median": 120.0,
+            "iqr": 22.0,
+            "p25": 109.0,
+            "p75": 131.0,
+            "p5": 97.0,
+            "p95": 156.0
+          }
+        },
+        {
+          "subgroup": {
+            "sex": "All",
+            "age_band": "All",
+            "race_ethnicity": "Other or multiracial"
+          },
+          "n": 489,
+          "statistics": {
+            "mean": {
+              "estimate": 121.92,
+              "ci_low": 119.1,
+              "ci_high": 124.48
+            },
+            "sd": {
+              "estimate": 17.67,
+              "ci_low": 15.05,
+              "ci_high": 19.62
+            },
+            "p1": {
+              "estimate": 92.0,
+              "ci_low": 91.0,
+              "ci_high": 97.0
+            },
+            "p2.5": {
+              "estimate": 97.0,
+              "ci_low": 92.0,
+              "ci_high": 100.52
+            },
+            "p5": {
+              "estimate": 101.0,
+              "ci_low": 97.0,
+              "ci_high": 103.0
+            },
+            "p10": {
+              "estimate": 104.0,
+              "ci_low": 101.0,
+              "ci_high": 106.0
+            },
+            "p25": {
+              "estimate": 110.0,
+              "ci_low": 109.0,
+              "ci_high": 113.0
+            },
+            "p50": {
+              "estimate": 119.0,
+              "ci_low": 116.0,
+              "ci_high": 122.0
+            },
+            "p75": {
+              "estimate": 128.0,
+              "ci_low": 125.0,
+              "ci_high": 131.0
+            },
+            "p90": {
+              "estimate": 145.0,
+              "ci_low": 138.0,
+              "ci_high": 150.0
+            },
+            "p95": {
+              "estimate": 159.0,
+              "ci_low": 146.0,
+              "ci_high": 166.0
+            },
+            "p97.5": {
+              "estimate": 170.0,
+              "ci_low": 158.48,
+              "ci_high": 184.0
+            },
+            "p99": {
+              "estimate": 184.0,
+              "ci_low": 166.0,
+              "ci_high": 187.0
+            }
+          },
+          "summary": {
+            "mean": 121.92,
+            "ci_mean": [
+              119.1,
+              124.48
+            ],
+            "sd": 17.67,
+            "median": 119.0,
+            "iqr": 18.0,
+            "p25": 110.0,
+            "p75": 128.0,
+            "p5": 101.0,
+            "p95": 159.0
+          }
+        }
+      ]
+    }
+  ],
+  "tidy_csv_url": "/data/metrics/blood_pressure.csv",
+  "bibtex_url": "/data/citations/blood_pressure.bib"
+}

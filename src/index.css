@@ -1,0 +1,122 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+/* ---------------------------------------------------------------------------
+   Design tokens matching the Wearable Validation Suite (validation-study-designer)
+   --------------------------------------------------------------------------- */
+@theme static {
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Surfaces & ink — light */
+  --color-plane: #f8fafc;
+  --color-surface: #ffffff;
+  --color-surface-subtle: #f1f5f9;
+  --color-ink: #0f172a;
+  --color-ink-secondary: #475569;
+  --color-ink-muted: #64748b;
+  --color-grid: #e2e8f0;
+  --color-axis: #cbd5e1;
+  --color-hairline: rgba(15, 23, 42, 0.08);
+
+  /* Categorical series — light */
+  --color-series-1: #0284c7; /* ocean blue */
+  --color-series-2: #10b981; /* emerald    */
+  --color-series-3: #8b5cf6; /* purple     */
+  --color-series-4: #f59e0b; /* amber      */
+  --color-series-5: #ec4899; /* pink       */
+  --color-series-6: #06b6d4; /* cyan       */
+  --color-series-7: #6366f1; /* indigo     */
+  --color-series-8: #ef4444; /* red        */
+
+  /* Status */
+  --color-good: #059669;
+  --color-warning: #d97706;
+  --color-serious: #ea580c;
+  --color-critical: #dc2626;
+
+  /* Monk Skin Tone (MST 1–10) Calibrated Hex Palette */
+  --color-mst-1: #f6ede4;
+  --color-mst-2: #f3e7db;
+  --color-mst-3: #f7ead0;
+  --color-mst-4: #eadaba;
+  --color-mst-5: #d7bd96;
+  --color-mst-6: #a07e56;
+  --color-mst-7: #825c43;
+  --color-mst-8: #604134;
+  --color-mst-9: #3a312a;
+  --color-mst-10: #292420;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme='light'])) {
+    color-scheme: dark;
+    --color-plane: #090d16;
+    --color-surface: #111827;
+    --color-surface-subtle: #1e293b;
+    --color-ink: #f1f5f9;
+    --color-ink-secondary: #94a3b8;
+    --color-ink-muted: #64748b;
+    --color-grid: #334155;
+    --color-axis: #475569;
+    --color-hairline: rgba(255, 255, 255, 0.08);
+    --color-series-1: #38bdf8;
+    --color-series-2: #34d399;
+    --color-series-3: #a78bfa;
+    --color-series-4: #fbbf24;
+    --color-series-5: #f472b6;
+    --color-series-6: #22d3ee;
+    --color-series-7: #818cf8;
+    --color-series-8: #f87171;
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --color-plane: #090d16;
+  --color-surface: #111827;
+  --color-surface-subtle: #1e293b;
+  --color-ink: #f1f5f9;
+  --color-ink-secondary: #94a3b8;
+  --color-ink-muted: #64748b;
+  --color-grid: #334155;
+  --color-axis: #475569;
+  --color-hairline: rgba(255, 255, 255, 0.08);
+  --color-series-1: #38bdf8;
+  --color-series-2: #34d399;
+  --color-series-3: #a78bfa;
+  --color-series-4: #fbbf24;
+  --color-series-5: #f472b6;
+  --color-series-6: #22d3ee;
+  --color-series-7: #818cf8;
+  --color-series-8: #f87171;
+}
+
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+html {
+  background-color: var(--color-plane);
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-plane);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+:where(a):focus-visible,
+:where(button):focus-visible,
+:where(input):focus-visible,
+:where(select):focus-visible {
+  outline: 2px solid var(--color-series-1);
+  outline-offset: 2px;
+}

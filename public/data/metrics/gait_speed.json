@@ -1,0 +1,18 @@
+{
+  "id": "gait_speed",
+  "name": "Walking speed",
+  "category": "Mobility",
+  "units": "m/s",
+  "priority": 14,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Measurement method is part of the data. Do not pool.",
+  "academy_module": null,
+  "candidate_sources": [
+    "To be identified"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}

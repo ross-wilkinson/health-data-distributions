@@ -1,0 +1,18 @@
+{
+  "id": "daily_activity",
+  "name": "Daily physical activity volume and step count",
+  "category": "Activity",
+  "units": "steps/day, activity units/day",
+  "priority": 11,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Measurement method is part of the data. Do not pool.",
+  "academy_module": null,
+  "candidate_sources": [
+    "NHANES 2011-2014 wrist accelerometry"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}

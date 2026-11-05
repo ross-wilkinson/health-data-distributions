@@ -1,0 +1,19 @@
+{
+  "id": "sleep_duration",
+  "name": "Sleep duration",
+  "category": "Sleep",
+  "units": "hours/night",
+  "priority": 12,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Self-reported questionnaire sleep hours and wearable actigraphy/PPG sleep duration systematically diverge. Questionnaires reflect time in bed; sensors reflect detected immobility.",
+  "academy_module": "Meridian PulseBand 2 Feature Validation",
+  "candidate_sources": [
+    "NHANES sleep questionnaire",
+    "NHANES 2011-2014 accelerometry"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}

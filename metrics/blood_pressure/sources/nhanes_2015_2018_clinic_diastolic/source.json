@@ -1,0 +1,56 @@
+{
+  "id": "nhanes_2015_2018_clinic_diastolic",
+  "title": "NHANES 2015-2018, clinic diastolic blood pressure",
+  "origin": "recomputed",
+  "statistic_form": "percentiles",
+  "population": {
+    "description": "Civilian, non-institutionalised US residents aged 18 and over examined in the mobile examination centre, two survey cycles combined (2015-2016 and 2017-2018).",
+    "country": "United States",
+    "years": "2015-2018",
+    "age_range": "18 and over",
+    "n": 10818,
+    "n_eligible": 11268,
+    "sampling": "probability sample",
+    "exclusions": "None for antihypertensive medication, cardiovascular conditions, pregnancy, or arrhythmias. Zero diastolic values (Korotkoff phase 5 not heard) are treated as missing."
+  },
+  "measurement": {
+    "method": "Auscultatory diastolic blood pressure (fifth Korotkoff sound, disappearance of sound) measured using a mercury sphygmomanometer by a certified physician examiner.",
+    "device": "Baumanometer mercury sphygmomanometer with calibrated adult/large cuff sizes.",
+    "protocol": "Seated quietly for 5 minutes in a private exam room; standard CDC protocol averages readings 2 and 3 (the initial reading is discarded to mitigate acute situational anxiety)."
+  },
+  "analysis": [
+    "Estimates use the examination sampling weights (WTMEC2YR), halved for the two combined cycles.",
+    "Percentiles are calculated from the survey-weighted empirical distribution.",
+    "95% confidence intervals are derived from 500 Rao-Wu bootstrap resamples of primary sampling units within strata.",
+    "Subgroups with fewer than 50 examined individuals are suppressed."
+  ],
+  "use_for": [
+    "Sizing clinical trials evaluating non-invasive blood pressure monitoring devices against auscultatory mercury reference standards.",
+    "Establishing empirical population distributions and between-subject standard deviations (sigma_b) for clinic diastolic blood pressure."
+  ],
+  "do_not_use_for": [
+    "A direct reference for 24-hour ambulatory blood pressure monitoring (ABPM) or continuous nocturnal wearable estimates.",
+    "A filtered 'normotensive' reference cohort: general population participants were not excluded for hypertension or antihypertensive pharmacology."
+  ],
+  "caveats": [
+    "**Clinic auscultation, not wearable PTT.** Disappearance of Korotkoff sound represents diastolic vascular resistance at rest.",
+    "**General population reference.** Participants taking antihypertensive pharmacology are included.",
+    "**Age 80 and over is top-coded** at 80 years in accordance with NCHS participant disclosure rules."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Centers for Disease Control and Prevention, National Center for Health Statistics. National Health and Nutrition Examination Survey Data, 2015-2018. Hyattsville, MD: U.S. Department of Health and Human Services.",
+    "url": "https://www.cdc.gov/nchs/nhanes/",
+    "license": "NCHS public-use data file. Users must use data for statistical reporting and analysis only."
+  },
+  "provenance": {
+    "pipeline": "pipelines/blood_pressure.py",
+    "raw_files": [
+      "raw/nhanes/DEMO_I.xpt",
+      "raw/nhanes/BPX_I.xpt",
+      "raw/nhanes/DEMO_J.xpt",
+      "raw/nhanes/BPX_J.xpt"
+    ]
+  },
+  "verification": "The overall survey-weighted diastolic mean of 71.3 mmHg aligns with published CDC National Health Statistics Reports for the 2015-2018 cycle."
+}

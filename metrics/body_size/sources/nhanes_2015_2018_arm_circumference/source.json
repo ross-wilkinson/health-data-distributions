@@ -1,0 +1,55 @@
+{
+  "id": "nhanes_2015_2018_arm_circumference",
+  "title": "NHANES 2015-2018, mid-upper arm circumference (cm)",
+  "origin": "recomputed",
+  "statistic_form": "percentiles",
+  "population": {
+    "description": "Civilian, non-institutionalised US residents aged 18 and over examined in the mobile examination centre, two survey cycles combined (2015-2016 and 2017-2018).",
+    "country": "United States",
+    "years": "2015-2018",
+    "age_range": "18 and over",
+    "n": 10676,
+    "n_eligible": 11268,
+    "sampling": "probability sample",
+    "exclusions": "Adults examined without upper arm circumference determinations or with physical arm casts/amputations are left out."
+  },
+  "measurement": {
+    "method": "Mid-upper arm circumference measured in centimeters at the midpoint between the acromion and olecranon process of the right arm.",
+    "device": "Calibrated steel measuring tape.",
+    "protocol": "Participant stands erect with right arm bent 90 degrees to locate midpoint, then arm relaxes freely while examiner measures circumference without compressing subcutaneous skin tissue."
+  },
+  "analysis": [
+    "Estimates use the examination sampling weights (WTMEC2YR), halved for the two combined cycles.",
+    "Percentiles are calculated from the survey-weighted empirical distribution.",
+    "95% confidence intervals are derived from 500 Rao-Wu bootstrap resamples of primary sampling units within strata.",
+    "Subgroups with fewer than 50 examined individuals are suppressed."
+  ],
+  "use_for": [
+    "Sizing wearable armbands, blood pressure cuffs, and upper-arm sensor straps.",
+    "Establishing mechanical fit bounds across diverse adult arm circumferences."
+  ],
+  "do_not_use_for": [
+    "A direct proxy for wrist circumference: wrist circumference is smaller and has a higher bone-to-soft-tissue ratio than mid-upper arm.",
+    "Pediatric cuff sizing: restricted to adults aged 18 and over."
+  ],
+  "caveats": [
+    "**Upper arm, not wrist.** Upper arm circumference is 10-15 cm larger than wrist circumference; do not use as wrist strap length without offset calibration.",
+    "**Age 80 and over is top-coded** at 80 years in accordance with NCHS participant disclosure rules."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Centers for Disease Control and Prevention, National Center for Health Statistics. National Health and Nutrition Examination Survey Data, 2015-2018. Hyattsville, MD: U.S. Department of Health and Human Services.",
+    "url": "https://www.cdc.gov/nchs/nhanes/",
+    "license": "NCHS public-use data file. Users must use data for statistical reporting and analysis only."
+  },
+  "provenance": {
+    "pipeline": "pipelines/body_size.py",
+    "raw_files": [
+      "raw/nhanes/DEMO_I.xpt",
+      "raw/nhanes/BMX_I.xpt",
+      "raw/nhanes/DEMO_J.xpt",
+      "raw/nhanes/BMX_J.xpt"
+    ]
+  },
+  "verification": "The overall survey-weighted arm circumference mean of 33.2 cm aligns with published CDC anthropometric reference data."
+}

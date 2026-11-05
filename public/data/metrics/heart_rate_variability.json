@@ -1,0 +1,18 @@
+{
+  "id": "heart_rate_variability",
+  "name": "Heart rate variability",
+  "category": "Cardiovascular",
+  "units": "ms",
+  "priority": 10,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Never pool daytime short-epoch (5-minute seated) ECG HRV with nocturnal continuous PPG HRV. Autonomic circadian rhythms and breathing rates create non-stationary baselines.",
+  "academy_module": "Module 3: HIIT Repeated Measures & Variance Decomposition (sigma_b vs sigma_w)",
+  "candidate_sources": [
+    "Published ECG cohort reference values"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}

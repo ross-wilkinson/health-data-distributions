@@ -1,0 +1,18 @@
+{
+  "id": "spo2",
+  "name": "Blood oxygen saturation",
+  "category": "Respiratory",
+  "units": "%",
+  "priority": 7,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Never pool normoxic ambient baseline saturation with controlled laboratory hypoxic desaturation (70%-100%). Never pool transmission finger-clip hospital monitors with reflective wrist optical sensors.",
+  "academy_module": "Module 4: Regulatory SpO2 & Demographic Quotas (ISO 80601-2-61)",
+  "candidate_sources": [
+    "To be identified"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}

@@ -1,0 +1,18 @@
+{
+  "id": "sleep_architecture",
+  "name": "Sleep stage proportions",
+  "category": "Sleep",
+  "units": "% of total sleep time",
+  "priority": 13,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Never pool gold-standard in-lab polysomnography (PSG 30s EEG epochs) with wearable surrogate stage heuristics. Wake after sleep onset (WASO) is systematically underestimated by optical/motion sensors.",
+  "academy_module": "Meridian PulseBand 2 Feature Validation",
+  "candidate_sources": [
+    "Polysomnography cohorts at the National Sleep Research Resource"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}

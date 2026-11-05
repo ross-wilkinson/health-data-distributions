@@ -1,0 +1,18 @@
+{
+  "id": "glycemia",
+  "name": "Fasting glucose and HbA1c",
+  "category": "Metabolic",
+  "units": "mg/dL, %",
+  "priority": 15,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Measurement method is part of the data. Do not pool.",
+  "academy_module": null,
+  "candidate_sources": [
+    "NHANES laboratory data"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}

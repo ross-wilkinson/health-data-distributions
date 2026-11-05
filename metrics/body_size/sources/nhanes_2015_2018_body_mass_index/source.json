@@ -1,0 +1,55 @@
+{
+  "id": "nhanes_2015_2018_body_mass_index",
+  "title": "NHANES 2015-2018, body mass index (BMI)",
+  "origin": "recomputed",
+  "statistic_form": "percentiles",
+  "population": {
+    "description": "Civilian, non-institutionalised US residents aged 18 and over examined in the mobile examination centre, two survey cycles combined (2015-2016 and 2017-2018).",
+    "country": "United States",
+    "years": "2015-2018",
+    "age_range": "18 and over",
+    "n": 11096,
+    "n_eligible": 11268,
+    "sampling": "probability sample",
+    "exclusions": "None for health conditions or pregnancy. Adults examined without standing height or weight determinations are left out."
+  },
+  "measurement": {
+    "method": "Body Mass Index calculated as weight in kilograms divided by height in meters squared (kg/m^2).",
+    "device": "Mettler Toledo digital scale and calibrated stadiometer.",
+    "protocol": "Measured in disposable examination gown and foam slippers following standardized anthropometric procedures."
+  },
+  "analysis": [
+    "Estimates use the examination sampling weights (WTMEC2YR), halved for the two combined cycles.",
+    "Percentiles are calculated from the survey-weighted empirical distribution.",
+    "95% confidence intervals are derived from 500 Rao-Wu bootstrap resamples of primary sampling units within strata.",
+    "Subgroups with fewer than 50 examined individuals are suppressed."
+  ],
+  "use_for": [
+    "Sizing wearable validation cohorts to ensure representative distribution across normal, overweight, and class I-III obesity tiers.",
+    "Quantifying between-subject variation in body size across age, sex, and race/ethnicity."
+  ],
+  "do_not_use_for": [
+    "A direct measure of body fat percentage or body composition: BMI does not differentiate lean mass from adipose tissue.",
+    "Athletic elite cohorts: high muscle mass athletes are misclassified into overweight or obese brackets."
+  ],
+  "caveats": [
+    "**Heavy right tail.** BMI exhibits strong positive skewness; mean is consistently higher than median.",
+    "**Age 80 and over is top-coded** at 80 years in accordance with NCHS participant disclosure rules."
+  ],
+  "review_status": "draft",
+  "citation": {
+    "text": "Centers for Disease Control and Prevention, National Center for Health Statistics. National Health and Nutrition Examination Survey Data, 2015-2018. Hyattsville, MD: U.S. Department of Health and Human Services.",
+    "url": "https://www.cdc.gov/nchs/nhanes/",
+    "license": "NCHS public-use data file. Users must use data for statistical reporting and analysis only."
+  },
+  "provenance": {
+    "pipeline": "pipelines/body_size.py",
+    "raw_files": [
+      "raw/nhanes/DEMO_I.xpt",
+      "raw/nhanes/BMX_I.xpt",
+      "raw/nhanes/DEMO_J.xpt",
+      "raw/nhanes/BMX_J.xpt"
+    ]
+  },
+  "verification": "The overall survey-weighted BMI mean of 29.7 kg/m^2 aligns with published CDC NCHS reference tables for the 2015-2018 survey cycles."
+}

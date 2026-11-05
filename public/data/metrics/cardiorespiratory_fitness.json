@@ -1,0 +1,19 @@
+{
+  "id": "cardiorespiratory_fitness",
+  "name": "Cardiorespiratory fitness (VO2max)",
+  "category": "Fitness",
+  "units": "mL/kg/min",
+  "priority": 9,
+  "status": "planned",
+  "definition": "",
+  "comparison_note": null,
+  "methodological_warning": "Measurement method is part of the data. Do not pool.",
+  "academy_module": null,
+  "candidate_sources": [
+    "NHANES 1999-2004 treadmill test",
+    "FRIEND registry publications"
+  ],
+  "sources": [],
+  "tidy_csv_url": null,
+  "bibtex_url": null
+}
